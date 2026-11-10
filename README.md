@@ -1,5 +1,7 @@
 # 📚 Local Document RAG Q&A Agent
 
+> **📚 Tutorial foundation:** Based on [Darsh Shah's freeCodeCamp tutorial](https://www.freecodecamp.org/news/build-a-private-rag-qa-ai-agent-for-your-documents-using-langchain). See [Tutorial Acknowledgment and Attribution](#tutorial-acknowledgment-and-attribution).
+
 ![Project overview and reading map](assets/readme-overview.svg)
 
 **🟦 Learn AI · 🟩 Portfolio evidence · 🟪 PhD research · 🟠 Planned work**
@@ -87,7 +89,7 @@ ollama pull nomic-embed-text
 python .\qa_agent.py
 ```
 
-The first run indexes files under docs/. Subsequent runs reuse the index.
+Each startup checks files under docs/. Matching completed indexes are reused.
 Type exit to stop.
 
 The included Cedar, Maple, and Birch documents are fictional test fixtures.
@@ -118,20 +120,29 @@ Edit the constants near the top of qa_agent.py:
 
 <a id="updating-the-document-index"></a>
 
-## 💾 Updating the document index
+## 💾 Automatic Startup Index Refresh
 
-Document changes are not detected automatically. Stop the agent, archive
-the index, and restart after changing documents, chunk settings, or the
-embedding model:
+At startup, the agent fingerprints extracted document text, source metadata,
+embedding model name, chunk settings, and splitter/PDF-reader versions.
 
-```powershell
-if (Test-Path .\db) {
-    Move-Item .\db ("db-backup-" + (Get-Date -Format "yyyyMMdd-HHmmss"))
-}
-python .\qa_agent.py
-```
+| Change | Startup behavior |
+| --- | --- |
+| Add a document | Build an index for the updated corpus |
+| Edit a document | Build an index containing the updated text |
+| Remove a document | Select an index that excludes it |
+| No changes | Reuse the matching completed index |
 
-Changing only RETRIEVAL_K does not require rebuilding the index.
+Changes made during a session take effect after restarting the agent.
+Each new corpus version rebuilds the complete index.
+Changing only RETRIEVAL_K does not rebuild it.
+
+Indexes are stored in version-specific folders under db/.
+Historical indexes retain their content, including removed documents.
+This feature does not provide secure erasure or automatic index cleanup.
+
+Replacing an embedding model under the same model name is not detected.
+
+See [startup-refresh verification](verification/index-refresh-results.md).
 
 <a id="initial-verification"></a>
 
@@ -202,3 +213,22 @@ Regenerate the fictional two-page PDF with:
 python .\tools\make_demo_pdf.py
 ```
 
+
+<a id="tutorial-acknowledgment-and-attribution"></a>
+
+## 📚 Tutorial Acknowledgment and Attribution
+
+We acknowledge **Darsh Shah**, author of the foundational tutorial published by **freeCodeCamp**:
+
+**[How to Build a RAG Q&A AI Agent for Your Documents Using LangChain v1](https://www.freecodecamp.org/news/build-a-private-rag-qa-ai-agent-for-your-documents-using-langchain)**
+
+Published: July 2, 2026.
+
+| Provenance | Description |
+| --- | --- |
+| Original author | Darsh Shah |
+| Publisher | freeCodeCamp |
+| Tutorial foundation | Local document loading, chunking, Ollama embeddings, Chroma persistence, retrieval middleware, and document Q&A |
+| Repository extensions | Fictional project fixtures, page-specific PDF verification, retrieval experiments, automatic startup index refresh, verification records, and visual documentation |
+
+The original tutorial is credited for the learning foundation. Repository adaptations, experiments, and research connections are documented separately.

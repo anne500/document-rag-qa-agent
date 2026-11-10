@@ -1,4 +1,4 @@
-﻿from pathlib import Path
+from pathlib import Path
 from time import perf_counter
 
 from pypdf import PdfReader
@@ -66,34 +66,88 @@ def load_documents():
 
 
 def get_vectorstore():
-    embeddings = OllamaEmbeddings(model=EMBED_MODEL)
-
-    if (DB_DIR / "chroma.sqlite3").exists():
-        print("Reusing the saved document index.")
-        return Chroma(
-            collection_name="document_qa",
-            persist_directory=str(DB_DIR),
-            embedding_function=embeddings,
-        )
+    import hashlib
+    import json
+    from importlib.metadata import version
 
     documents = load_documents()
     if not documents:
-        raise ValueError("Add readable PDF, Markdown, or text files to docs/.")
+        raise ValueError(
+            "No readable document text found in docs/. "
+            "No previous index will be used."
+        )
+
+    # Fingerprint extracted content, source metadata, and index settings.
+    payload = {
+        "schema": 1,
+        "embedding_model": EMBED_MODEL,
+        "chunk_size": CHUNK_SIZE,
+        "chunk_overlap": CHUNK_OVERLAP,
+        "splitter_version": version("langchain-text-splitters"),
+        "pdf_reader_version": version("pypdf"),
+        "documents": [
+            {"text": doc.page_content, "metadata": doc.metadata}
+            for doc in documents
+        ],
+    }
+    fingerprint = hashlib.sha256(
+        json.dumps(
+            payload, sort_keys=True, ensure_ascii=False
+        ).encode("utf-8")
+    ).hexdigest()
+
+    index_dir = DB_DIR / fingerprint
+    complete_file = index_dir / "complete.json"
+    embeddings = OllamaEmbeddings(model=EMBED_MODEL)
+
+    if complete_file.exists() and (
+        index_dir / "chroma.sqlite3"
+    ).exists():
+        print(f"Index unchanged: reusing {fingerprint[:12]}")
+        return Chroma(
+            collection_name="document_qa",
+            persist_directory=str(index_dir),
+            embedding_function=embeddings,
+        )
 
     chunks = RecursiveCharacterTextSplitter(
         chunk_size=CHUNK_SIZE,
         chunk_overlap=CHUNK_OVERLAP,
     ).split_documents(documents)
 
+    if not chunks:
+        raise ValueError("No indexable chunks found.")
+
+    print("New or changed corpus/settings: building an index.")
     print(f"Loaded {len(documents)} text documents/PDF pages.")
     print(f"Indexing {len(chunks)} chunks...")
+    print(f"Index version: {fingerprint[:12]}")
 
-    return Chroma.from_documents(
+    # Stable IDs let an interrupted build retry without duplicate IDs.
+    ids = [
+        f"{fingerprint}-{number}"
+        for number in range(len(chunks))
+    ]
+    store = Chroma.from_documents(
         documents=chunks,
+        ids=ids,
         embedding=embeddings,
         collection_name="document_qa",
-        persist_directory=str(DB_DIR),
+        persist_directory=str(index_dir),
     )
+
+    # Publish completion only after indexing succeeds.
+    temporary = index_dir / "complete.tmp"
+    temporary.write_text(
+        json.dumps({
+            "fingerprint": fingerprint,
+            "chunks": len(chunks),
+            "documents_or_pages": len(documents),
+        }, indent=2),
+        encoding="utf-8",
+    )
+    temporary.replace(complete_file)
+    return store
 
 
 def source_label(document):

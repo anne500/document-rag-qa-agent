@@ -1,4 +1,4 @@
-﻿# 🎨 Document RAG: Visual Guide
+# 🎨 Document RAG: Visual Guide
 
 🟦 Learning · 🟩 Verified behavior · 🟪 Research connection · 🟠 Pending work
 
@@ -73,3 +73,37 @@ Evaluate these separately:
 
 See the [initial results](../verification/initial-results.md) and
 [PDF results](../verification/pdf-results.md).
+
+## ?? Automatic Startup Refresh
+
+```mermaid
+flowchart TD
+    A["Start agent: read document text"] --> B["Fingerprint corpus and settings"]
+    B --> C{"Matching completed index?"}
+    C -->|Yes| D["Reuse that index"]
+    C -->|No| E["Build a versioned index"]
+    E --> F["Write completion marker"]
+    D --> G["Answer using the selected index"]
+    F --> G
+
+    classDef default fill:#F8FAFC,stroke:#475569,color:#0F172A,stroke-width:2px;
+    classDef process fill:#DBEAFE,stroke:#2563EB,color:#172554,stroke-width:2px;
+    classDef model fill:#EDE9FE,stroke:#7C3AED,color:#3B0764,stroke-width:2px;
+    classDef store fill:#CCFBF1,stroke:#0F766E,color:#134E4A,stroke-width:2px;
+    classDef decision fill:#FEF3C7,stroke:#B45309,color:#78350F,stroke-width:2px;
+    classDef human fill:#FFEDD5,stroke:#C2410C,color:#7C2D12,stroke-width:2px;
+    classDef output fill:#DCFCE7,stroke:#15803D,color:#14532D,stroke-width:2px;
+    classDef failure fill:#FEE2E2,stroke:#B91C1C,color:#7F1D1D,stroke-width:2px;
+    class A,B,E process;
+    class C decision;
+    class D store;
+    class F output;
+    class G model;
+```
+
+?? Observed: unchanged restart, document addition, edit, and removal.
+
+?? Scope: startup checks, complete-corpus rebuilds, historical index retention.
+This does not implement live watching, incremental embedding, or secure erasure.
+
+See the [refresh results](../verification/index-refresh-results.md).
