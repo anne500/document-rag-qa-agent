@@ -1,6 +1,6 @@
 # 🧪 Extension 5 Implementation Verification
 
-**🟩 52 offline tests passed in development. 🟠 Windows and live capture pending.**
+**🟩 52 offline tests passed in development; first live capture audited. 🟠 Windows test output and independent human answer ratings pending.**
 
 November 10, 2026: 41 existing tests plus 11 new multi-document checks passed
 with Python 3.12 in the development environment. No chat or embedding calls were
@@ -42,3 +42,16 @@ semantic and identifier experiment directories are unchanged.
 [Guide and rubric](../guides/MULTIDOC_EVALUATION.md) ·
 [Three manual observations](multidoc-manual-20261110.md) ·
 [Tutorial provenance](../README.md#tutorial-acknowledgment-and-attribution)
+
+
+## 📊 First Live Capture Follow-up
+
+The user captured all 13 answers on Windows using the unchanged baseline
+prompt and settings. The [saved-artifact audit](multidoc-run-audit-20261110.md)
+recomputed 65 metric values and checked 38 excerpt occurrences. A separate,
+explicitly AI-assisted source review proposes answer ratings; the original
+human worksheet remains unreviewed. Live integration has therefore been
+exercised, while independent human validation remains pending.
+
+The audit helper also rejected a deliberately corrupted metric in a temporary
+copy. It uses no model calls and leaves all original capture artifacts unchanged.

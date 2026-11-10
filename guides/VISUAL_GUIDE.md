@@ -144,6 +144,12 @@ rankings and records limitations; answer quality remains a separate check.
 The [Extension 5 workflow and rubric](MULTIDOC_EVALUATION.md) separates automatic
 marker coverage, citation-label checks, and human answer-quality ratings.
 Three [manual examples](../verification/multidoc-manual-20261110.md) were inspected;
-the Birch answer has a wording caveat. New live captures are pending.
+the Birch answer has a wording caveat. The first expanded live capture is now audited.
 The lab tests k=2 versus k=4 on shared ranked candidates and handles conflicting
 notes in a separate direct-context control. Unreviewed answers stay unscored.
+
+
+[📊 Expanded capture audit and assistant review](../verification/multidoc-run-audit-20261110.md):
+k=4 recovered the missing evidence for both broader questions; unsupported
+Birch wording remained. Proposed source-review ratings are AI-assisted and
+human confirmation remains pending. The original capture dashboard is preserved.

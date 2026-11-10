@@ -1,0 +1,159 @@
+{
+  "instructions": "Use the frozen case/corpus snapshots and report. Rate each dimension pass or fail; leave null if unreviewed. Supply notes quoting the answer claim and its source/page. Check all substantive claims, including unexpected additions. Do not infer support from citation syntax or marker coverage.",
+  "records": [
+    {
+      "record_id": "cedar_maple:k2",
+      "ratings": {
+        "completeness": "pass",
+        "attribution": "pass",
+        "citation_support": "pass",
+        "uncertainty": "pass"
+      },
+      "reviewer": "ChatGPT/Codex assistant source review (AI; human confirmation pending)",
+      "notes": "Completeness/attribution/citation support pass: Maple security checks plus release-manager approval cite [1] Maple; Cedar required tests plus maintainer approval cite [2] Cedar. Both match the supplied notes. Uncertainty pass: no unsupported missing/conflicting-evidence inference."
+    },
+    {
+      "record_id": "cedar_maple:k4",
+      "ratings": {
+        "completeness": "pass",
+        "attribution": "pass",
+        "citation_support": "pass",
+        "uncertainty": "pass"
+      },
+      "reviewer": "ChatGPT/Codex assistant source review (AI; human confirmation pending)",
+      "notes": "Completeness/attribution/citation support pass: Cedar tests and maintainer [2], Maple security checks and release manager [1], match their respective excerpts; added Birch/Atlas context is not used to invent requirements. Uncertainty pass: no unsupported inference."
+    },
+    {
+      "record_id": "atlas_pages:k2",
+      "ratings": {
+        "completeness": "pass",
+        "attribution": "pass",
+        "citation_support": "pass",
+        "uncertainty": "pass"
+      },
+      "reviewer": "ChatGPT/Codex assistant source review (AI; human confirmation pending)",
+      "notes": "Completeness/attribution/citation support pass: quality and operations leads cite Atlas PDF page 1 [1]; expired registry access token cites page 2 [2]. Both requested claims are present. Uncertainty pass: no unsupported inference."
+    },
+    {
+      "record_id": "atlas_pages:k4",
+      "ratings": {
+        "completeness": "pass",
+        "attribution": "pass",
+        "citation_support": "pass",
+        "uncertainty": "pass"
+      },
+      "reviewer": "ChatGPT/Codex assistant source review (AI; human confirmation pending)",
+      "notes": "Completeness/attribution/citation support pass: both approvers cite Atlas page 1 [1], failure cause cites page 2 [2]; answer matches the k=2 answer despite extra context. Uncertainty pass: no unsupported inference."
+    },
+    {
+      "record_id": "cedar_birch_missing:k2",
+      "ratings": {
+        "completeness": "pass",
+        "attribution": "pass",
+        "citation_support": "fail",
+        "uncertainty": "fail"
+      },
+      "reviewer": "ChatGPT/Codex assistant source review (AI; human confirmation pending)",
+      "notes": "Completeness pass: Cedar tests/maintainer and unspecified Birch approval conditions are stated. Attribution pass: no project swap. Citation support and uncertainty fail: \"this section is explicitly omitted\" [2] infers an editorial omission, while Birch only says \"This document does not specify release approval requirements.\" \"it only notes\" the nightly schedule also overstates the note, which includes failure/recovery information."
+    },
+    {
+      "record_id": "cedar_birch_missing:k4",
+      "ratings": {
+        "completeness": "pass",
+        "attribution": "pass",
+        "citation_support": "fail",
+        "uncertainty": "pass"
+      },
+      "reviewer": "ChatGPT/Codex assistant source review (AI; human confirmation pending)",
+      "notes": "Completeness and attribution pass: Cedar tests/maintainer [1] and Birch unspecified policy [2] are correctly assigned. Citation support fail: \"Build failures (e.g., disk space issues) prevent rerunning the build\" [2] adds an enforced/general restriction; Birch instead advises removing artifacts and verifying at least 20 GB before rerunning BIRCH-309. Uncertainty pass: unspecified requirements are bounded by \"in the text\" and the provided-document frame; the unsupported operational claim is counted under citation support."
+    },
+    {
+      "record_id": "three_unit_approvals:k2",
+      "ratings": {
+        "completeness": "fail",
+        "attribution": "pass",
+        "citation_support": "pass",
+        "uncertainty": "pass"
+      },
+      "reviewer": "ChatGPT/Codex assistant source review (AI; human confirmation pending)",
+      "notes": "Completeness fail: Cedar requirements are missing; only Atlas [1] and Maple [2] are supplied (2/3 marker coverage). Attribution and citation support pass for the provided approval conditions. Uncertainty pass under the opening \"Based on the provided documents\" frame: the answer identifies missing Cedar context without fabricating a policy. Wording caveat: \"There is no mention\" should explicitly say \"in the retrieved excerpts\"; this is not evidence Cedar is absent from the corpus."
+    },
+    {
+      "record_id": "three_unit_approvals:k4",
+      "ratings": {
+        "completeness": "pass",
+        "attribution": "pass",
+        "citation_support": "pass",
+        "uncertainty": "pass"
+      },
+      "reviewer": "ChatGPT/Codex assistant source review (AI; human confirmation pending)",
+      "notes": "All dimensions pass: Atlas integration tests and both leads [1] PDF page 1, Maple security checks and release manager [2], Cedar required tests and maintainer [3], match the excerpts. The unrequested Birch statement [4] is supported but unnecessary. All expected conditions are present."
+    },
+    {
+      "record_id": "four_unit_failures:k2",
+      "ratings": {
+        "completeness": "fail",
+        "attribution": "pass",
+        "citation_support": "pass",
+        "uncertainty": "pass"
+      },
+      "reviewer": "ChatGPT/Codex assistant source review (AI; human confirmation pending)",
+      "notes": "Completeness fail: only Cedar dependency [1] and Maple certificate [2] causes are available; Birch and Atlas causes are missing (2/4 marker coverage). Attribution/citation support/uncertainty pass: it explicitly limits their absence to \"the excerpts\", and [1, 2] denotes the complete supplied context set, not a corpus-wide assertion. This grouped citation is not parsed by the original singles-only checker but both labels are valid."
+    },
+    {
+      "record_id": "four_unit_failures:k4",
+      "ratings": {
+        "completeness": "pass",
+        "attribution": "pass",
+        "citation_support": "pass",
+        "uncertainty": "pass"
+      },
+      "reviewer": "ChatGPT/Codex assistant source review (AI; human confirmation pending)",
+      "notes": "All dimensions pass: Cedar missing cedar-utils==9.9.9 in index [1]; Maple expired certificate [2]; Birch runner disk space [3]; Atlas registry token expiry [4] PDF page 2. Four required causes are present, correctly attached and cited."
+    },
+    {
+      "record_id": "known_unknown:k2",
+      "ratings": {
+        "completeness": "pass",
+        "attribution": "pass",
+        "citation_support": "fail",
+        "uncertainty": "pass"
+      },
+      "reviewer": "ChatGPT/Codex assistant source review (AI; human confirmation pending)",
+      "notes": "Completeness/attribution/uncertainty pass: Cedar required tests and maintainer [1] are correct; Willow policy is not invented and absence is limited to retrieved excerpts. Citation support fail under the all-claims rule: \"Lack of Willow information: [2] docs/maple-project.md\" makes Maple alone stand for a whole-context absence finding, and the combined Cedar/Maple content statement cites only [2]. Maple is not evidence of Willow policy. The abstention conclusion itself is correct; frame it as a context limitation instead of a source-backed Willow fact."
+    },
+    {
+      "record_id": "known_unknown:k4",
+      "ratings": {
+        "completeness": "pass",
+        "attribution": "pass",
+        "citation_support": "pass",
+        "uncertainty": "pass"
+      },
+      "reviewer": "ChatGPT/Codex assistant source review (AI; human confirmation pending)",
+      "notes": "All dimensions pass: Cedar conditions cite [1]; unavailable Willow requirements are explicitly bounded to the retrieved excerpts and all supplied source labels [1][2][3][4] accompany the context-set statement. These labels describe the inspected context, not proof of a corpus-wide negative. Verbose citations could be simplified without changing the abstention."
+    },
+    {
+      "record_id": "conflicting_approvals:control",
+      "ratings": {
+        "completeness": "pass",
+        "attribution": "pass",
+        "citation_support": "pass",
+        "uncertainty": "pass"
+      },
+      "reviewer": "ChatGPT/Codex assistant source review (AI; human confirmation pending)",
+      "notes": "All dimensions pass in the direct-context control: security-lead policy [1] and operations-lead-only policy [2] are both stated and cited; the answer explicitly calls the conflict unresolved and notes neither source has a revision date/authority ranking. It does not invent a both-leads policy or choose a winner. The final provenance sentence is jointly supported by the two immediately preceding cited notes. This is not a retrieval result."
+    }
+  ],
+  "review_type": "assistant_source_review",
+  "reviewer_type": "AI assistant; not an independent human reviewer",
+  "reviewed_date": "2026-11-10",
+  "report_canonical_sha256": "268b42182bb7543f75aff7ca4f9da373631fb1a6afd8c19df4a52f0270fd8812",
+  "scope": "One source-grounded assistant inspection of 13 saved answers; independent human validation pending",
+  "decision_rules": {
+    "completeness": "All authored expected claims/conditions must be answered correctly; missing evidence can fail completeness while passing uncertainty. Unsupported extra claims are evaluated under citation support.",
+    "attribution": "Stated project/build facts must be assigned to the right entity; missing facts do not automatically fail attribution.",
+    "citation_support": "All substantive added factual claims must be supported by the cited excerpts. Context-bounded absence can be checked from the supplied context set; one unrelated source cannot establish the whole-set finding.",
+    "uncertainty": "Missing/conflicting evidence must be bounded to supplied excerpts and not converted to a fabricated policy, universal absence, or intentional omission. Opening provided-document framing is accepted, with wording caveats recorded."
+  }
+}

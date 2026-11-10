@@ -1,0 +1,22 @@
+{
+  "status": "passed",
+  "scope": "Saved artifact consistency, not live inference reproduction or answer accuracy",
+  "records_checked": 13,
+  "metric_values_recomputed": 65,
+  "excerpt_occurrences_checked": 38,
+  "shared_prefix_pairs_checked": 6,
+  "snapshot_digests_checked": 2,
+  "code_digest_line_endings": {
+    "eval_multidoc.py": "CRLF",
+    "multidoc_lab.py": "CRLF",
+    "qa_agent.py": "CRLF",
+    "id_retrieval.py": "CRLF",
+    "retrieval_metrics.py": "CRLF",
+    "eval_retrieval.py": "CRLF"
+  },
+  "grouped_citation_records_checked_separately": [
+    "four_unit_failures:k2"
+  ],
+  "out_of_range_numeric_labels_in_supplemental_check": 0,
+  "original_human_review": "13 records remain unreviewed"
+}

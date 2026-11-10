@@ -340,8 +340,8 @@ a held-out benchmark, or a thesis-effectiveness result.
 
 ## 📚 Multi-Document Answer Evaluation
 
-**🟩 Three manual examples inspected, with one Birch wording caveat.
-🟠 New live capture and human ratings pending.**
+**🟩 First 13-answer capture audited; assistant source review recorded.
+🟠 Independent human ratings pending.**
 
 The agent already combined Cedar/Maple notes and two Atlas PDF pages. Its
 Birch answer correctly identified unspecified requirements but added the
@@ -369,6 +369,28 @@ answers, excerpts, provenance, and an initially unreviewed worksheet under
 verification/multidoc-runs/. Capture completion is not an answer-quality pass.
 The interactive application still uses its existing prompt and defaults.
 
+### 📊 First Multi-Document Findings
+
+| On six authored retrieved cases | k=2 | k=4 |
+| --- | ---: | ---: |
+| Complete evidence-marker groups | 4/6 | 6/6 |
+| Assistant-reviewed expected-answer completeness | 4/6 | 6/6 |
+| Assistant-reviewed citation support | 4/6 | 5/6 |
+
+The deeper context supplied missing Cedar approval evidence and Birch/Atlas
+failure evidence. Both broader answers then included the expected facts.
+Birch still acquired an unsupported rerun restriction at k=4, showing that
+complete evidence does not guarantee a supported answer. The separate Larch
+conflict control disclosed disagreement without selecting an unsupported policy.
+
+These are one AI assistant's proposed ratings on a small development set,
+not human-scored accuracy. The original human worksheet remains unreviewed.
+The saved citation regex also misses grouped labels such as [1, 2]; a supplemental
+audit checked those labels without changing the raw report.
+
+[🔬 Evidence audit, full ratings, and limitations](verification/multidoc-run-audit-20261110.md) ·
+[📊 Raw capture dashboard](verification/multidoc-runs/20261110T222813Z-bc04d7e8/summary.md)
+
 [🎨 Workflow and scoring rubric](guides/MULTIDOC_EVALUATION.md) ·
 [🗂️ Cases](evaluation/multidoc-cases.json) ·
 [🧪 Implementation checks](verification/multidoc-implementation.md)
@@ -391,4 +413,5 @@ Published: July 2, 2026.
 | Repository extensions | Fictional project fixtures, page-specific PDF verification, retrieval experiments, automatic startup index refresh, retrieval evaluation, identifier-priority comparison, and multi-document answer-review labs, verification records, and visual documentation |
 
 The original tutorial is credited for the learning foundation. Repository adaptations, experiments, and research connections are documented separately.
+
 

@@ -1,6 +1,6 @@
 # 📚 Extension 5: Multi-Document Answer Evaluation
 
-**🟩 Three manual examples inspected, with a Birch wording caveat. 🟠 New live capture and review pending.**
+**🟩 First live capture audited and assistant source review recorded. 🟠 Independent human review pending.**
 
 The existing agent already combined two documents and two PDF pages in the
 user's examples. This extension measures where that behavior stops working.
@@ -147,9 +147,23 @@ ratings before making comparisons; the overall review counts are descriptive.
 - A k=4 gain would show evidence of benefit on these cases, not justify a universal default.
 - If evidence is missing, investigate context selection; if evidence is present but
   misused, investigate prompt/generation behavior. Preserve the baseline first.
-- The current lab uses human ratings, not an LLM judge or automatic semantic grading.
+- The human worksheet remains available. The first follow-up adds a separately labeled AI assistant source review; it is not an independent human evaluation or automatic semantic grader.
 
 [Manual examples](../verification/multidoc-manual-20261110.md) ·
 [Implementation checks](../verification/multidoc-implementation.md) ·
 [Case dataset](../evaluation/multidoc-cases.json) ·
 [Tutorial acknowledgment](../README.md#tutorial-acknowledgment-and-attribution)
+
+
+## 📊 First Capture Follow-up
+
+The [November 10 audit](../verification/multidoc-run-audit-20261110.md) checks
+the complete 13-answer capture. k=4 supplied the missing evidence in both
+broader questions, while the Birch answer still added an unsupported rule.
+The saved raw artifacts and empty human review worksheet remain unchanged.
+
+Assistant-proposed ratings and descriptive counts live in assistant-review.json
+and assistant-review-summary.json alongside the capture. Do not treat those as
+completed human review or overwrite review.json with them. The audit records
+borderline citation and scope decisions so a human can confirm or revise them.
+It also documents the singles-only citation parser's grouped-label limitation.

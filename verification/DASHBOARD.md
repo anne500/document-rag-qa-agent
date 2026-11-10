@@ -22,7 +22,8 @@ not universal reliability or completion of a thesis experiment.
 | 📊 Extension 4: paired local evaluation | 🟩 Completed and audited | [Paired dashboard](identifier-runs/20261110T200859Z-0651f827/summary.md); [audit](identifier-run-audit-20261110.md) |
 | 💬 Extension 4: interactive answer and citations | 🟩 One misleading Maple example passed | [Transcript and citation inspection](identifier-interactive-20261110.md); semantic remains the default |
 | 📚 Extension 5: manual multi-document answers | 🟩 Three inspected; Birch wording caveat | [Observed answers](multidoc-manual-20261110.md) |
-| 🧪 Extension 5: capture and review implementation | 🟩 52 offline tests in development; 🟠 Windows and live capture pending | [Checks](multidoc-implementation.md); [guide](../guides/MULTIDOC_EVALUATION.md) |
+| 🧪 Extension 5: capture and review implementation | 🟩 52 offline tests in development; live capture completed; 🟠 Windows test output not supplied | [Checks](multidoc-implementation.md); [guide](../guides/MULTIDOC_EVALUATION.md) |
+| 📊 Extension 5: first 13-answer capture | 🟩 Artifact checks passed; assistant review recorded; 🟠 human ratings pending | [Audit and proposed ratings](multidoc-run-audit-20261110.md); [raw capture](multidoc-runs/20261110T222813Z-bc04d7e8/summary.md) |
 | 🛡️ Retrieved-document instruction robustness | 🟠 Not evaluated | Future extension |
 
 ## 🎨 Where the measured-results dashboard appears
@@ -69,3 +70,17 @@ tests. Retrieval marker scores, generated-answer correctness, citation support,
 and abstention quality are separate evaluation questions.
 No real-build BRI effectiveness claim or general model ranking is made.
 
+
+
+## 📚 Multi-Document Capture and Assistant Review
+
+The [first capture audit](multidoc-run-audit-20261110.md) checked 13 records,
+65 metric values, 38 excerpt occurrences, both snapshot digests, and six code
+hashes with Windows line endings. Complete marker evidence rose from 4/6 at
+k=2 to 6/6 at k=4. Assistant-reviewed expected-answer completeness showed the
+same counts, but Birch retained unsupported wording despite full evidence.
+
+The [assistant review](multidoc-runs/20261110T222813Z-bc04d7e8/assistant-review.json)
+is explicitly AI-generated. Independent human review.json remains null.
+The direct-context conflict example is separate from retrieval aggregates.
+No default retrieval or prompt changes were made by the audit.
