@@ -1,0 +1,254 @@
+{
+  "schema_version": 1,
+  "title": "Authored multi-document development cases",
+  "cases": [
+    {
+      "id": "cedar_maple",
+      "suite": "retrieved",
+      "question": "Compare the release approval requirements for Cedar and Maple. Cite each project's source.",
+      "required_evidence": [
+        {
+          "id": "cedar_policy",
+          "source": "docs/cedar-project.md",
+          "page": null,
+          "contains": [
+            "all required tests to pass",
+            "approval from a maintainer"
+          ]
+        },
+        {
+          "id": "maple_policy",
+          "source": "docs/maple-project.md",
+          "page": null,
+          "contains": [
+            "passing security checks",
+            "release manager"
+          ]
+        }
+      ],
+      "expected_claims": [
+        "Cedar: all required tests pass and maintainer approval.",
+        "Maple: passing security checks and release manager approval."
+      ],
+      "review_notes": "Every project condition needs its supporting citation."
+    },
+    {
+      "id": "atlas_pages",
+      "suite": "retrieved",
+      "question": "Who must approve ATLAS-R12, and why did ATLAS-418 fail? Cite the supporting pages.",
+      "required_evidence": [
+        {
+          "id": "atlas_approval",
+          "source": "docs/atlas-release-report.pdf",
+          "page": 1,
+          "contains": [
+            "quality lead",
+            "operations lead"
+          ]
+        },
+        {
+          "id": "atlas_token",
+          "source": "docs/atlas-release-report.pdf",
+          "page": 2,
+          "contains": [
+            "access token",
+            "expired"
+          ]
+        }
+      ],
+      "expected_claims": [
+        "ATLAS-R12: quality lead and operations lead.",
+        "ATLAS-418: expired artifact registry access token."
+      ],
+      "review_notes": "Cite page 1 for approval and page 2 for failure."
+    },
+    {
+      "id": "cedar_birch_missing",
+      "suite": "retrieved",
+      "question": "Compare the release approval requirements for Cedar and Birch. Cite the evidence and identify any missing information.",
+      "required_evidence": [
+        {
+          "id": "cedar_policy",
+          "source": "docs/cedar-project.md",
+          "page": null,
+          "contains": [
+            "all required tests to pass",
+            "approval from a maintainer"
+          ]
+        },
+        {
+          "id": "birch_unspecified_approval",
+          "source": "docs/birch-project.md",
+          "page": null,
+          "contains": [
+            "does not specify release approval requirements"
+          ]
+        }
+      ],
+      "expected_claims": [
+        "Cedar: required tests pass and maintainer approval.",
+        "The retrieved Birch note does not specify approval requirements."
+      ],
+      "review_notes": "Do not infer intentional omission, no approval needed, or a universal absence of policy."
+    },
+    {
+      "id": "three_unit_approvals",
+      "suite": "retrieved",
+      "question": "Compare release approval requirements for Cedar, Maple, and ATLAS-R12. Include required checks and approvers, and cite each source.",
+      "required_evidence": [
+        {
+          "id": "cedar_policy",
+          "source": "docs/cedar-project.md",
+          "page": null,
+          "contains": [
+            "all required tests to pass",
+            "approval from a maintainer"
+          ]
+        },
+        {
+          "id": "maple_policy",
+          "source": "docs/maple-project.md",
+          "page": null,
+          "contains": [
+            "passing security checks",
+            "release manager"
+          ]
+        },
+        {
+          "id": "atlas_policy",
+          "source": "docs/atlas-release-report.pdf",
+          "page": 1,
+          "contains": [
+            "quality lead",
+            "operations lead",
+            "integration tests"
+          ]
+        }
+      ],
+      "expected_claims": [
+        "Cedar: required tests pass and maintainer approval.",
+        "Maple: security checks pass and release manager approval.",
+        "Atlas: integration tests pass, quality lead and operations lead approval."
+      ],
+      "review_notes": "Three distinct document/page units; k=2 cannot contain all three at current chunk boundaries. Missing retrieved evidence must be acknowledged."
+    },
+    {
+      "id": "four_unit_failures",
+      "suite": "retrieved",
+      "question": "Compare the causes of CEDAR-104, MAPLE-207, BIRCH-309, and ATLAS-418 failures. Cite evidence for each build.",
+      "required_evidence": [
+        {
+          "id": "cedar_dependency",
+          "source": "docs/cedar-project.md",
+          "page": null,
+          "contains": [
+            "cedar-utils==9.9.9",
+            "could not",
+            "package index"
+          ]
+        },
+        {
+          "id": "maple_certificate",
+          "source": "docs/maple-project.md",
+          "page": null,
+          "contains": [
+            "signing certificate",
+            "expired"
+          ]
+        },
+        {
+          "id": "birch_failure",
+          "source": "docs/birch-project.md",
+          "page": null,
+          "contains": [
+            "ran out of disk space"
+          ]
+        },
+        {
+          "id": "atlas_token",
+          "source": "docs/atlas-release-report.pdf",
+          "page": 2,
+          "contains": [
+            "access token",
+            "expired"
+          ]
+        }
+      ],
+      "expected_claims": [
+        "Cedar: unavailable cedar-utils==9.9.9 in configured package index.",
+        "Maple: expired signing certificate.",
+        "Birch: runner ran out of disk space.",
+        "Atlas: expired registry access token."
+      ],
+      "review_notes": "Four distinct document/page units. Do not transfer causes between builds or fill missing context from prior knowledge."
+    },
+    {
+      "id": "known_unknown",
+      "suite": "retrieved",
+      "question": "Compare release approval requirements for Cedar and Project Willow. Cite evidence and identify what cannot be determined.",
+      "required_evidence": [
+        {
+          "id": "cedar_policy",
+          "source": "docs/cedar-project.md",
+          "page": null,
+          "contains": [
+            "all required tests to pass",
+            "approval from a maintainer"
+          ]
+        }
+      ],
+      "expected_claims": [
+        "Cedar: required tests pass and maintainer approval.",
+        "Willow requirements cannot be determined from provided excerpts."
+      ],
+      "review_notes": "Willow is absent. Do not invent a Willow policy or cite Cedar as evidence for Willow."
+    },
+    {
+      "id": "conflicting_approvals",
+      "suite": "context_control",
+      "question": "Who must approve LARCH-R7? Explain any conflict and cite both notes.",
+      "context": [
+        {
+          "source": "control/policy-a.txt",
+          "page": null,
+          "text": "Fictional Project Larch release LARCH-R7 requires approval from the security lead. This note has no revision date or authority ranking."
+        },
+        {
+          "source": "control/policy-b.txt",
+          "page": null,
+          "text": "Fictional Project Larch release LARCH-R7 requires approval from the operations lead only. This note has no revision date or authority ranking."
+        }
+      ],
+      "required_evidence": [
+        {
+          "id": "larch_a",
+          "source": "control/policy-a.txt",
+          "page": null,
+          "contains": [
+            "security lead"
+          ]
+        },
+        {
+          "id": "larch_b",
+          "source": "control/policy-b.txt",
+          "page": null,
+          "contains": [
+            "operations lead only"
+          ]
+        }
+      ],
+      "expected_claims": [
+        "Note A names security lead; note B names operations lead only.",
+        "The notes conflict and provide no basis to select the authoritative policy."
+      ],
+      "review_notes": "Report disagreement and request authoritative clarification. Do not silently select one note or combine them into an invented both-leads requirement. Context supplied directly: not a retrieval experiment."
+    }
+  ],
+  "expected_sources": [
+    "docs/cedar-project.md",
+    "docs/maple-project.md",
+    "docs/birch-project.md",
+    "docs/atlas-release-report.pdf"
+  ],
+  "expected_document_units": 5
+}

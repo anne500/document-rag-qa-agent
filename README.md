@@ -10,7 +10,7 @@
 
 ## 🧭 Explore the project
 
-[🧩 Architecture](#architecture) · [🚀 Setup](#setup-on-windows-powershell) · [🧪 Results & verification](#initial-verification) · [🗂️ Evidence & guides](#visual-guide-and-pdf-verification) · [🧪 Evaluation lab](#retrieval-evaluation-lab) · [📊 Measured results](#recorded-retrieval-results) · [🔎 Identifier retrieval](#identifier-aware-retrieval) · [📋 Verification dashboard](verification/DASHBOARD.md) · [🎨 Visual standard](VISUAL_STYLE.md)
+[🧩 Architecture](#architecture) · [🚀 Setup](#setup-on-windows-powershell) · [🧪 Results & verification](#initial-verification) · [🗂️ Evidence & guides](#visual-guide-and-pdf-verification) · [🧪 Evaluation lab](#retrieval-evaluation-lab) · [📊 Measured results](#recorded-retrieval-results) · [🔎 Identifier retrieval](#identifier-aware-retrieval) · [📚 Multi-document lab](#multi-document-answer-evaluation) · [📋 Verification dashboard](verification/DASHBOARD.md) · [🎨 Visual standard](VISUAL_STYLE.md)
 
 🎨 [Shared architecture colors and diagram conventions](VISUAL_STYLE.md)
 
@@ -173,7 +173,7 @@ See [the verification record](verification/initial-results.md) for details.
 - Refusal and document-instruction handling are prompt-based, not guaranteed.
 - Scanned PDFs require OCR, which is not implemented.
 - PDF loading and page citations passed three initial smoke checks; broader PDF coverage remains unverified.
-- An automated retrieval evaluation lab is included; generated-answer evaluation and conversational memory are not implemented.
+- Retrieval and multi-document answer-capture labs are included; answer quality requires human review. Conversational memory is not implemented.
 - Dependency versions reflect the tested Windows environment.
 
 <a id="local-execution-and-document-handling"></a>
@@ -336,6 +336,43 @@ a held-out benchmark, or a thesis-effectiveness result.
 [🗂️ JSON report](verification/retrieval-runs/20261110T184155Z-a94eff34/report.json) ·
 [📋 Verification status](verification/DASHBOARD.md)
 
+<a id="multi-document-answer-evaluation"></a>
+
+## 📚 Multi-Document Answer Evaluation
+
+**🟩 Three manual examples inspected, with one Birch wording caveat.
+🟠 New live capture and human ratings pending.**
+
+The agent already combined Cedar/Maple notes and two Atlas PDF pages. Its
+Birch answer correctly identified unspecified requirements but added the
+unsupported wording “explicitly omitted.” See the [manual record](verification/multidoc-manual-20261110.md).
+
+Extension 5 preserves the existing agent as a baseline and adds seven authored
+cases: two-document answers, cross-page citations, missing information,
+three/four-unit evidence, absent Willow, and a separate conflicting-note control.
+
+| Layer | Check |
+| --- | --- |
+| 🔎 Retrieval | Automatic source/page/evidence-marker coverage |
+| 🔗 Citation syntax | Numeric labels refer to available excerpts |
+| 🟠 Answer quality | Human completeness, attribution, citation-support, and uncertainty ratings |
+
+```powershell
+python -m unittest discover -s tests -v
+python .\eval_multidoc.py --suite all --validate-only
+python .\eval_multidoc.py --suite all
+```
+
+The full run captures six retrieved cases at k=2 and k=4 using shared ranked
+candidates, plus one direct-context conflict control: 13 chat calls. It saves
+answers, excerpts, provenance, and an initially unreviewed worksheet under
+verification/multidoc-runs/. Capture completion is not an answer-quality pass.
+The interactive application still uses its existing prompt and defaults.
+
+[🎨 Workflow and scoring rubric](guides/MULTIDOC_EVALUATION.md) ·
+[🗂️ Cases](evaluation/multidoc-cases.json) ·
+[🧪 Implementation checks](verification/multidoc-implementation.md)
+
 <a id="tutorial-acknowledgment-and-attribution"></a>
 
 ## 📚 Tutorial Acknowledgment and Attribution
@@ -351,6 +388,7 @@ Published: July 2, 2026.
 | Original author | Darsh Shah |
 | Publisher | freeCodeCamp |
 | Tutorial foundation | Local document loading, chunking, Ollama embeddings, Chroma persistence, retrieval middleware, and document Q&A |
-| Repository extensions | Fictional project fixtures, page-specific PDF verification, retrieval experiments, automatic startup index refresh, retrieval evaluation and identifier-priority comparison labs, verification records, and visual documentation |
+| Repository extensions | Fictional project fixtures, page-specific PDF verification, retrieval experiments, automatic startup index refresh, retrieval evaluation, identifier-priority comparison, and multi-document answer-review labs, verification records, and visual documentation |
 
 The original tutorial is credited for the learning foundation. Repository adaptations, experiments, and research connections are documented separately.
+

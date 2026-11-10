@@ -137,3 +137,13 @@ The semantic-only measurements above remain the historical baseline.
 Maple moved from rank 2 to rank 1 in both chunk configurations.
 The [audit](../verification/identifier-run-audit-20261110.md) checks the paired
 rankings and records limitations; answer quality remains a separate check.
+
+
+## 📚 Multi-Document Answers and Review
+
+The [Extension 5 workflow and rubric](MULTIDOC_EVALUATION.md) separates automatic
+marker coverage, citation-label checks, and human answer-quality ratings.
+Three [manual examples](../verification/multidoc-manual-20261110.md) were inspected;
+the Birch answer has a wording caveat. New live captures are pending.
+The lab tests k=2 versus k=4 on shared ranked candidates and handles conflicting
+notes in a separate direct-context control. Unreviewed answers stay unscored.

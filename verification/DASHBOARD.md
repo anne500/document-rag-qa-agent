@@ -21,6 +21,8 @@ not universal reliability or completion of a thesis experiment.
 | 🔎 Extension 4: identifier-aware implementation | 🟩 41 offline tests passed in development | [Implementation checks](id-retrieval-implementation.md) |
 | 📊 Extension 4: paired local evaluation | 🟩 Completed and audited | [Paired dashboard](identifier-runs/20261110T200859Z-0651f827/summary.md); [audit](identifier-run-audit-20261110.md) |
 | 💬 Extension 4: interactive answer and citations | 🟩 One misleading Maple example passed | [Transcript and citation inspection](identifier-interactive-20261110.md); semantic remains the default |
+| 📚 Extension 5: manual multi-document answers | 🟩 Three inspected; Birch wording caveat | [Observed answers](multidoc-manual-20261110.md) |
+| 🧪 Extension 5: capture and review implementation | 🟩 52 offline tests in development; 🟠 Windows and live capture pending | [Checks](multidoc-implementation.md); [guide](../guides/MULTIDOC_EVALUATION.md) |
 | 🛡️ Retrieved-document instruction robustness | 🟠 Not evaluated | Future extension |
 
 ## 🎨 Where the measured-results dashboard appears
@@ -47,7 +49,8 @@ Failed or interrupted future runs must retain their actual status.
 Maple's supporting passage moved from rank 2 to rank 1 at both chunk sizes.
 No tested metric regressed; all 12 semantic-fallback pairs were unchanged.
 The [audit](identifier-run-audit-20261110.md) reproduces 168 score records,
-72 delta rows, and both charts. One [interactive Maple answer](identifier-interactive-20261110.md)\nalso passed manual source/citation inspection; broader answer evaluation remains open.
+72 delta rows, and both charts. One [interactive Maple answer](identifier-interactive-20261110.md)
+also passed manual source/citation inspection; broader answer evaluation remains open.
 
 ## 🗺️ Reading paths
 
@@ -65,3 +68,4 @@ The evidence comes from fictional fixtures, manual checks, and offline software
 tests. Retrieval marker scores, generated-answer correctness, citation support,
 and abstention quality are separate evaluation questions.
 No real-build BRI effectiveness claim or general model ranking is made.
+
