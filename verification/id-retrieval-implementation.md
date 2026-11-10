@@ -30,10 +30,17 @@ Maple moved from rank 2 to rank 1 at both chunk sizes. All 12 fallback pairs
 retained identical results, and no tested metric regressed in this run.
 These are small development-set findings, not answer-quality measurements.
 
+## 🟩 Interactive Follow-up
+
+One user-recorded Maple example passed manual answer and citation inspection
+with explicit ID-priority mode. See the [transcript](identifier-interactive-20261110.md).
+This does not establish improved answer accuracy over the already-correct
+semantic k=2 example.
+
 ## 🟠 Remaining Checks
 
 - Record the 41-test suite output on the user's Windows environment.
-- Check the interactive answer and citations with explicit ID-priority mode.
+- Extend answer and citation evaluation beyond the single Maple example.
 - Evaluate unknown IDs and larger corpora beyond the offline controlled checks.
 - Test generalization using new, held-out questions and artifact revisions.
 

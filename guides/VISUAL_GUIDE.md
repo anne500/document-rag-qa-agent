@@ -51,8 +51,8 @@ Excerpt labels are assigned separately for each question.
 | Missing-information handling | 🟩 Observed | Selected Markdown and PDF questions |
 | PDF page citations | 🟩 Observed | Three Atlas smoke checks |
 | Retrieval Evaluation Lab | 🟩 First local run audited; 22 development tests | [Measured results](../verification/retrieval-runs/20261110T184155Z-a94eff34/summary.md) |
-| Identifier-aware retrieval | 🟩 Paired run audited; 🟠 interactive check pending | [Measured comparison](../verification/identifier-runs/20261110T200859Z-0651f827/summary.md) |
-| Automatic index updates | 🟠 Pending | Manual rebuild currently required |
+| Identifier-aware retrieval | 🟩 Paired run audited; one interactive answer checked | [Measured comparison](../verification/identifier-runs/20261110T200859Z-0651f827/summary.md); [manual check](../verification/identifier-interactive-20261110.md) |
+| Automatic index updates | 🟩 Startup add, edit, removal, and reuse checks passed | [Index-refresh record](../verification/index-refresh-results.md) |
 | Scanned PDFs and OCR | 🟠 Pending | Not implemented |
 | Document-instruction robustness | 🟠 Pending | Not evaluated |
 

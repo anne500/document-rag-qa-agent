@@ -20,7 +20,7 @@ not universal reliability or completion of a thesis experiment.
 | 🔌 Live Chroma/Ollama integration for the lab | 🟩 One Windows run inspected | 28 query records; six aggregate settings; [report](retrieval-runs/20261110T184155Z-a94eff34/report.json) |
 | 🔎 Extension 4: identifier-aware implementation | 🟩 41 offline tests passed in development | [Implementation checks](id-retrieval-implementation.md) |
 | 📊 Extension 4: paired local evaluation | 🟩 Completed and audited | [Paired dashboard](identifier-runs/20261110T200859Z-0651f827/summary.md); [audit](identifier-run-audit-20261110.md) |
-| 💬 Extension 4: interactive answer and citations | 🟠 Awaiting manual check | Explicit id_priority mode; semantic remains the default |
+| 💬 Extension 4: interactive answer and citations | 🟩 One misleading Maple example passed | [Transcript and citation inspection](identifier-interactive-20261110.md); semantic remains the default |
 | 🛡️ Retrieved-document instruction robustness | 🟠 Not evaluated | Future extension |
 
 ## 🎨 Where the measured-results dashboard appears
@@ -47,7 +47,7 @@ Failed or interrupted future runs must retain their actual status.
 Maple's supporting passage moved from rank 2 to rank 1 at both chunk sizes.
 No tested metric regressed; all 12 semantic-fallback pairs were unchanged.
 The [audit](identifier-run-audit-20261110.md) reproduces 168 score records,
-72 delta rows, and both charts. Interactive answers remain unverified.
+72 delta rows, and both charts. One [interactive Maple answer](identifier-interactive-20261110.md)\nalso passed manual source/citation inspection; broader answer evaluation remains open.
 
 ## 🗺️ Reading paths
 

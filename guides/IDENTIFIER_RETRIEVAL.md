@@ -53,7 +53,7 @@ Maple at rank 2. That observed failure motivates this rule.
 | Semantic Maple ranking: Birch, then Maple | 🟩 Observed in the published baseline | Supporting evidence was missed at k=1 |
 | Whole-ID promotion on controlled passages | 🟩 Offline test passed | MAPLE-207 text can move ahead of a disk-space match |
 | New paired embedding experiment | 🟩 First local run audited | Maple promoted; no tested metric regressions in this run |
-| New interactive answer quality | 🟠 Pending manual check | A better rank does not prove a better answer |
+| Interactive answer and citations | 🟩 One Maple example manually checked | [Supported answer with two citations](../verification/identifier-interactive-20261110.md); broader gains not established |
 
 ## 🔢 Identifier rules
 

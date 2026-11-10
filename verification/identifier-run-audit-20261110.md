@@ -1,6 +1,6 @@
 # 🔬 Identifier-Priority Comparison: First Local Run Audit
 
-**🟩 Completed paired run · 🟩 Saved evidence reproduced · 🟠 Interactive answer check pending**
+**🟩 Completed paired run · 🟩 Saved evidence reproduced · 🟩 One interactive follow-up checked**
 
 ## 🗂️ Run identity
 
@@ -92,7 +92,8 @@ ID priority hit some supporting evidence for every evidence case, but complete
 coverage was only 10/12. Both methods reached complete marker coverage at k=2.
 
 The interactive application still defaults to semantic retrieval.
-ID priority is available explicitly and awaits a manual answer/citation check.
+ID priority is available explicitly. A separate [manual Maple example](identifier-interactive-20261110.md)
+subsequently passed answer and citation inspection.
 No answer-quality improvement or default-mode change is claimed.
 
 ## ⚠️ Remaining limits

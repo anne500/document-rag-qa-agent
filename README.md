@@ -249,7 +249,7 @@ After inspection, the actual run directory can be committed with its dashboard.
 
 ## 🔎 Identifier-Aware Retrieval
 
-**🟩 First paired local run completed and audited. 🟠 Interactive answer check pending.**
+**🟩 Paired local run audited; one interactive Maple answer and its citations checked.**
 
 The optional mode prioritizes whole build/release IDs, then uses semantic
 candidates to fill remaining positions. Unknown IDs and questions without IDs
@@ -259,7 +259,7 @@ MAPLE-207 does not match MAPLE-2070.
 | Mode | Purpose | Status |
 | --- | --- | --- |
 | Semantic | Existing default and published baseline | Local results audited |
-| ID priority | Exact-ID selection plus semantic fallback | Paired retrieval run audited; interactive check pending |
+| ID priority | Exact-ID selection plus semantic fallback | Paired run audited; one interactive answer/citation check passed |
 
 ```powershell
 python -m unittest discover -s tests -v
@@ -277,7 +277,9 @@ The paired runner compares both methods on the same questions and semantic
 candidate lists, saves regressions, and generates two colored charts.
 It does not invoke Qwen or modify the existing semantic experiment artifacts.
 The first paired run improved Maple's rank from 2 to 1 at both chunk sizes.
-Generated-answer quality remains unverified for this mode.
+One interactive Maple example correctly cited its expired certificate as [1]
+and Birch's disk-space failure as [2]. See the [manual verification record](verification/identifier-interactive-20261110.md).
+Broader answer-quality improvements remain unestablished.
 
 ### 📊 First Paired Results
 
