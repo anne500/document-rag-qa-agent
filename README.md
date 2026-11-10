@@ -1,4 +1,14 @@
-﻿# Local Document RAG Q&A Agent
+# 📚 Local Document RAG Q&A Agent
+
+![Project overview and reading map](assets/readme-overview.svg)
+
+**🟦 Learn AI · 🟩 Portfolio evidence · 🟪 PhD research · 🟠 Planned work**
+
+<a id="explore-the-project"></a>
+
+## 🧭 Explore the project
+
+[🧩 Architecture](#architecture) · [🚀 Setup](#setup-on-windows-powershell) · [🧪 Results & verification](#initial-verification) · [🗂️ Evidence & guides](#visual-guide-and-pdf-verification) · [🎨 Visual standard](VISUAL_STYLE.md)
 
 🎨 [Shared architecture colors and diagram conventions](VISUAL_STYLE.md)
 
@@ -8,7 +18,9 @@ explore evidence-based answers for Build, Release and Integration engineering.
 
 Adapted from [Darsh Shah's freeCodeCamp tutorial](https://www.freecodecamp.org/news/build-a-private-rag-qa-ai-agent-for-your-documents-using-langchain).
 
-## Architecture
+<a id="architecture"></a>
+
+## 🧩 Architecture
 
 ```mermaid
 flowchart TD
@@ -43,7 +55,9 @@ flowchart TD
 Retrieval runs for every question. The model does not choose whether to
 search. Each question is independent; conversational memory is not enabled.
 
-## Features
+<a id="features"></a>
+
+## ✨ Features
 
 - Reads Markdown, plain text, and text-extractable PDFs.
 - Preserves filenames and PDF page numbers.
@@ -52,13 +66,17 @@ search. Each question is independent; conversational memory is not enabled.
 - Prompts the model to acknowledge missing information.
 - Prints retrieved sources and elapsed time.
 
-## Requirements
+<a id="requirements"></a>
+
+## 🧰 Requirements
 
 - Python 3.12, tested with 3.12.10 on Windows.
 - Ollama running locally.
 - Models: qwen3.5:4b and nomic-embed-text.
 
-## Setup on Windows PowerShell
+<a id="setup-on-windows-powershell"></a>
+
+## 🚀 Setup on Windows PowerShell
 
 ```powershell
 python -m venv .venv
@@ -75,14 +93,18 @@ Type exit to stop.
 The included Cedar, Maple, and Birch documents are fictional test fixtures.
 Files placed under docs/ become part of the retrieval corpus.
 
-## Example questions
+<a id="example-questions"></a>
+
+## 💬 Example questions
 
 - Why did build CEDAR-104 fail?
 - What is required for a Cedar release?
 - How much free disk space is required before rerunning BIRCH-309?
 - Did MAPLE-207 fail because the runner ran out of disk space?
 
-## Configuration
+<a id="configuration"></a>
+
+## ⚙️ Configuration
 
 Edit the constants near the top of qa_agent.py:
 
@@ -94,7 +116,9 @@ Edit the constants near the top of qa_agent.py:
 | Chunk overlap | 200 characters |
 | Retrieved chunks | 2 |
 
-## Updating the document index
+<a id="updating-the-document-index"></a>
+
+## 💾 Updating the document index
 
 Document changes are not detected automatically. Stop the agent, archive
 the index, and restart after changing documents, chunk settings, or the
@@ -109,7 +133,9 @@ python .\qa_agent.py
 
 Changing only RETRIEVAL_K does not require rebuilding the index.
 
-## Initial verification
+<a id="initial-verification"></a>
+
+## 🧪 Initial verification
 
 Manual checks verified local embeddings, index reuse, direct answers
 across three documents, and missing-information handling.
@@ -126,7 +152,9 @@ This is one observed comparison, not a general performance claim.
 
 See [the verification record](verification/initial-results.md) for details.
 
-## Limitations
+<a id="limitations"></a>
+
+## ⚠️ Limitations
 
 - Citations are model-generated and require checking against the evidence.
 - A retrieved source does not automatically support every answer claim.
@@ -137,7 +165,9 @@ See [the verification record](verification/initial-results.md) for details.
 - No automated evaluation suite or conversational memory is included.
 - Dependency versions reflect the tested Windows environment.
 
-## Local execution and document handling
+<a id="local-execution-and-document-handling"></a>
+
+## 🔒 Local execution and document handling
 
 Chat generation and embeddings are configured to use local Ollama models,
 with Chroma storing the index on disk. This configuration has not been
@@ -147,11 +177,15 @@ The Git ignore rules exclude the local index, index backups, virtual
 environment, and .env file. The docs/ folder is tracked: review documents
 before committing and keep private material out of the public repository.
 
-## Learning and research direction
+<a id="learning-and-research-direction"></a>
+
+## 🧭 Learning and research direction
 
 This project is a foundation for an Engineering Evidence Assistant.
 Future work can evaluate retrieval accuracy, citation support,
 multi-document questions, and answers with and without retrieved evidence.
+
+<a id="visual-guide-and-pdf-verification"></a>
 
 ## 🎨 Visual Guide and PDF Verification
 
