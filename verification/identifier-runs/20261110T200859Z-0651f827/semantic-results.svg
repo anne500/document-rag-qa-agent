@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="695" viewBox="0 0 1100 695" role="img" aria-labelledby="title desc">
+<title id="title">Semantic baseline</title>
+<desc id="desc">Authored evidence marker coverage, complete evidence rate, and mean reciprocal rank. No answer generation is evaluated.</desc>
+<rect width="1100" height="695" fill="#F8FAFC"/>
+<g font-family="DejaVu Sans,Arial,sans-serif">
+<text x="28" y="35" font-size="23" font-weight="700" fill="#0F172A">Semantic baseline</text>
+<text x="28" y="63" font-size="14" fill="#475569">Status: complete / fictional corpus / retrieval only</text>
+<text x="230" y="99" font-size="16" font-weight="700" fill="#2563EB">Evidence coverage (0 to 1)</text>
+<text x="510" y="99" font-size="16" font-weight="700" fill="#15803D">Complete evidence (0 to 1)</text>
+<text x="790" y="99" font-size="16" font-weight="700" fill="#7C3AED">MRR (0 to 1)</text>
+<text x="28" y="157" font-size="16" fill="#0F172A">Chunk 500 / k=1</text>
+<rect x="230" y="138" width="190" height="25" rx="4" fill="#E2E8F0"/>
+<rect x="230" y="138" width="142.50" height="25" rx="4" fill="#2563EB"/>
+<text x="428" y="157" font-size="15" fill="#0F172A">0.750</text>
+<rect x="510" y="138" width="190" height="25" rx="4" fill="#E2E8F0"/>
+<rect x="510" y="138" width="126.67" height="25" rx="4" fill="#15803D"/>
+<text x="708" y="157" font-size="15" fill="#0F172A">0.667</text>
+<rect x="790" y="138" width="190" height="25" rx="4" fill="#E2E8F0"/>
+<rect x="790" y="138" width="158.33" height="25" rx="4" fill="#7C3AED"/>
+<text x="988" y="157" font-size="15" fill="#0F172A">0.833</text>
+<text x="230" y="186" font-size="12" fill="#475569">12 evidence cases; 2 unscored controls</text>
+<text x="28" y="242" font-size="16" fill="#0F172A">Chunk 500 / k=2</text>
+<rect x="230" y="223" width="190" height="25" rx="4" fill="#E2E8F0"/>
+<rect x="230" y="223" width="190.00" height="25" rx="4" fill="#2563EB"/>
+<text x="428" y="242" font-size="15" fill="#0F172A">1.000</text>
+<rect x="510" y="223" width="190" height="25" rx="4" fill="#E2E8F0"/>
+<rect x="510" y="223" width="190.00" height="25" rx="4" fill="#15803D"/>
+<text x="708" y="242" font-size="15" fill="#0F172A">1.000</text>
+<rect x="790" y="223" width="190" height="25" rx="4" fill="#E2E8F0"/>
+<rect x="790" y="223" width="174.17" height="25" rx="4" fill="#7C3AED"/>
+<text x="988" y="242" font-size="15" fill="#0F172A">0.917</text>
+<text x="230" y="271" font-size="12" fill="#475569">12 evidence cases; 2 unscored controls</text>
+<text x="28" y="327" font-size="16" fill="#0F172A">Chunk 500 / k=3</text>
+<rect x="230" y="308" width="190" height="25" rx="4" fill="#E2E8F0"/>
+<rect x="230" y="308" width="190.00" height="25" rx="4" fill="#2563EB"/>
+<text x="428" y="327" font-size="15" fill="#0F172A">1.000</text>
+<rect x="510" y="308" width="190" height="25" rx="4" fill="#E2E8F0"/>
+<rect x="510" y="308" width="190.00" height="25" rx="4" fill="#15803D"/>
+<text x="708" y="327" font-size="15" fill="#0F172A">1.000</text>
+<rect x="790" y="308" width="190" height="25" rx="4" fill="#E2E8F0"/>
+<rect x="790" y="308" width="174.17" height="25" rx="4" fill="#7C3AED"/>
+<text x="988" y="327" font-size="15" fill="#0F172A">0.917</text>
+<text x="230" y="356" font-size="12" fill="#475569">12 evidence cases; 2 unscored controls</text>
+<text x="28" y="412" font-size="16" fill="#0F172A">Chunk 1000 / k=1</text>
+<rect x="230" y="393" width="190" height="25" rx="4" fill="#E2E8F0"/>
+<rect x="230" y="393" width="158.33" height="25" rx="4" fill="#2563EB"/>
+<text x="428" y="412" font-size="15" fill="#0F172A">0.833</text>
+<rect x="510" y="393" width="190" height="25" rx="4" fill="#E2E8F0"/>
+<rect x="510" y="393" width="142.50" height="25" rx="4" fill="#15803D"/>
+<text x="708" y="412" font-size="15" fill="#0F172A">0.750</text>
+<rect x="790" y="393" width="190" height="25" rx="4" fill="#E2E8F0"/>
+<rect x="790" y="393" width="174.17" height="25" rx="4" fill="#7C3AED"/>
+<text x="988" y="412" font-size="15" fill="#0F172A">0.917</text>
+<text x="230" y="441" font-size="12" fill="#475569">12 evidence cases; 2 unscored controls</text>
+<text x="28" y="497" font-size="16" fill="#0F172A">Chunk 1000 / k=2</text>
+<rect x="230" y="478" width="190" height="25" rx="4" fill="#E2E8F0"/>
+<rect x="230" y="478" width="190.00" height="25" rx="4" fill="#2563EB"/>
+<text x="428" y="497" font-size="15" fill="#0F172A">1.000</text>
+<rect x="510" y="478" width="190" height="25" rx="4" fill="#E2E8F0"/>
+<rect x="510" y="478" width="190.00" height="25" rx="4" fill="#15803D"/>
+<text x="708" y="497" font-size="15" fill="#0F172A">1.000</text>
+<rect x="790" y="478" width="190" height="25" rx="4" fill="#E2E8F0"/>
+<rect x="790" y="478" width="182.08" height="25" rx="4" fill="#7C3AED"/>
+<text x="988" y="497" font-size="15" fill="#0F172A">0.958</text>
+<text x="230" y="526" font-size="12" fill="#475569">12 evidence cases; 2 unscored controls</text>
+<text x="28" y="582" font-size="16" fill="#0F172A">Chunk 1000 / k=3</text>
+<rect x="230" y="563" width="190" height="25" rx="4" fill="#E2E8F0"/>
+<rect x="230" y="563" width="190.00" height="25" rx="4" fill="#2563EB"/>
+<text x="428" y="582" font-size="15" fill="#0F172A">1.000</text>
+<rect x="510" y="563" width="190" height="25" rx="4" fill="#E2E8F0"/>
+<rect x="510" y="563" width="190.00" height="25" rx="4" fill="#15803D"/>
+<text x="708" y="582" font-size="15" fill="#0F172A">1.000</text>
+<rect x="790" y="563" width="190" height="25" rx="4" fill="#E2E8F0"/>
+<rect x="790" y="563" width="182.08" height="25" rx="4" fill="#7C3AED"/>
+<text x="988" y="582" font-size="15" fill="#0F172A">0.958</text>
+<text x="230" y="611" font-size="12" fill="#475569">12 evidence cases; 2 unscored controls</text>
+<text x="28" y="673" font-size="13" fill="#475569">Markers are an authored retrieval proxy, not semantic answer quality or thesis results.</text></g></svg>

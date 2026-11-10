@@ -1,0 +1,722 @@
+[
+  {
+    "chunk_size": 500,
+    "case": "cedar_failure",
+    "k": 1,
+    "hit_at_k_delta": 0,
+    "complete_at_k_delta": 0,
+    "coverage_at_k_delta": 0.0,
+    "mrr_at_k_delta": 0.0,
+    "precision_at_k_delta": 0.0
+  },
+  {
+    "chunk_size": 500,
+    "case": "cedar_failure",
+    "k": 2,
+    "hit_at_k_delta": 0,
+    "complete_at_k_delta": 0,
+    "coverage_at_k_delta": 0.0,
+    "mrr_at_k_delta": 0.0,
+    "precision_at_k_delta": 0.0
+  },
+  {
+    "chunk_size": 500,
+    "case": "cedar_failure",
+    "k": 3,
+    "hit_at_k_delta": 0,
+    "complete_at_k_delta": 0,
+    "coverage_at_k_delta": 0.0,
+    "mrr_at_k_delta": 0.0,
+    "precision_at_k_delta": 0.0
+  },
+  {
+    "chunk_size": 500,
+    "case": "cedar_approval",
+    "k": 1,
+    "hit_at_k_delta": 0,
+    "complete_at_k_delta": 0,
+    "coverage_at_k_delta": 0.0,
+    "mrr_at_k_delta": 0.0,
+    "precision_at_k_delta": 0.0
+  },
+  {
+    "chunk_size": 500,
+    "case": "cedar_approval",
+    "k": 2,
+    "hit_at_k_delta": 0,
+    "complete_at_k_delta": 0,
+    "coverage_at_k_delta": 0.0,
+    "mrr_at_k_delta": 0.0,
+    "precision_at_k_delta": 0.0
+  },
+  {
+    "chunk_size": 500,
+    "case": "cedar_approval",
+    "k": 3,
+    "hit_at_k_delta": 0,
+    "complete_at_k_delta": 0,
+    "coverage_at_k_delta": 0.0,
+    "mrr_at_k_delta": 0.0,
+    "precision_at_k_delta": 0.0
+  },
+  {
+    "chunk_size": 500,
+    "case": "cedar_recovery",
+    "k": 1,
+    "hit_at_k_delta": 0,
+    "complete_at_k_delta": 0,
+    "coverage_at_k_delta": 0.0,
+    "mrr_at_k_delta": 0.0,
+    "precision_at_k_delta": 0.0
+  },
+  {
+    "chunk_size": 500,
+    "case": "cedar_recovery",
+    "k": 2,
+    "hit_at_k_delta": 0,
+    "complete_at_k_delta": 0,
+    "coverage_at_k_delta": 0.0,
+    "mrr_at_k_delta": 0.0,
+    "precision_at_k_delta": 0.0
+  },
+  {
+    "chunk_size": 500,
+    "case": "cedar_recovery",
+    "k": 3,
+    "hit_at_k_delta": 0,
+    "complete_at_k_delta": 0,
+    "coverage_at_k_delta": 0.0,
+    "mrr_at_k_delta": 0.0,
+    "precision_at_k_delta": 0.0
+  },
+  {
+    "chunk_size": 500,
+    "case": "maple_failure",
+    "k": 1,
+    "hit_at_k_delta": 0,
+    "complete_at_k_delta": 0,
+    "coverage_at_k_delta": 0.0,
+    "mrr_at_k_delta": 0.0,
+    "precision_at_k_delta": 0.0
+  },
+  {
+    "chunk_size": 500,
+    "case": "maple_failure",
+    "k": 2,
+    "hit_at_k_delta": 0,
+    "complete_at_k_delta": 0,
+    "coverage_at_k_delta": 0.0,
+    "mrr_at_k_delta": 0.0,
+    "precision_at_k_delta": 0.0
+  },
+  {
+    "chunk_size": 500,
+    "case": "maple_failure",
+    "k": 3,
+    "hit_at_k_delta": 0,
+    "complete_at_k_delta": 0,
+    "coverage_at_k_delta": 0.0,
+    "mrr_at_k_delta": 0.0,
+    "precision_at_k_delta": 0.0
+  },
+  {
+    "chunk_size": 500,
+    "case": "maple_misleading",
+    "k": 1,
+    "hit_at_k_delta": 1,
+    "complete_at_k_delta": 1,
+    "coverage_at_k_delta": 1.0,
+    "mrr_at_k_delta": 1.0,
+    "precision_at_k_delta": 1.0
+  },
+  {
+    "chunk_size": 500,
+    "case": "maple_misleading",
+    "k": 2,
+    "hit_at_k_delta": 0,
+    "complete_at_k_delta": 0,
+    "coverage_at_k_delta": 0.0,
+    "mrr_at_k_delta": 0.5,
+    "precision_at_k_delta": 0.0
+  },
+  {
+    "chunk_size": 500,
+    "case": "maple_misleading",
+    "k": 3,
+    "hit_at_k_delta": 0,
+    "complete_at_k_delta": 0,
+    "coverage_at_k_delta": 0.0,
+    "mrr_at_k_delta": 0.5,
+    "precision_at_k_delta": 0.0
+  },
+  {
+    "chunk_size": 500,
+    "case": "birch_disk",
+    "k": 1,
+    "hit_at_k_delta": 0,
+    "complete_at_k_delta": 0,
+    "coverage_at_k_delta": 0.0,
+    "mrr_at_k_delta": 0.0,
+    "precision_at_k_delta": 0.0
+  },
+  {
+    "chunk_size": 500,
+    "case": "birch_disk",
+    "k": 2,
+    "hit_at_k_delta": 0,
+    "complete_at_k_delta": 0,
+    "coverage_at_k_delta": 0.0,
+    "mrr_at_k_delta": 0.0,
+    "precision_at_k_delta": 0.0
+  },
+  {
+    "chunk_size": 500,
+    "case": "birch_disk",
+    "k": 3,
+    "hit_at_k_delta": 0,
+    "complete_at_k_delta": 0,
+    "coverage_at_k_delta": 0.0,
+    "mrr_at_k_delta": 0.0,
+    "precision_at_k_delta": 0.0
+  },
+  {
+    "chunk_size": 500,
+    "case": "birch_approval_unspecified",
+    "k": 1,
+    "hit_at_k_delta": 0,
+    "complete_at_k_delta": 0,
+    "coverage_at_k_delta": 0.0,
+    "mrr_at_k_delta": 0.0,
+    "precision_at_k_delta": 0.0
+  },
+  {
+    "chunk_size": 500,
+    "case": "birch_approval_unspecified",
+    "k": 2,
+    "hit_at_k_delta": 0,
+    "complete_at_k_delta": 0,
+    "coverage_at_k_delta": 0.0,
+    "mrr_at_k_delta": 0.0,
+    "precision_at_k_delta": 0.0
+  },
+  {
+    "chunk_size": 500,
+    "case": "birch_approval_unspecified",
+    "k": 3,
+    "hit_at_k_delta": 0,
+    "complete_at_k_delta": 0,
+    "coverage_at_k_delta": 0.0,
+    "mrr_at_k_delta": 0.0,
+    "precision_at_k_delta": 0.0
+  },
+  {
+    "chunk_size": 500,
+    "case": "atlas_approval",
+    "k": 1,
+    "hit_at_k_delta": 0,
+    "complete_at_k_delta": 0,
+    "coverage_at_k_delta": 0.0,
+    "mrr_at_k_delta": 0.0,
+    "precision_at_k_delta": 0.0
+  },
+  {
+    "chunk_size": 500,
+    "case": "atlas_approval",
+    "k": 2,
+    "hit_at_k_delta": 0,
+    "complete_at_k_delta": 0,
+    "coverage_at_k_delta": 0.0,
+    "mrr_at_k_delta": 0.0,
+    "precision_at_k_delta": 0.0
+  },
+  {
+    "chunk_size": 500,
+    "case": "atlas_approval",
+    "k": 3,
+    "hit_at_k_delta": 0,
+    "complete_at_k_delta": 0,
+    "coverage_at_k_delta": 0.0,
+    "mrr_at_k_delta": 0.0,
+    "precision_at_k_delta": 0.0
+  },
+  {
+    "chunk_size": 500,
+    "case": "atlas_failure_recovery",
+    "k": 1,
+    "hit_at_k_delta": 0,
+    "complete_at_k_delta": 0,
+    "coverage_at_k_delta": 0.0,
+    "mrr_at_k_delta": 0.0,
+    "precision_at_k_delta": 0.0
+  },
+  {
+    "chunk_size": 500,
+    "case": "atlas_failure_recovery",
+    "k": 2,
+    "hit_at_k_delta": 0,
+    "complete_at_k_delta": 0,
+    "coverage_at_k_delta": 0.0,
+    "mrr_at_k_delta": 0.0,
+    "precision_at_k_delta": 0.0
+  },
+  {
+    "chunk_size": 500,
+    "case": "atlas_failure_recovery",
+    "k": 3,
+    "hit_at_k_delta": 0,
+    "complete_at_k_delta": 0,
+    "coverage_at_k_delta": 0.0,
+    "mrr_at_k_delta": 0.0,
+    "precision_at_k_delta": 0.0
+  },
+  {
+    "chunk_size": 500,
+    "case": "atlas_cross_page",
+    "k": 1,
+    "hit_at_k_delta": 0,
+    "complete_at_k_delta": 0,
+    "coverage_at_k_delta": 0.0,
+    "mrr_at_k_delta": 0.0,
+    "precision_at_k_delta": 0.0
+  },
+  {
+    "chunk_size": 500,
+    "case": "atlas_cross_page",
+    "k": 2,
+    "hit_at_k_delta": 0,
+    "complete_at_k_delta": 0,
+    "coverage_at_k_delta": 0.0,
+    "mrr_at_k_delta": 0.0,
+    "precision_at_k_delta": 0.0
+  },
+  {
+    "chunk_size": 500,
+    "case": "atlas_cross_page",
+    "k": 3,
+    "hit_at_k_delta": 0,
+    "complete_at_k_delta": 0,
+    "coverage_at_k_delta": 0.0,
+    "mrr_at_k_delta": 0.0,
+    "precision_at_k_delta": 0.0
+  },
+  {
+    "chunk_size": 500,
+    "case": "compare_approvals",
+    "k": 1,
+    "hit_at_k_delta": 0,
+    "complete_at_k_delta": 0,
+    "coverage_at_k_delta": 0.0,
+    "mrr_at_k_delta": 0.0,
+    "precision_at_k_delta": 0.0
+  },
+  {
+    "chunk_size": 500,
+    "case": "compare_approvals",
+    "k": 2,
+    "hit_at_k_delta": 0,
+    "complete_at_k_delta": 0,
+    "coverage_at_k_delta": 0.0,
+    "mrr_at_k_delta": 0.0,
+    "precision_at_k_delta": 0.0
+  },
+  {
+    "chunk_size": 500,
+    "case": "compare_approvals",
+    "k": 3,
+    "hit_at_k_delta": 0,
+    "complete_at_k_delta": 0,
+    "coverage_at_k_delta": 0.0,
+    "mrr_at_k_delta": 0.0,
+    "precision_at_k_delta": 0.0
+  },
+  {
+    "chunk_size": 500,
+    "case": "atlas_date_unspecified",
+    "k": 1,
+    "hit_at_k_delta": 0,
+    "complete_at_k_delta": 0,
+    "coverage_at_k_delta": 0.0,
+    "mrr_at_k_delta": 0.0,
+    "precision_at_k_delta": 0.0
+  },
+  {
+    "chunk_size": 500,
+    "case": "atlas_date_unspecified",
+    "k": 2,
+    "hit_at_k_delta": 0,
+    "complete_at_k_delta": 0,
+    "coverage_at_k_delta": 0.0,
+    "mrr_at_k_delta": 0.0,
+    "precision_at_k_delta": 0.0
+  },
+  {
+    "chunk_size": 500,
+    "case": "atlas_date_unspecified",
+    "k": 3,
+    "hit_at_k_delta": 0,
+    "complete_at_k_delta": 0,
+    "coverage_at_k_delta": 0.0,
+    "mrr_at_k_delta": 0.0,
+    "precision_at_k_delta": 0.0
+  },
+  {
+    "chunk_size": 1000,
+    "case": "cedar_failure",
+    "k": 1,
+    "hit_at_k_delta": 0,
+    "complete_at_k_delta": 0,
+    "coverage_at_k_delta": 0.0,
+    "mrr_at_k_delta": 0.0,
+    "precision_at_k_delta": 0.0
+  },
+  {
+    "chunk_size": 1000,
+    "case": "cedar_failure",
+    "k": 2,
+    "hit_at_k_delta": 0,
+    "complete_at_k_delta": 0,
+    "coverage_at_k_delta": 0.0,
+    "mrr_at_k_delta": 0.0,
+    "precision_at_k_delta": 0.0
+  },
+  {
+    "chunk_size": 1000,
+    "case": "cedar_failure",
+    "k": 3,
+    "hit_at_k_delta": 0,
+    "complete_at_k_delta": 0,
+    "coverage_at_k_delta": 0.0,
+    "mrr_at_k_delta": 0.0,
+    "precision_at_k_delta": 0.0
+  },
+  {
+    "chunk_size": 1000,
+    "case": "cedar_approval",
+    "k": 1,
+    "hit_at_k_delta": 0,
+    "complete_at_k_delta": 0,
+    "coverage_at_k_delta": 0.0,
+    "mrr_at_k_delta": 0.0,
+    "precision_at_k_delta": 0.0
+  },
+  {
+    "chunk_size": 1000,
+    "case": "cedar_approval",
+    "k": 2,
+    "hit_at_k_delta": 0,
+    "complete_at_k_delta": 0,
+    "coverage_at_k_delta": 0.0,
+    "mrr_at_k_delta": 0.0,
+    "precision_at_k_delta": 0.0
+  },
+  {
+    "chunk_size": 1000,
+    "case": "cedar_approval",
+    "k": 3,
+    "hit_at_k_delta": 0,
+    "complete_at_k_delta": 0,
+    "coverage_at_k_delta": 0.0,
+    "mrr_at_k_delta": 0.0,
+    "precision_at_k_delta": 0.0
+  },
+  {
+    "chunk_size": 1000,
+    "case": "cedar_recovery",
+    "k": 1,
+    "hit_at_k_delta": 0,
+    "complete_at_k_delta": 0,
+    "coverage_at_k_delta": 0.0,
+    "mrr_at_k_delta": 0.0,
+    "precision_at_k_delta": 0.0
+  },
+  {
+    "chunk_size": 1000,
+    "case": "cedar_recovery",
+    "k": 2,
+    "hit_at_k_delta": 0,
+    "complete_at_k_delta": 0,
+    "coverage_at_k_delta": 0.0,
+    "mrr_at_k_delta": 0.0,
+    "precision_at_k_delta": 0.0
+  },
+  {
+    "chunk_size": 1000,
+    "case": "cedar_recovery",
+    "k": 3,
+    "hit_at_k_delta": 0,
+    "complete_at_k_delta": 0,
+    "coverage_at_k_delta": 0.0,
+    "mrr_at_k_delta": 0.0,
+    "precision_at_k_delta": 0.0
+  },
+  {
+    "chunk_size": 1000,
+    "case": "maple_failure",
+    "k": 1,
+    "hit_at_k_delta": 0,
+    "complete_at_k_delta": 0,
+    "coverage_at_k_delta": 0.0,
+    "mrr_at_k_delta": 0.0,
+    "precision_at_k_delta": 0.0
+  },
+  {
+    "chunk_size": 1000,
+    "case": "maple_failure",
+    "k": 2,
+    "hit_at_k_delta": 0,
+    "complete_at_k_delta": 0,
+    "coverage_at_k_delta": 0.0,
+    "mrr_at_k_delta": 0.0,
+    "precision_at_k_delta": 0.0
+  },
+  {
+    "chunk_size": 1000,
+    "case": "maple_failure",
+    "k": 3,
+    "hit_at_k_delta": 0,
+    "complete_at_k_delta": 0,
+    "coverage_at_k_delta": 0.0,
+    "mrr_at_k_delta": 0.0,
+    "precision_at_k_delta": 0.0
+  },
+  {
+    "chunk_size": 1000,
+    "case": "maple_misleading",
+    "k": 1,
+    "hit_at_k_delta": 1,
+    "complete_at_k_delta": 1,
+    "coverage_at_k_delta": 1.0,
+    "mrr_at_k_delta": 1.0,
+    "precision_at_k_delta": 1.0
+  },
+  {
+    "chunk_size": 1000,
+    "case": "maple_misleading",
+    "k": 2,
+    "hit_at_k_delta": 0,
+    "complete_at_k_delta": 0,
+    "coverage_at_k_delta": 0.0,
+    "mrr_at_k_delta": 0.5,
+    "precision_at_k_delta": 0.0
+  },
+  {
+    "chunk_size": 1000,
+    "case": "maple_misleading",
+    "k": 3,
+    "hit_at_k_delta": 0,
+    "complete_at_k_delta": 0,
+    "coverage_at_k_delta": 0.0,
+    "mrr_at_k_delta": 0.5,
+    "precision_at_k_delta": 0.0
+  },
+  {
+    "chunk_size": 1000,
+    "case": "birch_disk",
+    "k": 1,
+    "hit_at_k_delta": 0,
+    "complete_at_k_delta": 0,
+    "coverage_at_k_delta": 0.0,
+    "mrr_at_k_delta": 0.0,
+    "precision_at_k_delta": 0.0
+  },
+  {
+    "chunk_size": 1000,
+    "case": "birch_disk",
+    "k": 2,
+    "hit_at_k_delta": 0,
+    "complete_at_k_delta": 0,
+    "coverage_at_k_delta": 0.0,
+    "mrr_at_k_delta": 0.0,
+    "precision_at_k_delta": 0.0
+  },
+  {
+    "chunk_size": 1000,
+    "case": "birch_disk",
+    "k": 3,
+    "hit_at_k_delta": 0,
+    "complete_at_k_delta": 0,
+    "coverage_at_k_delta": 0.0,
+    "mrr_at_k_delta": 0.0,
+    "precision_at_k_delta": 0.0
+  },
+  {
+    "chunk_size": 1000,
+    "case": "birch_approval_unspecified",
+    "k": 1,
+    "hit_at_k_delta": 0,
+    "complete_at_k_delta": 0,
+    "coverage_at_k_delta": 0.0,
+    "mrr_at_k_delta": 0.0,
+    "precision_at_k_delta": 0.0
+  },
+  {
+    "chunk_size": 1000,
+    "case": "birch_approval_unspecified",
+    "k": 2,
+    "hit_at_k_delta": 0,
+    "complete_at_k_delta": 0,
+    "coverage_at_k_delta": 0.0,
+    "mrr_at_k_delta": 0.0,
+    "precision_at_k_delta": 0.0
+  },
+  {
+    "chunk_size": 1000,
+    "case": "birch_approval_unspecified",
+    "k": 3,
+    "hit_at_k_delta": 0,
+    "complete_at_k_delta": 0,
+    "coverage_at_k_delta": 0.0,
+    "mrr_at_k_delta": 0.0,
+    "precision_at_k_delta": 0.0
+  },
+  {
+    "chunk_size": 1000,
+    "case": "atlas_approval",
+    "k": 1,
+    "hit_at_k_delta": 0,
+    "complete_at_k_delta": 0,
+    "coverage_at_k_delta": 0.0,
+    "mrr_at_k_delta": 0.0,
+    "precision_at_k_delta": 0.0
+  },
+  {
+    "chunk_size": 1000,
+    "case": "atlas_approval",
+    "k": 2,
+    "hit_at_k_delta": 0,
+    "complete_at_k_delta": 0,
+    "coverage_at_k_delta": 0.0,
+    "mrr_at_k_delta": 0.0,
+    "precision_at_k_delta": 0.0
+  },
+  {
+    "chunk_size": 1000,
+    "case": "atlas_approval",
+    "k": 3,
+    "hit_at_k_delta": 0,
+    "complete_at_k_delta": 0,
+    "coverage_at_k_delta": 0.0,
+    "mrr_at_k_delta": 0.0,
+    "precision_at_k_delta": 0.0
+  },
+  {
+    "chunk_size": 1000,
+    "case": "atlas_failure_recovery",
+    "k": 1,
+    "hit_at_k_delta": 0,
+    "complete_at_k_delta": 0,
+    "coverage_at_k_delta": 0.0,
+    "mrr_at_k_delta": 0.0,
+    "precision_at_k_delta": 0.0
+  },
+  {
+    "chunk_size": 1000,
+    "case": "atlas_failure_recovery",
+    "k": 2,
+    "hit_at_k_delta": 0,
+    "complete_at_k_delta": 0,
+    "coverage_at_k_delta": 0.0,
+    "mrr_at_k_delta": 0.0,
+    "precision_at_k_delta": 0.0
+  },
+  {
+    "chunk_size": 1000,
+    "case": "atlas_failure_recovery",
+    "k": 3,
+    "hit_at_k_delta": 0,
+    "complete_at_k_delta": 0,
+    "coverage_at_k_delta": 0.0,
+    "mrr_at_k_delta": 0.0,
+    "precision_at_k_delta": 0.0
+  },
+  {
+    "chunk_size": 1000,
+    "case": "atlas_cross_page",
+    "k": 1,
+    "hit_at_k_delta": 0,
+    "complete_at_k_delta": 0,
+    "coverage_at_k_delta": 0.0,
+    "mrr_at_k_delta": 0.0,
+    "precision_at_k_delta": 0.0
+  },
+  {
+    "chunk_size": 1000,
+    "case": "atlas_cross_page",
+    "k": 2,
+    "hit_at_k_delta": 0,
+    "complete_at_k_delta": 0,
+    "coverage_at_k_delta": 0.0,
+    "mrr_at_k_delta": 0.0,
+    "precision_at_k_delta": 0.0
+  },
+  {
+    "chunk_size": 1000,
+    "case": "atlas_cross_page",
+    "k": 3,
+    "hit_at_k_delta": 0,
+    "complete_at_k_delta": 0,
+    "coverage_at_k_delta": 0.0,
+    "mrr_at_k_delta": 0.0,
+    "precision_at_k_delta": 0.0
+  },
+  {
+    "chunk_size": 1000,
+    "case": "compare_approvals",
+    "k": 1,
+    "hit_at_k_delta": 0,
+    "complete_at_k_delta": 0,
+    "coverage_at_k_delta": 0.0,
+    "mrr_at_k_delta": 0.0,
+    "precision_at_k_delta": 0.0
+  },
+  {
+    "chunk_size": 1000,
+    "case": "compare_approvals",
+    "k": 2,
+    "hit_at_k_delta": 0,
+    "complete_at_k_delta": 0,
+    "coverage_at_k_delta": 0.0,
+    "mrr_at_k_delta": 0.0,
+    "precision_at_k_delta": 0.0
+  },
+  {
+    "chunk_size": 1000,
+    "case": "compare_approvals",
+    "k": 3,
+    "hit_at_k_delta": 0,
+    "complete_at_k_delta": 0,
+    "coverage_at_k_delta": 0.0,
+    "mrr_at_k_delta": 0.0,
+    "precision_at_k_delta": 0.0
+  },
+  {
+    "chunk_size": 1000,
+    "case": "atlas_date_unspecified",
+    "k": 1,
+    "hit_at_k_delta": 0,
+    "complete_at_k_delta": 0,
+    "coverage_at_k_delta": 0.0,
+    "mrr_at_k_delta": 0.0,
+    "precision_at_k_delta": 0.0
+  },
+  {
+    "chunk_size": 1000,
+    "case": "atlas_date_unspecified",
+    "k": 2,
+    "hit_at_k_delta": 0,
+    "complete_at_k_delta": 0,
+    "coverage_at_k_delta": 0.0,
+    "mrr_at_k_delta": 0.0,
+    "precision_at_k_delta": 0.0
+  },
+  {
+    "chunk_size": 1000,
+    "case": "atlas_date_unspecified",
+    "k": 3,
+    "hit_at_k_delta": 0,
+    "complete_at_k_delta": 0,
+    "coverage_at_k_delta": 0.0,
+    "mrr_at_k_delta": 0.0,
+    "precision_at_k_delta": 0.0
+  }
+]
