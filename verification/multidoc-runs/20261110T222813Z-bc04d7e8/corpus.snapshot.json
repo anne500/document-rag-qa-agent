@@ -1,0 +1,27 @@
+[
+  {
+    "source": "docs/atlas-release-report.pdf",
+    "page": 1,
+    "text": "Project Atlas | Fictional RAG test fixture\nPage 1\n Project Atlas\nRelease Approval\nThis fictional report is a test fixture for checking PDF retrieval and page citations. It describes no real\nrelease.\nRelease ATLAS-R12 requires approval from both the quality lead and the operations lead.\nAll required integration tests must pass before approval. A passing test run alone does not authorize\nthe release.\n"
+  },
+  {
+    "source": "docs/atlas-release-report.pdf",
+    "page": 2,
+    "text": "Project Atlas | Fictional RAG test fixture\nPage 2\n Project Atlas\nBuild Failure and Recovery\nBuild ATLAS-418 failed because the artifact registry access token had expired.\nBefore rerunning ATLAS-418, rotate the registry access token and verify that the build runner can\nauthenticate to the artifact registry.\nThis report does not specify a production deployment date.\n"
+  },
+  {
+    "source": "docs/birch-project.md",
+    "page": null,
+    "text": "# Project Birch: Build Notes\n\nThis is a fictional project for retrieval testing.\n\nBuild BIRCH-309 failed because the build runner ran out of disk space.\nBefore rerunning the build, remove obsolete build artifacts and verify\nthat the runner has at least 20 GB of free disk space.\n\nBirch uses a nightly build schedule.\nThis document does not specify release approval requirements.\n"
+  },
+  {
+    "source": "docs/cedar-project.md",
+    "page": null,
+    "text": "# Project Cedar: Build and Release Notes\n\nThis is a fictional project used for testing a document Q&A assistant.\n\n## Automated tests\nProject Cedar runs automated tests whenever a pull request is opened.\nRegression tests check that existing behavior still works after a change.\nPassing tests does not prove that the software has no defects.\n\n## Release policy\nA failed required test blocks the release workflow until the problem is reviewed.\nA release requires all required tests to pass and approval from a maintainer.\n\n## Build failure example\nBuild CEDAR-104 failed because the dependency cedar-utils==9.9.9 could not\nbe found in the configured package index.\nThe proposed next action is to verify the dependency version and package\nindex configuration before running the build again.\n\n## Missing information\nThis document does not specify a production deployment date or a cloud provider.\n"
+  },
+  {
+    "source": "docs/maple-project.md",
+    "page": null,
+    "text": "# Project Maple: Release Notes\n\nThis is a fictional project for retrieval testing.\n\nBuild MAPLE-207 failed because the signing certificate had expired.\nBefore rerunning the build, renew the signing certificate and verify\nthat the signing service uses the renewed certificate.\n\nA Maple release requires passing security checks and approval\nfrom the release manager.\n"
+  }
+]

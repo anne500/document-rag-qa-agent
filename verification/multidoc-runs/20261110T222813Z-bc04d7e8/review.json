@@ -1,0 +1,148 @@
+{
+  "instructions": "Use the frozen case/corpus snapshots and report. Rate each dimension pass or fail; leave null if unreviewed. Supply notes quoting the answer claim and its source/page. Check all substantive claims, including unexpected additions. Do not infer support from citation syntax or marker coverage.",
+  "records": [
+    {
+      "record_id": "cedar_maple:k2",
+      "ratings": {
+        "completeness": null,
+        "attribution": null,
+        "citation_support": null,
+        "uncertainty": null
+      },
+      "reviewer": "",
+      "notes": ""
+    },
+    {
+      "record_id": "cedar_maple:k4",
+      "ratings": {
+        "completeness": null,
+        "attribution": null,
+        "citation_support": null,
+        "uncertainty": null
+      },
+      "reviewer": "",
+      "notes": ""
+    },
+    {
+      "record_id": "atlas_pages:k2",
+      "ratings": {
+        "completeness": null,
+        "attribution": null,
+        "citation_support": null,
+        "uncertainty": null
+      },
+      "reviewer": "",
+      "notes": ""
+    },
+    {
+      "record_id": "atlas_pages:k4",
+      "ratings": {
+        "completeness": null,
+        "attribution": null,
+        "citation_support": null,
+        "uncertainty": null
+      },
+      "reviewer": "",
+      "notes": ""
+    },
+    {
+      "record_id": "cedar_birch_missing:k2",
+      "ratings": {
+        "completeness": null,
+        "attribution": null,
+        "citation_support": null,
+        "uncertainty": null
+      },
+      "reviewer": "",
+      "notes": ""
+    },
+    {
+      "record_id": "cedar_birch_missing:k4",
+      "ratings": {
+        "completeness": null,
+        "attribution": null,
+        "citation_support": null,
+        "uncertainty": null
+      },
+      "reviewer": "",
+      "notes": ""
+    },
+    {
+      "record_id": "three_unit_approvals:k2",
+      "ratings": {
+        "completeness": null,
+        "attribution": null,
+        "citation_support": null,
+        "uncertainty": null
+      },
+      "reviewer": "",
+      "notes": ""
+    },
+    {
+      "record_id": "three_unit_approvals:k4",
+      "ratings": {
+        "completeness": null,
+        "attribution": null,
+        "citation_support": null,
+        "uncertainty": null
+      },
+      "reviewer": "",
+      "notes": ""
+    },
+    {
+      "record_id": "four_unit_failures:k2",
+      "ratings": {
+        "completeness": null,
+        "attribution": null,
+        "citation_support": null,
+        "uncertainty": null
+      },
+      "reviewer": "",
+      "notes": ""
+    },
+    {
+      "record_id": "four_unit_failures:k4",
+      "ratings": {
+        "completeness": null,
+        "attribution": null,
+        "citation_support": null,
+        "uncertainty": null
+      },
+      "reviewer": "",
+      "notes": ""
+    },
+    {
+      "record_id": "known_unknown:k2",
+      "ratings": {
+        "completeness": null,
+        "attribution": null,
+        "citation_support": null,
+        "uncertainty": null
+      },
+      "reviewer": "",
+      "notes": ""
+    },
+    {
+      "record_id": "known_unknown:k4",
+      "ratings": {
+        "completeness": null,
+        "attribution": null,
+        "citation_support": null,
+        "uncertainty": null
+      },
+      "reviewer": "",
+      "notes": ""
+    },
+    {
+      "record_id": "conflicting_approvals:control",
+      "ratings": {
+        "completeness": null,
+        "attribution": null,
+        "citation_support": null,
+        "uncertainty": null
+      },
+      "reviewer": "",
+      "notes": ""
+    }
+  ]
+}
