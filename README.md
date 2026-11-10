@@ -399,7 +399,7 @@ audit checked those labels without changing the raw report.
 
 ## 🧪 Frozen-Context Prompt Comparison
 
-**🟩 65 offline tests passed in development. 🟠 New local answer effects unmeasured.**
+**🟩 First 26-answer prompt capture audited; assistant source review recorded. 🟠 Independent human ratings pending.**
 
 Extension 5 exposed unsupported Birch claims even when all necessary evidence
 was present. The follow-up tests a revised instruction set using the exact
@@ -420,6 +420,27 @@ is experimental; the interactive agent keeps its existing default prompt.
 
 The new runner checks both [1] and grouped [1, 2] citation syntax. This does
 not establish factual citation support or modify the older report parser.
+
+### 📊 First Paired Prompt Findings
+
+| On 12 retrieved-context pairs | Baseline | Revised |
+| --- | ---: | ---: |
+| Assistant-reviewed expected-answer completeness | 10/12 | 10/12 |
+| Assistant-reviewed citation support | 9/12 | 11/12 |
+| Assistant-reviewed uncertainty | 11/12 | 12/12 |
+
+The revision removed both targeted Birch claims. Willow's k=2 citation-scope
+issue persists, and the three-project k=2 answer adds supported build-recovery
+advice under a release-check heading. Completeness remains limited by the
+same missing k=2 evidence. Both prompts disclose the separate Larch conflict.
+
+These are proposed AI assistant ratings on authored development cases;
+independent human review remains pending. Keep the revised prompt experimental
+while the remaining citation and scope issues are addressed. The interactive
+default is unchanged.
+
+[🔬 Full audit, ratings, caveats, and adoption recommendation](verification/prompt-run-audit-20261110.md) ·
+[📊 Raw paired capture](verification/prompt-runs/20261110T232200Z-d0f222aa/summary.md)
 
 [🎨 Comparison design and review](guides/PROMPT_COMPARISON.md) ·
 [🧪 Offline verification](verification/prompt-comparison-implementation.md) ·
@@ -443,6 +464,7 @@ Published: July 2, 2026.
 | Repository extensions | Fictional project fixtures, page-specific PDF verification, retrieval experiments, automatic startup index refresh, retrieval evaluation, identifier-priority comparison, multi-document answer-review, and frozen-context prompt comparison labs, verification records, and visual documentation |
 
 The original tutorial is credited for the learning foundation. Repository adaptations, experiments, and research connections are documented separately.
+
 
 
 

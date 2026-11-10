@@ -1,0 +1,255 @@
+{
+  "review_type": "assistant_source_review",
+  "human_validation": "pending",
+  "scope": "One generation per prompt and frozen context; descriptive AI-proposed ratings only. Direct conflict control excluded from retrieved aggregates.",
+  "groups": {
+    "retrieved_k2": {
+      "baseline": {
+        "completeness": {
+          "reviewed": 6,
+          "unreviewed": 0,
+          "passed": 4,
+          "failed": 2,
+          "pass_rate_reviewed_only": 0.6666666666666666
+        },
+        "attribution": {
+          "reviewed": 6,
+          "unreviewed": 0,
+          "passed": 6,
+          "failed": 0,
+          "pass_rate_reviewed_only": 1.0
+        },
+        "citation_support": {
+          "reviewed": 6,
+          "unreviewed": 0,
+          "passed": 4,
+          "failed": 2,
+          "pass_rate_reviewed_only": 0.6666666666666666
+        },
+        "uncertainty": {
+          "reviewed": 6,
+          "unreviewed": 0,
+          "passed": 5,
+          "failed": 1,
+          "pass_rate_reviewed_only": 0.8333333333333334
+        }
+      },
+      "revised": {
+        "completeness": {
+          "reviewed": 6,
+          "unreviewed": 0,
+          "passed": 4,
+          "failed": 2,
+          "pass_rate_reviewed_only": 0.6666666666666666
+        },
+        "attribution": {
+          "reviewed": 6,
+          "unreviewed": 0,
+          "passed": 6,
+          "failed": 0,
+          "pass_rate_reviewed_only": 1.0
+        },
+        "citation_support": {
+          "reviewed": 6,
+          "unreviewed": 0,
+          "passed": 5,
+          "failed": 1,
+          "pass_rate_reviewed_only": 0.8333333333333334
+        },
+        "uncertainty": {
+          "reviewed": 6,
+          "unreviewed": 0,
+          "passed": 6,
+          "failed": 0,
+          "pass_rate_reviewed_only": 1.0
+        }
+      }
+    },
+    "retrieved_k4": {
+      "baseline": {
+        "completeness": {
+          "reviewed": 6,
+          "unreviewed": 0,
+          "passed": 6,
+          "failed": 0,
+          "pass_rate_reviewed_only": 1.0
+        },
+        "attribution": {
+          "reviewed": 6,
+          "unreviewed": 0,
+          "passed": 6,
+          "failed": 0,
+          "pass_rate_reviewed_only": 1.0
+        },
+        "citation_support": {
+          "reviewed": 6,
+          "unreviewed": 0,
+          "passed": 5,
+          "failed": 1,
+          "pass_rate_reviewed_only": 0.8333333333333334
+        },
+        "uncertainty": {
+          "reviewed": 6,
+          "unreviewed": 0,
+          "passed": 6,
+          "failed": 0,
+          "pass_rate_reviewed_only": 1.0
+        }
+      },
+      "revised": {
+        "completeness": {
+          "reviewed": 6,
+          "unreviewed": 0,
+          "passed": 6,
+          "failed": 0,
+          "pass_rate_reviewed_only": 1.0
+        },
+        "attribution": {
+          "reviewed": 6,
+          "unreviewed": 0,
+          "passed": 6,
+          "failed": 0,
+          "pass_rate_reviewed_only": 1.0
+        },
+        "citation_support": {
+          "reviewed": 6,
+          "unreviewed": 0,
+          "passed": 6,
+          "failed": 0,
+          "pass_rate_reviewed_only": 1.0
+        },
+        "uncertainty": {
+          "reviewed": 6,
+          "unreviewed": 0,
+          "passed": 6,
+          "failed": 0,
+          "pass_rate_reviewed_only": 1.0
+        }
+      }
+    },
+    "retrieved": {
+      "baseline": {
+        "completeness": {
+          "reviewed": 12,
+          "unreviewed": 0,
+          "passed": 10,
+          "failed": 2,
+          "pass_rate_reviewed_only": 0.8333333333333334
+        },
+        "attribution": {
+          "reviewed": 12,
+          "unreviewed": 0,
+          "passed": 12,
+          "failed": 0,
+          "pass_rate_reviewed_only": 1.0
+        },
+        "citation_support": {
+          "reviewed": 12,
+          "unreviewed": 0,
+          "passed": 9,
+          "failed": 3,
+          "pass_rate_reviewed_only": 0.75
+        },
+        "uncertainty": {
+          "reviewed": 12,
+          "unreviewed": 0,
+          "passed": 11,
+          "failed": 1,
+          "pass_rate_reviewed_only": 0.9166666666666666
+        }
+      },
+      "revised": {
+        "completeness": {
+          "reviewed": 12,
+          "unreviewed": 0,
+          "passed": 10,
+          "failed": 2,
+          "pass_rate_reviewed_only": 0.8333333333333334
+        },
+        "attribution": {
+          "reviewed": 12,
+          "unreviewed": 0,
+          "passed": 12,
+          "failed": 0,
+          "pass_rate_reviewed_only": 1.0
+        },
+        "citation_support": {
+          "reviewed": 12,
+          "unreviewed": 0,
+          "passed": 11,
+          "failed": 1,
+          "pass_rate_reviewed_only": 0.9166666666666666
+        },
+        "uncertainty": {
+          "reviewed": 12,
+          "unreviewed": 0,
+          "passed": 12,
+          "failed": 0,
+          "pass_rate_reviewed_only": 1.0
+        }
+      }
+    },
+    "context_control": {
+      "baseline": {
+        "completeness": {
+          "reviewed": 1,
+          "unreviewed": 0,
+          "passed": 1,
+          "failed": 0,
+          "pass_rate_reviewed_only": 1.0
+        },
+        "attribution": {
+          "reviewed": 1,
+          "unreviewed": 0,
+          "passed": 1,
+          "failed": 0,
+          "pass_rate_reviewed_only": 1.0
+        },
+        "citation_support": {
+          "reviewed": 1,
+          "unreviewed": 0,
+          "passed": 1,
+          "failed": 0,
+          "pass_rate_reviewed_only": 1.0
+        },
+        "uncertainty": {
+          "reviewed": 1,
+          "unreviewed": 0,
+          "passed": 1,
+          "failed": 0,
+          "pass_rate_reviewed_only": 1.0
+        }
+      },
+      "revised": {
+        "completeness": {
+          "reviewed": 1,
+          "unreviewed": 0,
+          "passed": 1,
+          "failed": 0,
+          "pass_rate_reviewed_only": 1.0
+        },
+        "attribution": {
+          "reviewed": 1,
+          "unreviewed": 0,
+          "passed": 1,
+          "failed": 0,
+          "pass_rate_reviewed_only": 1.0
+        },
+        "citation_support": {
+          "reviewed": 1,
+          "unreviewed": 0,
+          "passed": 1,
+          "failed": 0,
+          "pass_rate_reviewed_only": 1.0
+        },
+        "uncertainty": {
+          "reviewed": 1,
+          "unreviewed": 0,
+          "passed": 1,
+          "failed": 0,
+          "pass_rate_reviewed_only": 1.0
+        }
+      }
+    }
+  }
+}

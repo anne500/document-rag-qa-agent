@@ -24,7 +24,8 @@ not universal reliability or completion of a thesis experiment.
 | 📚 Extension 5: manual multi-document answers | 🟩 Three inspected; Birch wording caveat | [Observed answers](multidoc-manual-20261110.md) |
 | 🧪 Extension 5: capture and review implementation | 🟩 52 offline tests in development; live capture completed; 🟠 Windows test output not supplied | [Checks](multidoc-implementation.md); [guide](../guides/MULTIDOC_EVALUATION.md) |
 | 📊 Extension 5: first 13-answer capture | 🟩 Artifact checks passed; assistant review recorded; 🟠 human ratings pending | [Audit and proposed ratings](multidoc-run-audit-20261110.md); [raw capture](multidoc-runs/20261110T222813Z-bc04d7e8/summary.md) |
-| 🧪 Extension 5 follow-up: frozen-context prompt comparison | 🟩 65 offline tests in development; 🟠 Windows and live paired capture pending | [Checks](prompt-comparison-implementation.md); [design](../guides/PROMPT_COMPARISON.md) |
+| 🧪 Extension 5 follow-up: frozen-context prompt comparison | 🟩 65 offline tests in development; paired capture audited; 🟠 Windows test output and independent human ratings pending | [Checks](prompt-comparison-implementation.md); [design](../guides/PROMPT_COMPARISON.md) |
+| 📊 Extension 5 follow-up: first prompt capture | 🟩 13 pairs audited; AI source review recorded; 🟠 human confirmation pending | [Audit and adoption recommendation](prompt-run-audit-20261110.md) |
 | 🛡️ Retrieved-document instruction robustness | 🟠 Not evaluated | Future extension |
 
 ## 🎨 Where the measured-results dashboard appears
@@ -91,6 +92,9 @@ No default retrieval or prompt changes were made by the audit.
 
 The [frozen-context comparison](../guides/PROMPT_COMPARISON.md) is implemented.
 It regenerates both prompts' answers on the same 13 source contexts, with no
-retrieval calls and no interactive default change. New paired prompt effects
-remain unmeasured; the prior assistant-reviewed results are historical source
-findings, not results of the new experiment.
+retrieval calls and no interactive default change. The [first paired capture audit](prompt-run-audit-20261110.md) now records
+results: proposed citation-support passes rose from 9/12 to 11/12, with
+completeness unchanged. The remaining Willow citation issue and qualitative
+scope caveats support keeping the revision experimental. Human validation
+remains pending.
+

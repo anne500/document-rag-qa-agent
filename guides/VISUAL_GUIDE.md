@@ -159,5 +159,12 @@ human confirmation remains pending. The original capture dashboard is preserved.
 
 The [comparison workflow](PROMPT_COMPARISON.md) branches each saved question
 and exact context into original and revised prompt calls, then compares their
-claims. All 65 offline checks pass in development; live effects remain pending.
+claims. All 65 offline checks pass in development; the first paired capture is now audited.
 New numeric syntax checks handle [1, 2] without claiming semantic citation support.
+
+
+The [first prompt audit](../verification/prompt-run-audit-20261110.md) checks
+13 pairs and 26 answers. Proposed assistant citation-support ratings improve
+for both Birch contexts; Willow k=2 remains problematic. Qualitative scope
+caveats are preserved separately from the four-dimension rubric. Human review
+is pending, and the interactive prompt remains the original default.

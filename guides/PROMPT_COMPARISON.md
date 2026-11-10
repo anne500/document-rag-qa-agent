@@ -1,6 +1,6 @@
 # 🧪 Frozen-Context Prompt Comparison
 
-**🟩 Implementation and 65 offline tests passed in development. 🟠 Local prompt effects unmeasured.**
+**🟩 65 offline tests passed in development; first paired capture audited. 🟠 Independent human review pending.**
 
 This follows [Extension 5's first answer audit](../verification/multidoc-run-audit-20261110.md).
 More context recovered missing facts, but the model still added unsupported
@@ -155,3 +155,18 @@ benchmark. Independent human review and new held-out cases remain future work.
 [Implementation checks](../verification/prompt-comparison-implementation.md) ·
 [Prior source audit](../verification/multidoc-run-audit-20261110.md) ·
 [Tutorial acknowledgment](../README.md#tutorial-acknowledgment-and-attribution)
+
+
+## 📊 First Paired Capture Follow-up
+
+The [November 10 audit](../verification/prompt-run-audit-20261110.md) checks
+all 13 pairs and 26 answers, including exact context/prompt hashes and numeric
+citation results. The proposed assistant review records two Birch citation-support
+improvements, unchanged expected-answer completeness, and no four-dimension
+pass/fail regressions. Willow's k=2 citation-scope defect remains. New scope
+concerns in the three-project k=2 answer and unrequested details are documented
+without adding a new scored dimension after inspecting outputs.
+
+Keep the revised prompt experimental while these issues are addressed.
+Assistant-review artifacts are separate from the unchanged, unreviewed human
+worksheet. The original raw capture files and interactive prompt are preserved.

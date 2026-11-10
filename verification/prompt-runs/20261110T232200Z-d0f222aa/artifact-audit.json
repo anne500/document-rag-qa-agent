@@ -1,0 +1,25 @@
+{
+  "status": "passed",
+  "scope": "Saved artifact consistency, not live inference reproduction or answer accuracy",
+  "pairs_checked": 13,
+  "answers_checked": 26,
+  "frozen_context_excerpt_occurrences_checked": 38,
+  "answer_context_hashes_checked": 26,
+  "answer_prompt_hashes_checked": 26,
+  "snapshot_digests_checked": 3,
+  "alternating_call_orders_checked": 13,
+  "citation_syntax_checks_recomputed": 26,
+  "source_marker_score_values_recomputed": 65,
+  "out_of_range_numeric_labels": 0,
+  "code_digest_line_endings": {
+    "eval_prompt_comparison.py": "CRLF",
+    "prompt_lab.py": "CRLF",
+    "qa_agent.py": "CRLF",
+    "multidoc_lab.py": "CRLF",
+    "retrieval_metrics.py": "CRLF",
+    "eval_retrieval.py": "CRLF"
+  },
+  "saved_model_digest_matches_source_capture": true,
+  "baseline_answers_identical_to_original_capture": 13,
+  "original_human_review": "26 records remain unreviewed"
+}

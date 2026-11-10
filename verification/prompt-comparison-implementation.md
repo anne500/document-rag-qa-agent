@@ -1,6 +1,6 @@
 # 🧪 Prompt Comparison Implementation Verification
 
-**🟩 65 offline tests passed in development. 🟠 Windows tests and live paired answers pending.**
+**🟩 65 offline tests passed in development; first live paired capture audited. 🟠 Windows test output and independent human answer ratings pending.**
 
 November 10, 2026: all 52 existing checks plus 13 new checks passed with
 Python 3.12 in development. Validation checked all 13 frozen contexts from
@@ -45,3 +45,23 @@ claimed from passing implementation tests.
 [Workflow and limitations](../guides/PROMPT_COMPARISON.md) ·
 [Verification dashboard](DASHBOARD.md) ·
 [Tutorial provenance](../README.md#tutorial-acknowledgment-and-attribution)
+
+
+## 📊 Live Follow-up and Artifact Reproduction
+
+The user captured all 26 paired answers on Windows and published the complete
+run. The [audit](prompt-run-audit-20261110.md) rechecks 13 pair contexts,
+26 prompt/context hashes each, three snapshot digests, 26 citation results,
+and six code digests. All saved-artifact checks passed. The helper also rejected
+separately corrupted context and citation results in temporary copies.
+
+The 65-test output from Windows has not been supplied. The live capture does
+exercise the model factory's prompt override, but it does not replace that
+missing test-suite observation or independent human answer review.
+
+```powershell
+python .\tools\audit_prompt_run.py .\verification\prompt-runs\20261110T232200Z-d0f222aa
+```
+
+This reproduction command makes no model calls. The separate assistant ratings
+are proposals with claim/excerpt notes; original human ratings remain null.

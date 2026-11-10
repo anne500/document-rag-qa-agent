@@ -1,0 +1,145 @@
+[
+  {
+    "record_id": "cedar_maple:k2",
+    "suite": "retrieved",
+    "k": 2,
+    "dimensions": {
+      "completeness": "unchanged",
+      "attribution": "unchanged",
+      "citation_support": "unchanged",
+      "uncertainty": "unchanged"
+    }
+  },
+  {
+    "record_id": "cedar_maple:k4",
+    "suite": "retrieved",
+    "k": 4,
+    "dimensions": {
+      "completeness": "unchanged",
+      "attribution": "unchanged",
+      "citation_support": "unchanged",
+      "uncertainty": "unchanged"
+    }
+  },
+  {
+    "record_id": "atlas_pages:k2",
+    "suite": "retrieved",
+    "k": 2,
+    "dimensions": {
+      "completeness": "unchanged",
+      "attribution": "unchanged",
+      "citation_support": "unchanged",
+      "uncertainty": "unchanged"
+    }
+  },
+  {
+    "record_id": "atlas_pages:k4",
+    "suite": "retrieved",
+    "k": 4,
+    "dimensions": {
+      "completeness": "unchanged",
+      "attribution": "unchanged",
+      "citation_support": "unchanged",
+      "uncertainty": "unchanged"
+    }
+  },
+  {
+    "record_id": "cedar_birch_missing:k2",
+    "suite": "retrieved",
+    "k": 2,
+    "dimensions": {
+      "completeness": "unchanged",
+      "attribution": "unchanged",
+      "citation_support": "improved",
+      "uncertainty": "improved"
+    }
+  },
+  {
+    "record_id": "cedar_birch_missing:k4",
+    "suite": "retrieved",
+    "k": 4,
+    "dimensions": {
+      "completeness": "unchanged",
+      "attribution": "unchanged",
+      "citation_support": "improved",
+      "uncertainty": "unchanged"
+    }
+  },
+  {
+    "record_id": "three_unit_approvals:k2",
+    "suite": "retrieved",
+    "k": 2,
+    "dimensions": {
+      "completeness": "unchanged",
+      "attribution": "unchanged",
+      "citation_support": "unchanged",
+      "uncertainty": "unchanged"
+    }
+  },
+  {
+    "record_id": "three_unit_approvals:k4",
+    "suite": "retrieved",
+    "k": 4,
+    "dimensions": {
+      "completeness": "unchanged",
+      "attribution": "unchanged",
+      "citation_support": "unchanged",
+      "uncertainty": "unchanged"
+    }
+  },
+  {
+    "record_id": "four_unit_failures:k2",
+    "suite": "retrieved",
+    "k": 2,
+    "dimensions": {
+      "completeness": "unchanged",
+      "attribution": "unchanged",
+      "citation_support": "unchanged",
+      "uncertainty": "unchanged"
+    }
+  },
+  {
+    "record_id": "four_unit_failures:k4",
+    "suite": "retrieved",
+    "k": 4,
+    "dimensions": {
+      "completeness": "unchanged",
+      "attribution": "unchanged",
+      "citation_support": "unchanged",
+      "uncertainty": "unchanged"
+    }
+  },
+  {
+    "record_id": "known_unknown:k2",
+    "suite": "retrieved",
+    "k": 2,
+    "dimensions": {
+      "completeness": "unchanged",
+      "attribution": "unchanged",
+      "citation_support": "unchanged",
+      "uncertainty": "unchanged"
+    }
+  },
+  {
+    "record_id": "known_unknown:k4",
+    "suite": "retrieved",
+    "k": 4,
+    "dimensions": {
+      "completeness": "unchanged",
+      "attribution": "unchanged",
+      "citation_support": "unchanged",
+      "uncertainty": "unchanged"
+    }
+  },
+  {
+    "record_id": "conflicting_approvals:control",
+    "suite": "context_control",
+    "k": null,
+    "dimensions": {
+      "completeness": "unchanged",
+      "attribution": "unchanged",
+      "citation_support": "unchanged",
+      "uncertainty": "unchanged"
+    }
+  }
+]
