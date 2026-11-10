@@ -18,6 +18,9 @@ not universal reliability or completion of a thesis experiment.
 | 🧪 Extension 3: evaluation implementation | 🟩 21 Windows tests; 22 development tests after CSV fix | [Implementation verification](retrieval-lab-implementation.md) |
 | 📊 Extension 3: local embedding evaluation | 🟩 Completed; all saved scores recomputed | [Measured dashboard](retrieval-runs/20261110T184155Z-a94eff34/summary.md); [audit](retrieval-run-audit-20261110.md) |
 | 🔌 Live Chroma/Ollama integration for the lab | 🟩 One Windows run inspected | 28 query records; six aggregate settings; [report](retrieval-runs/20261110T184155Z-a94eff34/report.json) |
+| 🔎 Extension 4: identifier-aware implementation | 🟩 41 offline tests passed in development | [Implementation checks](id-retrieval-implementation.md) |
+| 📊 Extension 4: paired local evaluation | 🟠 Awaiting local run and inspection | [ID-priority guide](../guides/IDENTIFIER_RETRIEVAL.md) |
+| 💬 Extension 4: interactive answer and citations | 🟠 Awaiting manual check | Explicit id_priority mode; semantic remains the default |
 | 🛡️ Retrieved-document instruction robustness | 🟠 Not evaluated | Future extension |
 
 ## 🎨 Where the measured-results dashboard appears

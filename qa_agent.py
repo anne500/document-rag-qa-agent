@@ -1,5 +1,7 @@
 from pathlib import Path
 from time import perf_counter
+import argparse
+import json
 
 from pypdf import PdfReader
 from langchain.agents import create_agent
@@ -9,6 +11,7 @@ from langchain_core.messages import SystemMessage
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_ollama import ChatOllama, OllamaEmbeddings
 from langchain_chroma import Chroma
+from id_retrieval import IdentifierAwareRetriever
 
 
 BASE_DIR = Path(__file__).resolve().parent
@@ -187,10 +190,23 @@ def build_agent():
     )
 
 
-def main():
+def main(argv=None):
+    parser = argparse.ArgumentParser(description="Local document Q&A")
+    parser.add_argument(
+        "--retrieval-mode", choices=["semantic", "id_priority"], default="semantic"
+    )
+    parser.add_argument("--candidate-pool", type=int, default=20)
+    args = parser.parse_args(argv)
+    if args.candidate_pool < 1:
+        parser.error("candidate-pool must be positive")
     vectorstore = get_vectorstore()
+    retriever = (
+        IdentifierAwareRetriever(vectorstore, args.candidate_pool)
+        if args.retrieval_mode == "id_priority" else None
+    )
     agent = build_agent()
 
+    print("Retrieval mode:", args.retrieval_mode)
     print("\nReady. Ask about your documents. Type exit to quit.")
 
     while True:
@@ -206,9 +222,15 @@ def main():
             continue
 
         started = perf_counter()
-        documents = vectorstore.similarity_search(
-            question, k=RETRIEVAL_K
-        )
+        if retriever is None:
+            documents = vectorstore.similarity_search(question, k=RETRIEVAL_K)
+        else:
+            retrieved = retriever.retrieve(question, k=RETRIEVAL_K)
+            documents = [
+                Document(page_content=chunk["text"], metadata=chunk["metadata"])
+                for chunk in retrieved["ranked"]
+            ]
+            print("Retrieval trace:", json.dumps(retrieved["trace"]))
 
         excerpts = "\n\n".join(
             f"[{number}] {source_label(document)}\n{document.page_content}"

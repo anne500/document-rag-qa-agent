@@ -10,7 +10,7 @@
 
 ## 🧭 Explore the project
 
-[🧩 Architecture](#architecture) · [🚀 Setup](#setup-on-windows-powershell) · [🧪 Results & verification](#initial-verification) · [🗂️ Evidence & guides](#visual-guide-and-pdf-verification) · [🧪 Evaluation lab](#retrieval-evaluation-lab) · [📊 Measured results](#recorded-retrieval-results) · [📋 Verification dashboard](verification/DASHBOARD.md) · [🎨 Visual standard](VISUAL_STYLE.md)
+[🧩 Architecture](#architecture) · [🚀 Setup](#setup-on-windows-powershell) · [🧪 Results & verification](#initial-verification) · [🗂️ Evidence & guides](#visual-guide-and-pdf-verification) · [🧪 Evaluation lab](#retrieval-evaluation-lab) · [📊 Measured results](#recorded-retrieval-results) · [🔎 Identifier retrieval](#identifier-aware-retrieval) · [📋 Verification dashboard](verification/DASHBOARD.md) · [🎨 Visual standard](VISUAL_STYLE.md)
 
 🎨 [Shared architecture colors and diagram conventions](VISUAL_STYLE.md)
 
@@ -245,6 +245,43 @@ After inspection, the actual run directory can be committed with its dashboard.
 [🗂️ Authored cases](evaluation/cases.json) ·
 [🧪 Offline verification](verification/retrieval-lab-implementation.md)
 
+<a id="identifier-aware-retrieval"></a>
+
+## 🔎 Identifier-Aware Retrieval
+
+**🟩 Implementation: 41 offline tests passed. 🟠 Local paired results pending.**
+
+The optional mode prioritizes whole build/release IDs, then uses semantic
+candidates to fill remaining positions. Unknown IDs and questions without IDs
+fall back to semantic order. Matching is case-insensitive and token-based:
+MAPLE-207 does not match MAPLE-2070.
+
+| Mode | Purpose | Status |
+| --- | --- | --- |
+| Semantic | Existing default and published baseline | Local results audited |
+| ID priority | Exact-ID selection plus semantic fallback | Offline checked; live comparison pending |
+
+```powershell
+python -m unittest discover -s tests -v
+python .\eval_id_retrieval.py --validate-only
+python .\eval_id_retrieval.py
+```
+
+To try the interactive mode explicitly:
+
+```powershell
+python .\qa_agent.py --retrieval-mode id_priority
+```
+
+The paired runner compares both methods on the same questions and semantic
+candidate lists, saves regressions, and generates two colored charts.
+It does not invoke Qwen or modify the existing semantic experiment artifacts.
+No local ranking or answer-quality improvement is claimed yet.
+
+[🧩 Colored workflow and matching rules](guides/IDENTIFIER_RETRIEVAL.md) ·
+[🧪 Implementation verification](verification/id-retrieval-implementation.md) ·
+[📋 Verification dashboard](verification/DASHBOARD.md)
+
 <a id="recorded-retrieval-results"></a>
 
 ## 📊 Recorded Retrieval Results
@@ -291,6 +328,6 @@ Published: July 2, 2026.
 | Original author | Darsh Shah |
 | Publisher | freeCodeCamp |
 | Tutorial foundation | Local document loading, chunking, Ollama embeddings, Chroma persistence, retrieval middleware, and document Q&A |
-| Repository extensions | Fictional project fixtures, page-specific PDF verification, retrieval experiments, automatic startup index refresh, a retrieval evaluation lab, verification records, and visual documentation |
+| Repository extensions | Fictional project fixtures, page-specific PDF verification, retrieval experiments, automatic startup index refresh, retrieval evaluation and identifier-priority comparison labs, verification records, and visual documentation |
 
 The original tutorial is credited for the learning foundation. Repository adaptations, experiments, and research connections are documented separately.

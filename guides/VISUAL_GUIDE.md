@@ -51,6 +51,7 @@ Excerpt labels are assigned separately for each question.
 | Missing-information handling | 🟩 Observed | Selected Markdown and PDF questions |
 | PDF page citations | 🟩 Observed | Three Atlas smoke checks |
 | Retrieval Evaluation Lab | 🟩 First local run audited; 22 development tests | [Measured results](../verification/retrieval-runs/20261110T184155Z-a94eff34/summary.md) |
+| Identifier-aware retrieval | 🟩 Offline implementation; 🟠 local comparison pending | [Whole-ID workflow](IDENTIFIER_RETRIEVAL.md) |
 | Automatic index updates | 🟠 Pending | Manual rebuild currently required |
 | Scanned PDFs and OCR | 🟠 Pending | Not implemented |
 | Document-instruction robustness | 🟠 Pending | Not evaluated |
@@ -122,3 +123,9 @@ and the generated results dashboard.
 
 See the [evidence audit](../verification/retrieval-run-audit-20261110.md) for
 the Maple retrieval miss, Atlas page coverage, and the limits of these scores.
+
+## 🔎 Whole-ID Retrieval Extension
+
+See the [colored architecture and paired-evaluation guide](IDENTIFIER_RETRIEVAL.md)
+for exact identifier matching, semantic fallback, unknown IDs, and regression checks.
+The semantic-only measurements above remain the historical baseline.
