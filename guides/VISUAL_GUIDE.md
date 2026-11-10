@@ -14,14 +14,20 @@ flowchart TD
     E --> F["Retrieve evidence for each question"]
     F --> G["Qwen answer with excerpt labels"]
     F --> H["Source list with PDF page numbers"]
-    style A fill:#dbeafe,stroke:#2563eb,color:#172554
-    style B fill:#dbeafe,stroke:#2563eb,color:#172554
-    style C fill:#ede9fe,stroke:#7c3aed,color:#2e1065
-    style D fill:#dbeafe,stroke:#2563eb,color:#172554
-    style E fill:#dbeafe,stroke:#2563eb,color:#172554
-    style F fill:#ede9fe,stroke:#7c3aed,color:#2e1065
-    style G fill:#dcfce7,stroke:#16a34a,color:#14532d
-    style H fill:#dcfce7,stroke:#16a34a,color:#14532d
+
+    %% Shared architecture palette: see VISUAL_STYLE.md
+    classDef default fill:#F8FAFC,stroke:#475569,color:#0F172A,stroke-width:2px;
+    classDef process fill:#DBEAFE,stroke:#2563EB,color:#172554,stroke-width:2px;
+    classDef model fill:#EDE9FE,stroke:#7C3AED,color:#3B0764,stroke-width:2px;
+    classDef store fill:#CCFBF1,stroke:#0F766E,color:#134E4A,stroke-width:2px;
+    classDef decision fill:#FEF3C7,stroke:#B45309,color:#78350F,stroke-width:2px;
+    classDef human fill:#FFEDD5,stroke:#C2410C,color:#7C2D12,stroke-width:2px;
+    classDef output fill:#DCFCE7,stroke:#15803D,color:#14532D,stroke-width:2px;
+    classDef failure fill:#FEE2E2,stroke:#B91C1C,color:#7F1D1D,stroke-width:2px;
+    class A,B,C,D,F process;
+    class G model;
+    class E store;
+    class H output;
 ```
 
 ## 🔎 Reading a citation
