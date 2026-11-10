@@ -10,7 +10,7 @@
 
 ## 🧭 Explore the project
 
-[🧩 Architecture](#architecture) · [🚀 Setup](#setup-on-windows-powershell) · [🧪 Results & verification](#initial-verification) · [🗂️ Evidence & guides](#visual-guide-and-pdf-verification) · [🎨 Visual standard](VISUAL_STYLE.md)
+[🧩 Architecture](#architecture) · [🚀 Setup](#setup-on-windows-powershell) · [🧪 Results & verification](#initial-verification) · [🗂️ Evidence & guides](#visual-guide-and-pdf-verification) · [🧪 Evaluation lab](#retrieval-evaluation-lab) · [📋 Verification dashboard](verification/DASHBOARD.md) · [🎨 Visual standard](VISUAL_STYLE.md)
 
 🎨 [Shared architecture colors and diagram conventions](VISUAL_STYLE.md)
 
@@ -173,7 +173,7 @@ See [the verification record](verification/initial-results.md) for details.
 - Refusal and document-instruction handling are prompt-based, not guaranteed.
 - Scanned PDFs require OCR, which is not implemented.
 - PDF loading and page citations passed three initial smoke checks; broader PDF coverage remains unverified.
-- No automated evaluation suite or conversational memory is included.
+- An automated retrieval evaluation lab is included; generated-answer evaluation and conversational memory are not implemented.
 - Dependency versions reflect the tested Windows environment.
 
 <a id="local-execution-and-document-handling"></a>
@@ -214,6 +214,36 @@ python .\tools\make_demo_pdf.py
 ```
 
 
+<a id="retrieval-evaluation-lab"></a>
+
+## 🧪 Retrieval Evaluation Lab
+
+Compare retrieval settings on 14 authored questions: 12 evidence cases and
+2 unscored no-evidence controls. This extension evaluates retrieval without
+calling the chat model or changing the interactive agent index.
+
+| 🟦 Learn | 🟩 Inspect on GitHub | 🟪 Research connection |
+| --- | --- | --- |
+| Compare 500/1000-character chunks at k=1,2,3 | JSON evidence, CSV, and a colored results dashboard | Separate evidence retrieval from answer generation |
+| Check source, PDF page, and authored text markers | Per-question ranks and matched evidence groups | Traceable evaluation labels and documented limitations |
+
+**Implementation status:** 21 offline scorer and mocked-runner tests passed.
+Real local embedding results are pending; no best configuration is claimed.
+
+```powershell
+python -m unittest discover -s tests -v
+python .\eval_retrieval.py --validate-only
+python .\eval_retrieval.py
+```
+
+The runner saves each unique experiment under verification/retrieval-runs/.
+After inspection, the actual run directory can be committed with its dashboard.
+
+[📊 Lab guide and metric definitions](guides/RETRIEVAL_LAB.md) ·
+[📋 Verification dashboard](verification/DASHBOARD.md) ·
+[🗂️ Authored cases](evaluation/cases.json) ·
+[🧪 Offline verification](verification/retrieval-lab-implementation.md)
+
 <a id="tutorial-acknowledgment-and-attribution"></a>
 
 ## 📚 Tutorial Acknowledgment and Attribution
@@ -229,6 +259,6 @@ Published: July 2, 2026.
 | Original author | Darsh Shah |
 | Publisher | freeCodeCamp |
 | Tutorial foundation | Local document loading, chunking, Ollama embeddings, Chroma persistence, retrieval middleware, and document Q&A |
-| Repository extensions | Fictional project fixtures, page-specific PDF verification, retrieval experiments, automatic startup index refresh, verification records, and visual documentation |
+| Repository extensions | Fictional project fixtures, page-specific PDF verification, retrieval experiments, automatic startup index refresh, a retrieval evaluation lab, verification records, and visual documentation |
 
 The original tutorial is credited for the learning foundation. Repository adaptations, experiments, and research connections are documented separately.

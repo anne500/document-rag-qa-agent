@@ -1,0 +1,242 @@
+{
+  "schema_version": 1,
+  "title": "Fictional project retrieval evaluation",
+  "description": "Authored evidence markers test retrieval only, not answer quality. No-evidence controls are excluded from relevance metrics.",
+  "expected_sources": [
+    "docs/cedar-project.md",
+    "docs/maple-project.md",
+    "docs/birch-project.md",
+    "docs/atlas-release-report.pdf"
+  ],
+  "expected_document_units": 5,
+  "cases": [
+    {
+      "id": "cedar_failure",
+      "kind": "evidence",
+      "question": "Why did build CEDAR-104 fail?",
+      "required_evidence": [
+        {
+          "id": "cedar_dependency",
+          "source": "docs/cedar-project.md",
+          "page": null,
+          "contains": [
+            "cedar-utils==9.9.9",
+            "could not",
+            "package index"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cedar_approval",
+      "kind": "evidence",
+      "question": "Who must approve a Cedar release?",
+      "required_evidence": [
+        {
+          "id": "cedar_approval",
+          "source": "docs/cedar-project.md",
+          "page": null,
+          "contains": [
+            "approval from a maintainer"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cedar_recovery",
+      "kind": "evidence",
+      "question": "What should be checked before rerunning build CEDAR-104?",
+      "required_evidence": [
+        {
+          "id": "cedar_recovery",
+          "source": "docs/cedar-project.md",
+          "page": null,
+          "contains": [
+            "dependency version",
+            "index configuration"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "maple_failure",
+      "kind": "evidence",
+      "question": "Why did build MAPLE-207 fail?",
+      "required_evidence": [
+        {
+          "id": "maple_certificate",
+          "source": "docs/maple-project.md",
+          "page": null,
+          "contains": [
+            "signing certificate",
+            "expired"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "maple_misleading",
+      "kind": "evidence",
+      "question": "Did MAPLE-207 fail because the runner ran out of disk space?",
+      "required_evidence": [
+        {
+          "id": "maple_certificate",
+          "source": "docs/maple-project.md",
+          "page": null,
+          "contains": [
+            "signing certificate",
+            "expired"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "birch_disk",
+      "kind": "evidence",
+      "question": "How much free disk space is required before rerunning BIRCH-309?",
+      "required_evidence": [
+        {
+          "id": "birch_disk",
+          "source": "docs/birch-project.md",
+          "page": null,
+          "contains": [
+            "20 GB",
+            "free disk space"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "birch_approval_unspecified",
+      "kind": "evidence",
+      "question": "Who must approve a Birch release?",
+      "required_evidence": [
+        {
+          "id": "birch_unspecified_approval",
+          "source": "docs/birch-project.md",
+          "page": null,
+          "contains": [
+            "does not specify release approval requirements"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "atlas_approval",
+      "kind": "evidence",
+      "question": "Who must approve release ATLAS-R12?",
+      "required_evidence": [
+        {
+          "id": "atlas_approval",
+          "source": "docs/atlas-release-report.pdf",
+          "page": 1,
+          "contains": [
+            "quality lead",
+            "operations lead"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "atlas_failure_recovery",
+      "kind": "evidence",
+      "question": "Why did ATLAS-418 fail, and what should be done before rerunning it?",
+      "required_evidence": [
+        {
+          "id": "atlas_token",
+          "source": "docs/atlas-release-report.pdf",
+          "page": 2,
+          "contains": [
+            "access token",
+            "expired"
+          ]
+        },
+        {
+          "id": "atlas_recovery",
+          "source": "docs/atlas-release-report.pdf",
+          "page": 2,
+          "contains": [
+            "rotate the registry access token",
+            "authenticate"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "atlas_cross_page",
+      "kind": "evidence",
+      "question": "For Atlas, who approves the release and why did build ATLAS-418 fail?",
+      "required_evidence": [
+        {
+          "id": "atlas_approval",
+          "source": "docs/atlas-release-report.pdf",
+          "page": 1,
+          "contains": [
+            "quality lead",
+            "operations lead"
+          ]
+        },
+        {
+          "id": "atlas_token",
+          "source": "docs/atlas-release-report.pdf",
+          "page": 2,
+          "contains": [
+            "access token",
+            "expired"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "compare_approvals",
+      "kind": "evidence",
+      "question": "Compare the release approval requirements for Cedar and Maple.",
+      "required_evidence": [
+        {
+          "id": "cedar_approval",
+          "source": "docs/cedar-project.md",
+          "page": null,
+          "contains": [
+            "approval from a maintainer"
+          ]
+        },
+        {
+          "id": "maple_approval",
+          "source": "docs/maple-project.md",
+          "page": null,
+          "contains": [
+            "approval",
+            "release manager"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "atlas_date_unspecified",
+      "kind": "evidence",
+      "question": "When is Atlas scheduled for production deployment?",
+      "required_evidence": [
+        {
+          "id": "atlas_unspecified_date",
+          "source": "docs/atlas-release-report.pdf",
+          "page": 2,
+          "contains": [
+            "does not specify a production deployment date"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "absent_willow",
+      "kind": "no_evidence",
+      "question": "What is Project Willow's recovery code?",
+      "required_evidence": []
+    },
+    {
+      "id": "absent_neptune",
+      "kind": "no_evidence",
+      "question": "What is Project Neptune's annual operating budget?",
+      "required_evidence": []
+    }
+  ]
+}

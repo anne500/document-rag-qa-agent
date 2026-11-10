@@ -50,6 +50,7 @@ Excerpt labels are assigned separately for each question.
 | Direct project retrieval | 🟩 Observed | Cedar, Maple, and Birch |
 | Missing-information handling | 🟩 Observed | Selected Markdown and PDF questions |
 | PDF page citations | 🟩 Observed | Three Atlas smoke checks |
+| Retrieval Evaluation Lab | 🟩 Offline implementation; 🟠 local run pending | [21 tests and scope](../verification/retrieval-lab-implementation.md) |
 | Automatic index updates | 🟠 Pending | Manual rebuild currently required |
 | Scanned PDFs and OCR | 🟠 Pending | Not implemented |
 | Document-instruction robustness | 🟠 Pending | Not evaluated |
@@ -107,3 +108,10 @@ flowchart TD
 This does not implement live watching, incremental embedding, or secure erasure.
 
 See the [refresh results](../verification/index-refresh-results.md).
+
+## 📋 Complete Verification Dashboard
+
+See the [repository verification dashboard](../verification/DASHBOARD.md) for
+the tutorial baseline, extensions, preserved failures, and pending local checks.
+The [colored evaluation guide](RETRIEVAL_LAB.md) explains the experiment flow
+and the generated results dashboard.
