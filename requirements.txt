@@ -66,6 +66,7 @@ orjson==3.13.0
 ormsgpack==1.13.1
 overrides==7.7.0
 packaging==26.3
+pillow==13.0.0
 propcache==0.5.4
 protobuf==7.36.2
 pybase64==1.5.1
@@ -80,6 +81,7 @@ python-dateutil==4.0.0
 python-dotenv==1.2.4
 PyYAML==6.0.3
 referencing==0.37.0
+reportlab==5.1.0
 requests==2.34.2
 requests-oauthlib==2.0.0
 requests-toolbelt==1.0.0

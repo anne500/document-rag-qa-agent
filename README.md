@@ -117,7 +117,7 @@ See [the verification record](verification/initial-results.md) for details.
 - Similarity search can retrieve irrelevant documents.
 - Refusal and document-instruction handling are prompt-based, not guaranteed.
 - Scanned PDFs require OCR, which is not implemented.
-- PDF loading and page citations have not yet been verified.
+- PDF loading and page citations passed three initial smoke checks; broader PDF coverage remains unverified.
 - No automated evaluation suite or conversational memory is included.
 - Dependency versions reflect the tested Windows environment.
 
@@ -136,3 +136,19 @@ before committing and keep private material out of the public repository.
 This project is a foundation for an Engineering Evidence Assistant.
 Future work can evaluate retrieval accuracy, citation support,
 multi-document questions, and answers with and without retrieved evidence.
+
+## 🎨 Visual Guide and PDF Verification
+
+See the [colored visual guide](guides/VISUAL_GUIDE.md) for architecture,
+citation interpretation, and verification status.
+
+Three Atlas PDF smoke checks verified page-specific evidence for release
+approval, build recovery, and missing deployment information.
+See the [PDF verification record](verification/pdf-results.md).
+
+Regenerate the fictional two-page PDF with:
+
+```powershell
+python .\tools\make_demo_pdf.py
+```
+
