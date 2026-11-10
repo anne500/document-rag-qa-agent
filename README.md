@@ -249,7 +249,7 @@ After inspection, the actual run directory can be committed with its dashboard.
 
 ## 🔎 Identifier-Aware Retrieval
 
-**🟩 Implementation: 41 offline tests passed. 🟠 Local paired results pending.**
+**🟩 First paired local run completed and audited. 🟠 Interactive answer check pending.**
 
 The optional mode prioritizes whole build/release IDs, then uses semantic
 candidates to fill remaining positions. Unknown IDs and questions without IDs
@@ -259,7 +259,7 @@ MAPLE-207 does not match MAPLE-2070.
 | Mode | Purpose | Status |
 | --- | --- | --- |
 | Semantic | Existing default and published baseline | Local results audited |
-| ID priority | Exact-ID selection plus semantic fallback | Offline checked; live comparison pending |
+| ID priority | Exact-ID selection plus semantic fallback | Paired retrieval run audited; interactive check pending |
 
 ```powershell
 python -m unittest discover -s tests -v
@@ -276,7 +276,28 @@ python .\qa_agent.py --retrieval-mode id_priority
 The paired runner compares both methods on the same questions and semantic
 candidate lists, saves regressions, and generates two colored charts.
 It does not invoke Qwen or modify the existing semantic experiment artifacts.
-No local ranking or answer-quality improvement is claimed yet.
+The first paired run improved Maple's rank from 2 to 1 at both chunk sizes.
+Generated-answer quality remains unverified for this mode.
+
+### 📊 First Paired Results
+
+| At k=1 | Semantic completeness | ID-priority completeness | Complete-evidence regressions |
+| --- | ---: | ---: | ---: |
+| 500-character chunks | 8/12 | 9/12 | 0 |
+| 1000-character chunks | 9/12 | 10/12 | 0 |
+
+![Observed identifier-priority metrics](verification/identifier-runs/20261110T200859Z-0651f827/id_priority-results.svg)
+
+No tested metric regressed in this run. All 12 semantic-fallback pairs retained
+identical results. At k=2, both methods covered every authored evidence group;
+ID priority placed supporting evidence earlier.
+
+Keep k=2 for multi-source questions. The corpus is tiny and fictional, and the
+semantic pools contained every chunk: this is evidence of reranking, not a
+measured benefit from finding evidence outside a truncated pool.
+
+[📊 Full paired dashboard](verification/identifier-runs/20261110T200859Z-0651f827/summary.md) ·
+[🔬 Evidence audit and limits](verification/identifier-run-audit-20261110.md)
 
 [🧩 Colored workflow and matching rules](guides/IDENTIFIER_RETRIEVAL.md) ·
 [🧪 Implementation verification](verification/id-retrieval-implementation.md) ·

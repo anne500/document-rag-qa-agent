@@ -1,6 +1,6 @@
 # 🔎 Identifier-Aware Retrieval
 
-**🟦 Learn retrieval control · 🟩 Offline checks passed · 🟪 Paired evaluation · 🟠 Local run pending**
+**🟦 Learn retrieval control · 🟩 Offline checks passed · 🟪 Paired evaluation · 🟩 Paired local run audited**
 
 This extension prioritizes chunks containing a whole build or release identifier,
 then fills remaining positions using semantic retrieval. It is a deterministic
@@ -52,7 +52,7 @@ Maple at rank 2. That observed failure motivates this rule.
 | --- | --- | --- |
 | Semantic Maple ranking: Birch, then Maple | 🟩 Observed in the published baseline | Supporting evidence was missed at k=1 |
 | Whole-ID promotion on controlled passages | 🟩 Offline test passed | MAPLE-207 text can move ahead of a disk-space match |
-| New paired embedding experiment | 🟠 Pending local run | Do not assume aggregate improvement |
+| New paired embedding experiment | 🟩 First local run audited | Maple promoted; no tested metric regressions in this run |
 | New interactive answer quality | 🟠 Pending manual check | A better rank does not prove a better answer |
 
 ## 🔢 Identifier rules
@@ -175,7 +175,7 @@ Hit@k, Complete@k, Coverage@k, MRR@k, and Precision@k use the
 - Reading all indexed text is not a scalable search architecture.
 - This is development-set comparison, not held-out research evidence.
 - The runner measures retrieval, not generation, citations, or abstention quality.
-- No live improvement is claimed before a local report is inspected.
+- The first observed improvement is limited to this small, authored development set.
 
 ## 📚 Tutorial and research provenance
 
@@ -189,3 +189,19 @@ Real-build evidence, revision identity, freshness, and held-out evaluation would
 still be required before making a research-effectiveness claim.
 
 API reference: [LangChain Chroma get](https://reference.langchain.com/python/langchain-chroma/vectorstores/Chroma/get).
+
+## 📊 First Observed Paired Run
+
+The [measured dashboard](../verification/identifier-runs/20261110T200859Z-0651f827/summary.md) and
+[full audit](../verification/identifier-run-audit-20261110.md) are published.
+Maple moved from semantic rank 2 to final rank 1 at both chunk sizes.
+All 12 fallback pairs retained identical results. The full semantic pools
+contained all chunks, so outside-pool recovery was not exercised by this run.
+
+### 🔵 Semantic method
+
+![Measured semantic results](../verification/identifier-runs/20261110T200859Z-0651f827/semantic-results.svg)
+
+### 🟣 Identifier-priority method
+
+![Measured ID-priority results](../verification/identifier-runs/20261110T200859Z-0651f827/id_priority-results.svg)

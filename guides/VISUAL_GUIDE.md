@@ -51,7 +51,7 @@ Excerpt labels are assigned separately for each question.
 | Missing-information handling | 🟩 Observed | Selected Markdown and PDF questions |
 | PDF page citations | 🟩 Observed | Three Atlas smoke checks |
 | Retrieval Evaluation Lab | 🟩 First local run audited; 22 development tests | [Measured results](../verification/retrieval-runs/20261110T184155Z-a94eff34/summary.md) |
-| Identifier-aware retrieval | 🟩 Offline implementation; 🟠 local comparison pending | [Whole-ID workflow](IDENTIFIER_RETRIEVAL.md) |
+| Identifier-aware retrieval | 🟩 Paired run audited; 🟠 interactive check pending | [Measured comparison](../verification/identifier-runs/20261110T200859Z-0651f827/summary.md) |
 | Automatic index updates | 🟠 Pending | Manual rebuild currently required |
 | Scanned PDFs and OCR | 🟠 Pending | Not implemented |
 | Document-instruction robustness | 🟠 Pending | Not evaluated |
@@ -129,3 +129,11 @@ the Maple retrieval miss, Atlas page coverage, and the limits of these scores.
 See the [colored architecture and paired-evaluation guide](IDENTIFIER_RETRIEVAL.md)
 for exact identifier matching, semantic fallback, unknown IDs, and regression checks.
 The semantic-only measurements above remain the historical baseline.
+
+## 🟣 Measured Identifier-Priority Comparison
+
+![ID-priority metrics](../verification/identifier-runs/20261110T200859Z-0651f827/id_priority-results.svg)
+
+Maple moved from rank 2 to rank 1 in both chunk configurations.
+The [audit](../verification/identifier-run-audit-20261110.md) checks the paired
+rankings and records limitations; answer quality remains a separate check.

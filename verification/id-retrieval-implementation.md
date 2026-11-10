@@ -19,14 +19,23 @@ No embedding or chat model is invoked by these tests.
 These controlled checks establish implementation behavior, not local model
 quality or performance gains.
 
-## 🟠 Pending local checks
+## 🟩 First Paired Local Run
 
-- Run the 41-test suite on the user's Windows environment.
-- Validate the actual five-unit corpus and 14 cases.
-- Run the paired Ollama/Chroma evaluation.
-- Inspect original semantic ranks, exact-ID traces, metrics, and regressions.
-- Check the interactive answer and citations with the new mode.
-- Publish the selected measured run and update the central dashboard.
+The actual five-unit corpus and 14 cases validated, and the paired local
+Ollama/Chroma run completed. Its [evidence audit](identifier-run-audit-20261110.md)
+reproduces all 56 method rankings, 168 scores, 72 delta rows, 12 CSV rows,
+and both charts. The corpus/code snapshot hashes also match.
+
+Maple moved from rank 2 to rank 1 at both chunk sizes. All 12 fallback pairs
+retained identical results, and no tested metric regressed in this run.
+These are small development-set findings, not answer-quality measurements.
+
+## 🟠 Remaining Checks
+
+- Record the 41-test suite output on the user's Windows environment.
+- Check the interactive answer and citations with explicit ID-priority mode.
+- Evaluate unknown IDs and larger corpora beyond the offline controlled checks.
+- Test generalization using new, held-out questions and artifact revisions.
 
 ## 🔗 Reproduction and scope
 
