@@ -10,7 +10,7 @@
 
 ## 🧭 Explore the project
 
-[🧩 Architecture](#architecture) · [🚀 Setup](#setup-on-windows-powershell) · [🧪 Results & verification](#initial-verification) · [🗂️ Evidence & guides](#visual-guide-and-pdf-verification) · [🧪 Evaluation lab](#retrieval-evaluation-lab) · [📋 Verification dashboard](verification/DASHBOARD.md) · [🎨 Visual standard](VISUAL_STYLE.md)
+[🧩 Architecture](#architecture) · [🚀 Setup](#setup-on-windows-powershell) · [🧪 Results & verification](#initial-verification) · [🗂️ Evidence & guides](#visual-guide-and-pdf-verification) · [🧪 Evaluation lab](#retrieval-evaluation-lab) · [📊 Measured results](#recorded-retrieval-results) · [📋 Verification dashboard](verification/DASHBOARD.md) · [🎨 Visual standard](VISUAL_STYLE.md)
 
 🎨 [Shared architecture colors and diagram conventions](VISUAL_STYLE.md)
 
@@ -227,8 +227,9 @@ calling the chat model or changing the interactive agent index.
 | Compare 500/1000-character chunks at k=1,2,3 | JSON evidence, CSV, and a colored results dashboard | Separate evidence retrieval from answer generation |
 | Check source, PDF page, and authored text markers | Per-question ranks and matched evidence groups | Traceable evaluation labels and documented limitations |
 
-**Implementation status:** 21 offline scorer and mocked-runner tests passed.
-Real local embedding results are pending; no best configuration is claimed.
+**Verification status:** the initial 21 tests passed on Windows and the first
+local embedding run completed. All saved scores were recomputed during audit.
+After the CSV formatting fix, 22 offline tests passed in development.
 
 ```powershell
 python -m unittest discover -s tests -v
@@ -243,6 +244,37 @@ After inspection, the actual run directory can be committed with its dashboard.
 [📋 Verification dashboard](verification/DASHBOARD.md) ·
 [🗂️ Authored cases](evaluation/cases.json) ·
 [🧪 Offline verification](verification/retrieval-lab-implementation.md)
+
+<a id="recorded-retrieval-results"></a>
+
+## 📊 Recorded Retrieval Results
+
+**🟩 First local run completed and audited: November 10, 2026.**
+
+![Measured retrieval metrics](verification/retrieval-runs/20261110T184155Z-a94eff34/retrieval-results.svg)
+
+| Configuration | Complete evidence | Coverage | MRR | Precision |
+| --- | ---: | ---: | ---: | ---: |
+| 500 characters, k=1 | 66.7% | 75.0% | 0.833 | 83.3% |
+| 500 characters, k=2 | 100% | 100% | 0.917 | 58.3% |
+| 1000 characters, k=1 | 75.0% | 83.3% | 0.917 | 91.7% |
+| 1000 characters, k=2 | 100% | 100% | 0.958 | 58.3% |
+
+At k=3, coverage was unchanged and precision fell to 38.9% for both chunk sizes.
+The working demo remains at 1000 characters and k=2.
+
+The misleading Maple question retrieved Birch first and Maple second. The
+Atlas cross-page question needed both PDF pages. These failures at k=1 are
+preserved alongside the successful k=2 results.
+
+**Scope:** 12 authored evidence cases on four fictional files; two no-evidence
+controls excluded from averages. This is not 100% generated-answer accuracy,
+a held-out benchmark, or a thesis-effectiveness result.
+
+[📊 Full six-setting dashboard](verification/retrieval-runs/20261110T184155Z-a94eff34/summary.md) ·
+[🔬 Evidence audit and limitations](verification/retrieval-run-audit-20261110.md) ·
+[🗂️ JSON report](verification/retrieval-runs/20261110T184155Z-a94eff34/report.json) ·
+[📋 Verification status](verification/DASHBOARD.md)
 
 <a id="tutorial-acknowledgment-and-attribution"></a>
 

@@ -50,7 +50,7 @@ Excerpt labels are assigned separately for each question.
 | Direct project retrieval | 🟩 Observed | Cedar, Maple, and Birch |
 | Missing-information handling | 🟩 Observed | Selected Markdown and PDF questions |
 | PDF page citations | 🟩 Observed | Three Atlas smoke checks |
-| Retrieval Evaluation Lab | 🟩 Offline implementation; 🟠 local run pending | [21 tests and scope](../verification/retrieval-lab-implementation.md) |
+| Retrieval Evaluation Lab | 🟩 First local run audited; 22 development tests | [Measured results](../verification/retrieval-runs/20261110T184155Z-a94eff34/summary.md) |
 | Automatic index updates | 🟠 Pending | Manual rebuild currently required |
 | Scanned PDFs and OCR | 🟠 Pending | Not implemented |
 | Document-instruction robustness | 🟠 Pending | Not evaluated |
@@ -115,3 +115,10 @@ See the [repository verification dashboard](../verification/DASHBOARD.md) for
 the tutorial baseline, extensions, preserved failures, and pending local checks.
 The [colored evaluation guide](RETRIEVAL_LAB.md) explains the experiment flow
 and the generated results dashboard.
+
+## 📊 Measured Retrieval Results
+
+![First local retrieval run](../verification/retrieval-runs/20261110T184155Z-a94eff34/retrieval-results.svg)
+
+See the [evidence audit](../verification/retrieval-run-audit-20261110.md) for
+the Maple retrieval miss, Atlas page coverage, and the limits of these scores.

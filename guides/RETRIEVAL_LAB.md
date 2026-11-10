@@ -1,6 +1,6 @@
 # 🧪 Retrieval Evaluation Lab
 
-**🟦 Learn retrieval · 🟩 Preserve evidence · 🟪 Build research methods · 🟠 Live run pending**
+**🟦 Learn retrieval · 🟩 Preserve evidence · 🟪 Build research methods · 🟩 First local run inspected**
 
 This extension evaluates retrieval without asking the chat model to answer.
 It reuses the application's document loader, creates separate in-memory Chroma
@@ -168,3 +168,10 @@ evaluation dashboard are repository-specific learning extensions.
 Implementation references:
 [LangChain Chroma integration](https://docs.langchain.com/oss/python/integrations/vectorstores/chroma)
 and [Ollama model identity endpoint](https://docs.ollama.com/api/tags).
+
+## 📊 First Observed Local Run
+
+The [six-setting dashboard](../verification/retrieval-runs/20261110T184155Z-a94eff34/summary.md) and
+[evidence audit](../verification/retrieval-run-audit-20261110.md) are published.
+Both chunk sizes reached complete authored marker coverage at k=2.
+The two no-evidence controls remain unscored; answer quality was not evaluated.

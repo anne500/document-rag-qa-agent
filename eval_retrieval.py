@@ -147,10 +147,12 @@ def write_artifacts(run_dir, report):
     fields = ["chunk_size", "overlap", "k", "evidence_cases",
               "no_evidence_controls", *METRICS]
     stream = io.StringIO(newline="")
-    writer = csv.DictWriter(stream, fieldnames=fields)
+    writer = csv.DictWriter(stream, fieldnames=fields, lineterminator="\n")
     writer.writeheader()
     writer.writerows(rows)
-    (run_dir / "metrics.csv").write_text(stream.getvalue(), encoding="utf-8")
+    (run_dir / "metrics.csv").write_text(
+        stream.getvalue(), encoding="utf-8", newline="\n"
+    )
     (run_dir / "retrieval-results.svg").write_text(
         render_svg(rows, report["status"]), encoding="utf-8"
     )

@@ -21,14 +21,21 @@ No real embedding or chat model is called by these tests.
 The chart renderer was also visually inspected using clearly labeled illustrative
 values. That rendering check is not retrieval-performance evidence.
 
-## 🟠 Pending local verification
+## 🟩 Local Run and CSV Follow-up
 
-- Validate the actual installed loader against the full fixture corpus.
-- Run real Ollama embeddings and in-memory Chroma retrieval.
-- Inspect report status, embedding identity, ranks, and per-case evidence.
-- Publish a selected observed results directory and link it from the dashboard.
+The user recorded 21 passing Windows tests, validated all 14 cases against
+five document/page units, and completed the first real embedding run.
+See the [published evidence audit](retrieval-run-audit-20261110.md).
 
-No real retrieval score, best configuration, or speed improvement is claimed yet.
+All 84 per-setting score records were recomputed, all 84 ranked passages were
+checked against their source/page snapshot, and six CSV rows matched the report.
+
+After correcting doubled CSV carriage returns, a regression test was added.
+22 offline tests passed in development after that fix. These do not replace
+Windows verification of the new formatting change or repeated model runs.
+
+Generalization, answer quality, citation entailment, and no-answer detection
+remain outside this retrieval-only evaluation.
 
 ## 🚀 Reproduce
 

@@ -15,9 +15,9 @@ not universal reliability or completion of a thesis experiment.
 | 🧪 Same Maple question at k=2 | 🟩 Evidence retrieved and answer corrected in one run | [Preserved comparison](initial-results.md) |
 | 📄 Extension 1: PDF pages and citations | 🟩 Three manual smoke checks passed | [PDF results](pdf-results.md) |
 | 🔄 Extension 2: startup index refresh | 🟩 Add, edit, remove, and reuse checks passed | [Index-refresh results](index-refresh-results.md) |
-| 🧪 Extension 3: evaluation implementation | 🟩 21 offline tests passed in development | [Implementation verification](retrieval-lab-implementation.md) |
-| 📊 Extension 3: local embedding evaluation | 🟠 Awaiting local run and report inspection | [Run instructions](../guides/RETRIEVAL_LAB.md) |
-| 🔌 Live Chroma/Ollama integration for the lab | 🟠 Awaiting local verification | The offline runner tests use mock dependencies |
+| 🧪 Extension 3: evaluation implementation | 🟩 21 Windows tests; 22 development tests after CSV fix | [Implementation verification](retrieval-lab-implementation.md) |
+| 📊 Extension 3: local embedding evaluation | 🟩 Completed; all saved scores recomputed | [Measured dashboard](retrieval-runs/20261110T184155Z-a94eff34/summary.md); [audit](retrieval-run-audit-20261110.md) |
+| 🔌 Live Chroma/Ollama integration for the lab | 🟩 One Windows run inspected | 28 query records; six aggregate settings; [report](retrieval-runs/20261110T184155Z-a94eff34/report.json) |
 | 🛡️ Retrieved-document instruction robustness | 🟠 Not evaluated | Future extension |
 
 ## 🎨 Where the measured-results dashboard appears
@@ -26,10 +26,14 @@ The runner creates a unique directory under verification/retrieval-runs/.
 Open its summary.md to see the metric table and colored chart.
 The same directory contains JSON, CSV, case snapshots, and corpus snapshots.
 
-No measured results directory is linked here yet.
-After a completed local run is inspected, publish the selected directory
-and add its exact summary link here. Failed or interrupted runs must retain
-their actual status.
+First inspected local run: [20261110T184155Z-a94eff34](retrieval-runs/20261110T184155Z-a94eff34/summary.md).
+
+![Measured retrieval metrics](retrieval-runs/20261110T184155Z-a94eff34/retrieval-results.svg)
+
+Both chunk sizes reached complete marker coverage at k=2 on the 12 evidence
+cases. Increasing to k=3 added no coverage. See the [audit](retrieval-run-audit-20261110.md)
+for diagnostic failures at k=1, provenance checks, and interpretation limits.
+Failed or interrupted future runs must retain their actual status.
 
 ## 🗺️ Reading paths
 

@@ -202,6 +202,12 @@ class RunnerTests(unittest.TestCase):
         self.assertEqual(deleted, 1)
         self.assertIn("failed", (directory / "summary.md").read_text())
 
+    def test_csv_output_uses_lf_without_carriage_returns(self):
+        _, directory, _, _ = self.run_fixture()
+        raw = (directory / "metrics.csv").read_bytes()
+        self.assertNotIn(b"\r", raw)
+        self.assertTrue(raw.endswith(b"\n"))
+
     def test_interruption_is_not_reported_as_a_complete_run(self):
         code, _, report, deleted = self.run_fixture(KeyboardInterrupt())
         self.assertEqual(code, 130)
