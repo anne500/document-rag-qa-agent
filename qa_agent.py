@@ -159,7 +159,7 @@ def source_label(document):
     return f"{source}, page {page}" if page else source
 
 
-def build_agent():
+def build_agent(system_prompt=None):
     @wrap_model_call
     def add_retrieved_context(request, handler):
         # The caller supplies evidence separately for each question.
@@ -184,7 +184,7 @@ def build_agent():
             reasoning=False,
         ),
         tools=[],
-        system_prompt=SYSTEM_PROMPT,
+        system_prompt=SYSTEM_PROMPT if system_prompt is None else system_prompt,
         middleware=[add_retrieved_context],
         context_schema=dict,
     )
@@ -252,5 +252,6 @@ def main(argv=None):
 
 if __name__ == "__main__":
     main()
+
 
 

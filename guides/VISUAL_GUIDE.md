@@ -153,3 +153,11 @@ notes in a separate direct-context control. Unreviewed answers stay unscored.
 k=4 recovered the missing evidence for both broader questions; unsupported
 Birch wording remained. Proposed source-review ratings are AI-assisted and
 human confirmation remains pending. The original capture dashboard is preserved.
+
+
+## 🧪 Frozen-Context Prompt Follow-up
+
+The [comparison workflow](PROMPT_COMPARISON.md) branches each saved question
+and exact context into original and revised prompt calls, then compares their
+claims. All 65 offline checks pass in development; live effects remain pending.
+New numeric syntax checks handle [1, 2] without claiming semantic citation support.

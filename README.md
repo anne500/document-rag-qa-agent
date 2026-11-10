@@ -10,7 +10,7 @@
 
 ## 🧭 Explore the project
 
-[🧩 Architecture](#architecture) · [🚀 Setup](#setup-on-windows-powershell) · [🧪 Results & verification](#initial-verification) · [🗂️ Evidence & guides](#visual-guide-and-pdf-verification) · [🧪 Evaluation lab](#retrieval-evaluation-lab) · [📊 Measured results](#recorded-retrieval-results) · [🔎 Identifier retrieval](#identifier-aware-retrieval) · [📚 Multi-document lab](#multi-document-answer-evaluation) · [📋 Verification dashboard](verification/DASHBOARD.md) · [🎨 Visual standard](VISUAL_STYLE.md)
+[🧩 Architecture](#architecture) · [🚀 Setup](#setup-on-windows-powershell) · [🧪 Results & verification](#initial-verification) · [🗂️ Evidence & guides](#visual-guide-and-pdf-verification) · [🧪 Evaluation lab](#retrieval-evaluation-lab) · [📊 Measured results](#recorded-retrieval-results) · [🔎 Identifier retrieval](#identifier-aware-retrieval) · [📚 Multi-document lab](#multi-document-answer-evaluation) · [🧪 Prompt comparison](#frozen-context-prompt-comparison) · [📋 Verification dashboard](verification/DASHBOARD.md) · [🎨 Visual standard](VISUAL_STYLE.md)
 
 🎨 [Shared architecture colors and diagram conventions](VISUAL_STYLE.md)
 
@@ -395,6 +395,36 @@ audit checked those labels without changing the raw report.
 [🗂️ Cases](evaluation/multidoc-cases.json) ·
 [🧪 Implementation checks](verification/multidoc-implementation.md)
 
+<a id="frozen-context-prompt-comparison"></a>
+
+## 🧪 Frozen-Context Prompt Comparison
+
+**🟩 65 offline tests passed in development. 🟠 New local answer effects unmeasured.**
+
+Extension 5 exposed unsupported Birch claims even when all necessary evidence
+was present. The follow-up tests a revised instruction set using the exact
+saved excerpts. Both original-prompt and revised-prompt answers are generated
+fresh, with identical questions, context text, source/page labels, and model
+settings within each pair. Call order alternates by context.
+
+```powershell
+python -m unittest discover -s tests -v
+python .\eval_prompt_comparison.py --validate-only
+python .\eval_prompt_comparison.py
+```
+
+The full run uses 13 frozen contexts and captures 26 answers without retrieval
+or embedding calls. It saves prompt/context hashes, exact answers, provenance,
+and an unreviewed worksheet under verification/prompt-runs/. The revised prompt
+is experimental; the interactive agent keeps its existing default prompt.
+
+The new runner checks both [1] and grouped [1, 2] citation syntax. This does
+not establish factual citation support or modify the older report parser.
+
+[🎨 Comparison design and review](guides/PROMPT_COMPARISON.md) ·
+[🧪 Offline verification](verification/prompt-comparison-implementation.md) ·
+[🔬 Source findings](verification/multidoc-run-audit-20261110.md)
+
 <a id="tutorial-acknowledgment-and-attribution"></a>
 
 ## 📚 Tutorial Acknowledgment and Attribution
@@ -410,8 +440,9 @@ Published: July 2, 2026.
 | Original author | Darsh Shah |
 | Publisher | freeCodeCamp |
 | Tutorial foundation | Local document loading, chunking, Ollama embeddings, Chroma persistence, retrieval middleware, and document Q&A |
-| Repository extensions | Fictional project fixtures, page-specific PDF verification, retrieval experiments, automatic startup index refresh, retrieval evaluation, identifier-priority comparison, and multi-document answer-review labs, verification records, and visual documentation |
+| Repository extensions | Fictional project fixtures, page-specific PDF verification, retrieval experiments, automatic startup index refresh, retrieval evaluation, identifier-priority comparison, multi-document answer-review, and frozen-context prompt comparison labs, verification records, and visual documentation |
 
 The original tutorial is credited for the learning foundation. Repository adaptations, experiments, and research connections are documented separately.
+
 
 

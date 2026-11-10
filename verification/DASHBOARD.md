@@ -24,6 +24,7 @@ not universal reliability or completion of a thesis experiment.
 | 📚 Extension 5: manual multi-document answers | 🟩 Three inspected; Birch wording caveat | [Observed answers](multidoc-manual-20261110.md) |
 | 🧪 Extension 5: capture and review implementation | 🟩 52 offline tests in development; live capture completed; 🟠 Windows test output not supplied | [Checks](multidoc-implementation.md); [guide](../guides/MULTIDOC_EVALUATION.md) |
 | 📊 Extension 5: first 13-answer capture | 🟩 Artifact checks passed; assistant review recorded; 🟠 human ratings pending | [Audit and proposed ratings](multidoc-run-audit-20261110.md); [raw capture](multidoc-runs/20261110T222813Z-bc04d7e8/summary.md) |
+| 🧪 Extension 5 follow-up: frozen-context prompt comparison | 🟩 65 offline tests in development; 🟠 Windows and live paired capture pending | [Checks](prompt-comparison-implementation.md); [design](../guides/PROMPT_COMPARISON.md) |
 | 🛡️ Retrieved-document instruction robustness | 🟠 Not evaluated | Future extension |
 
 ## 🎨 Where the measured-results dashboard appears
@@ -84,3 +85,12 @@ The [assistant review](multidoc-runs/20261110T222813Z-bc04d7e8/assistant-review.
 is explicitly AI-generated. Independent human review.json remains null.
 The direct-context conflict example is separate from retrieval aggregates.
 No default retrieval or prompt changes were made by the audit.
+
+
+## 🧪 Prompt Follow-up Status
+
+The [frozen-context comparison](../guides/PROMPT_COMPARISON.md) is implemented.
+It regenerates both prompts' answers on the same 13 source contexts, with no
+retrieval calls and no interactive default change. New paired prompt effects
+remain unmeasured; the prior assistant-reviewed results are historical source
+findings, not results of the new experiment.
