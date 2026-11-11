@@ -1,0 +1,1961 @@
+{
+  "schema_version": 1,
+  "experiment": "citation_guard_saved_draft_evaluation",
+  "run_id": "20261111T011524Z-f2bde230",
+  "status": "complete",
+  "records": [
+    {
+      "record_id": "cedar_maple:k2::baseline",
+      "suite": "retrieved",
+      "initial_check": {
+        "schema_version": 1,
+        "valid": true,
+        "labels": [
+          1,
+          2
+        ],
+        "out_of_range": [],
+        "malformed_numeric_spans": [],
+        "empty_answer": false,
+        "has_numeric_citation": true,
+        "scope": "Numeric citation syntax/range only; no factual-support, completeness, or semantic-abstention guarantee"
+      },
+      "live_calls": 0,
+      "context_sha256": "59bd8d435430b76163783e1ccb1770e4bfc7505557b78fdd2ce0e57a48ebfcbc",
+      "question": "Compare the release approval requirements for Cedar and Maple. Cite each project's source.",
+      "guard": {
+        "status": "accepted",
+        "answer": "Based on the provided documents, here is the comparison of release approval requirements:\n\n*   **Maple**: A release requires passing security checks and approval from the release manager [1].\n*   **Cedar**: A release requires all required tests to pass and approval from a maintainer [2].",
+        "attempts": [
+          {
+            "attempt": 1,
+            "status": "accepted",
+            "feedback": null,
+            "draft": "Based on the provided documents, here is the comparison of release approval requirements:\n\n*   **Maple**: A release requires passing security checks and approval from the release manager [1].\n*   **Cedar**: A release requires all required tests to pass and approval from a maintainer [2].",
+            "check": {
+              "schema_version": 1,
+              "valid": true,
+              "labels": [
+                1,
+                2
+              ],
+              "out_of_range": [],
+              "malformed_numeric_spans": [],
+              "empty_answer": false,
+              "has_numeric_citation": true,
+              "scope": "Numeric citation syntax/range only; no factual-support, completeness, or semantic-abstention guarantee"
+            },
+            "elapsed_seconds": 3.0399765819311142e-05
+          }
+        ],
+        "validation_scope": "numeric citation syntax/range only"
+      }
+    },
+    {
+      "record_id": "cedar_maple:k2::revised",
+      "suite": "retrieved",
+      "initial_check": {
+        "schema_version": 1,
+        "valid": true,
+        "labels": [
+          1,
+          2
+        ],
+        "out_of_range": [],
+        "malformed_numeric_spans": [],
+        "empty_answer": false,
+        "has_numeric_citation": true,
+        "scope": "Numeric citation syntax/range only; no factual-support, completeness, or semantic-abstention guarantee"
+      },
+      "live_calls": 0,
+      "context_sha256": "59bd8d435430b76163783e1ccb1770e4bfc7505557b78fdd2ce0e57a48ebfcbc",
+      "question": "Compare the release approval requirements for Cedar and Maple. Cite each project's source.",
+      "guard": {
+        "status": "accepted",
+        "answer": "Based on the provided documents, here is the comparison of release approval requirements:\n\n*   **Project Maple**: A release requires passing security checks and approval from a release manager [1].\n*   **Project Cedar**: A release requires all required tests to pass and approval from a maintainer [2].",
+        "attempts": [
+          {
+            "attempt": 1,
+            "status": "accepted",
+            "feedback": null,
+            "draft": "Based on the provided documents, here is the comparison of release approval requirements:\n\n*   **Project Maple**: A release requires passing security checks and approval from a release manager [1].\n*   **Project Cedar**: A release requires all required tests to pass and approval from a maintainer [2].",
+            "check": {
+              "schema_version": 1,
+              "valid": true,
+              "labels": [
+                1,
+                2
+              ],
+              "out_of_range": [],
+              "malformed_numeric_spans": [],
+              "empty_answer": false,
+              "has_numeric_citation": true,
+              "scope": "Numeric citation syntax/range only; no factual-support, completeness, or semantic-abstention guarantee"
+            },
+            "elapsed_seconds": 3.390014171600342e-05
+          }
+        ],
+        "validation_scope": "numeric citation syntax/range only"
+      }
+    },
+    {
+      "record_id": "cedar_maple:k2::refined",
+      "suite": "retrieved",
+      "initial_check": {
+        "schema_version": 1,
+        "valid": true,
+        "labels": [
+          1,
+          2
+        ],
+        "out_of_range": [],
+        "malformed_numeric_spans": [],
+        "empty_answer": false,
+        "has_numeric_citation": true,
+        "scope": "Numeric citation syntax/range only; no factual-support, completeness, or semantic-abstention guarantee"
+      },
+      "live_calls": 0,
+      "context_sha256": "59bd8d435430b76163783e1ccb1770e4bfc7505557b78fdd2ce0e57a48ebfcbc",
+      "question": "Compare the release approval requirements for Cedar and Maple. Cite each project's source.",
+      "guard": {
+        "status": "accepted",
+        "answer": "Based on the provided excerpts, here is the comparison of release approval requirements:\n\n*   **Maple**: A release requires passing security checks and approval from a release manager [1].\n*   **Cedar**: A release requires all required tests to pass and approval from a maintainer [2].\n\nThe documents do not specify whether these approvals are enforced or recommended, nor do they list other operational restrictions.",
+        "attempts": [
+          {
+            "attempt": 1,
+            "status": "accepted",
+            "feedback": null,
+            "draft": "Based on the provided excerpts, here is the comparison of release approval requirements:\n\n*   **Maple**: A release requires passing security checks and approval from a release manager [1].\n*   **Cedar**: A release requires all required tests to pass and approval from a maintainer [2].\n\nThe documents do not specify whether these approvals are enforced or recommended, nor do they list other operational restrictions.",
+            "check": {
+              "schema_version": 1,
+              "valid": true,
+              "labels": [
+                1,
+                2
+              ],
+              "out_of_range": [],
+              "malformed_numeric_spans": [],
+              "empty_answer": false,
+              "has_numeric_citation": true,
+              "scope": "Numeric citation syntax/range only; no factual-support, completeness, or semantic-abstention guarantee"
+            },
+            "elapsed_seconds": 4.650000482797623e-05
+          }
+        ],
+        "validation_scope": "numeric citation syntax/range only"
+      }
+    },
+    {
+      "record_id": "cedar_maple:k4::revised",
+      "suite": "retrieved",
+      "initial_check": {
+        "schema_version": 1,
+        "valid": true,
+        "labels": [
+          1,
+          2
+        ],
+        "out_of_range": [],
+        "malformed_numeric_spans": [],
+        "empty_answer": false,
+        "has_numeric_citation": true,
+        "scope": "Numeric citation syntax/range only; no factual-support, completeness, or semantic-abstention guarantee"
+      },
+      "live_calls": 0,
+      "context_sha256": "2cf600b28a9fcc1f07a0b54d23a4c18d9169857acf9c24aa3d36047019771935",
+      "question": "Compare the release approval requirements for Cedar and Maple. Cite each project's source.",
+      "guard": {
+        "status": "accepted",
+        "answer": "Based on the provided documents, here is the comparison of release approval requirements for Project Cedar and Project Maple:\n\n*   **Project Cedar**\n    *   A release requires all required tests to pass and approval from a maintainer [2].\n    *   A failed required test blocks the release workflow until the problem is reviewed [2].\n\n*   **Project Maple**\n    *   A release requires passing security checks and approval from the release manager [1].",
+        "attempts": [
+          {
+            "attempt": 1,
+            "status": "accepted",
+            "feedback": null,
+            "draft": "Based on the provided documents, here is the comparison of release approval requirements for Project Cedar and Project Maple:\n\n*   **Project Cedar**\n    *   A release requires all required tests to pass and approval from a maintainer [2].\n    *   A failed required test blocks the release workflow until the problem is reviewed [2].\n\n*   **Project Maple**\n    *   A release requires passing security checks and approval from the release manager [1].",
+            "check": {
+              "schema_version": 1,
+              "valid": true,
+              "labels": [
+                1,
+                2
+              ],
+              "out_of_range": [],
+              "malformed_numeric_spans": [],
+              "empty_answer": false,
+              "has_numeric_citation": true,
+              "scope": "Numeric citation syntax/range only; no factual-support, completeness, or semantic-abstention guarantee"
+            },
+            "elapsed_seconds": 3.5600271075963974e-05
+          }
+        ],
+        "validation_scope": "numeric citation syntax/range only"
+      }
+    },
+    {
+      "record_id": "cedar_maple:k4::refined",
+      "suite": "retrieved",
+      "initial_check": {
+        "schema_version": 1,
+        "valid": true,
+        "labels": [
+          1,
+          2
+        ],
+        "out_of_range": [],
+        "malformed_numeric_spans": [],
+        "empty_answer": false,
+        "has_numeric_citation": true,
+        "scope": "Numeric citation syntax/range only; no factual-support, completeness, or semantic-abstention guarantee"
+      },
+      "live_calls": 0,
+      "context_sha256": "2cf600b28a9fcc1f07a0b54d23a4c18d9169857acf9c24aa3d36047019771935",
+      "question": "Compare the release approval requirements for Cedar and Maple. Cite each project's source.",
+      "guard": {
+        "status": "accepted",
+        "answer": "Based on the retrieved excerpts, here is the comparison of release approval requirements for Cedar and Maple:\n\n*   **Project Cedar**\n    *   A release requires all required tests to pass [2].\n    *   A release requires approval from a maintainer [2].\n    *   If a required test fails, the release workflow is blocked until the problem is reviewed [2].\n\n*   **Project Maple**\n    *   A release requires passing security checks and approval from the release manager [1].\n    *   The excerpts do not specify requirements regarding failed tests blocking the workflow for Maple; they only state that a build failure (due to an expired certificate) must be addressed by renewing the certificate before rerunning [1].\n\n**Limitation Statement:**\nThe requested comparison cannot be fully determined from the retrieved excerpts because the document for Project Cedar does not specify production deployment dates or cloud providers, and the document for Project Maple does not explicitly state that a passing test run alone authorizes the release (though it implies tests must pass) [2]. Additionally, no excerpt explicitly lists operational restrictions or reasons why documentation lacks information regarding these projects.",
+        "attempts": [
+          {
+            "attempt": 1,
+            "status": "accepted",
+            "feedback": null,
+            "draft": "Based on the retrieved excerpts, here is the comparison of release approval requirements for Cedar and Maple:\n\n*   **Project Cedar**\n    *   A release requires all required tests to pass [2].\n    *   A release requires approval from a maintainer [2].\n    *   If a required test fails, the release workflow is blocked until the problem is reviewed [2].\n\n*   **Project Maple**\n    *   A release requires passing security checks and approval from the release manager [1].\n    *   The excerpts do not specify requirements regarding failed tests blocking the workflow for Maple; they only state that a build failure (due to an expired certificate) must be addressed by renewing the certificate before rerunning [1].\n\n**Limitation Statement:**\nThe requested comparison cannot be fully determined from the retrieved excerpts because the document for Project Cedar does not specify production deployment dates or cloud providers, and the document for Project Maple does not explicitly state that a passing test run alone authorizes the release (though it implies tests must pass) [2]. Additionally, no excerpt explicitly lists operational restrictions or reasons why documentation lacks information regarding these projects.",
+            "check": {
+              "schema_version": 1,
+              "valid": true,
+              "labels": [
+                1,
+                2
+              ],
+              "out_of_range": [],
+              "malformed_numeric_spans": [],
+              "empty_answer": false,
+              "has_numeric_citation": true,
+              "scope": "Numeric citation syntax/range only; no factual-support, completeness, or semantic-abstention guarantee"
+            },
+            "elapsed_seconds": 5.6900084018707275e-05
+          }
+        ],
+        "validation_scope": "numeric citation syntax/range only"
+      }
+    },
+    {
+      "record_id": "cedar_maple:k4::baseline",
+      "suite": "retrieved",
+      "initial_check": {
+        "schema_version": 1,
+        "valid": true,
+        "labels": [
+          1,
+          2
+        ],
+        "out_of_range": [],
+        "malformed_numeric_spans": [],
+        "empty_answer": false,
+        "has_numeric_citation": true,
+        "scope": "Numeric citation syntax/range only; no factual-support, completeness, or semantic-abstention guarantee"
+      },
+      "live_calls": 0,
+      "context_sha256": "2cf600b28a9fcc1f07a0b54d23a4c18d9169857acf9c24aa3d36047019771935",
+      "question": "Compare the release approval requirements for Cedar and Maple. Cite each project's source.",
+      "guard": {
+        "status": "accepted",
+        "answer": "Based on the provided documents, here is the comparison of release approval requirements:\n\n*   **Project Cedar**: A release requires all required tests to pass and approval from a maintainer [2].\n*   **Project Maple**: A release requires passing security checks and approval from the release manager [1].",
+        "attempts": [
+          {
+            "attempt": 1,
+            "status": "accepted",
+            "feedback": null,
+            "draft": "Based on the provided documents, here is the comparison of release approval requirements:\n\n*   **Project Cedar**: A release requires all required tests to pass and approval from a maintainer [2].\n*   **Project Maple**: A release requires passing security checks and approval from the release manager [1].",
+            "check": {
+              "schema_version": 1,
+              "valid": true,
+              "labels": [
+                1,
+                2
+              ],
+              "out_of_range": [],
+              "malformed_numeric_spans": [],
+              "empty_answer": false,
+              "has_numeric_citation": true,
+              "scope": "Numeric citation syntax/range only; no factual-support, completeness, or semantic-abstention guarantee"
+            },
+            "elapsed_seconds": 3.1200237572193146e-05
+          }
+        ],
+        "validation_scope": "numeric citation syntax/range only"
+      }
+    },
+    {
+      "record_id": "atlas_pages:k2::refined",
+      "suite": "retrieved",
+      "initial_check": {
+        "schema_version": 1,
+        "valid": true,
+        "labels": [
+          1,
+          2
+        ],
+        "out_of_range": [],
+        "malformed_numeric_spans": [],
+        "empty_answer": false,
+        "has_numeric_citation": true,
+        "scope": "Numeric citation syntax/range only; no factual-support, completeness, or semantic-abstention guarantee"
+      },
+      "live_calls": 0,
+      "context_sha256": "6380e82ddb92c346855bdb350a4e5e7deb4f82bc746b485ff95ea59ebf2cb2ee",
+      "question": "Who must approve ATLAS-R12, and why did ATLAS-418 fail? Cite the supporting pages.",
+      "guard": {
+        "status": "accepted",
+        "answer": "**ATLAS-R12 Approval:**\nRelease ATLAS-R12 requires approval from both the quality lead and the operations lead [1].\n\n**ATLAS-418 Failure:**\nBuild ATLAS-418 failed because the artifact registry access token had expired [2].",
+        "attempts": [
+          {
+            "attempt": 1,
+            "status": "accepted",
+            "feedback": null,
+            "draft": "**ATLAS-R12 Approval:**\nRelease ATLAS-R12 requires approval from both the quality lead and the operations lead [1].\n\n**ATLAS-418 Failure:**\nBuild ATLAS-418 failed because the artifact registry access token had expired [2].",
+            "check": {
+              "schema_version": 1,
+              "valid": true,
+              "labels": [
+                1,
+                2
+              ],
+              "out_of_range": [],
+              "malformed_numeric_spans": [],
+              "empty_answer": false,
+              "has_numeric_citation": true,
+              "scope": "Numeric citation syntax/range only; no factual-support, completeness, or semantic-abstention guarantee"
+            },
+            "elapsed_seconds": 2.8399750590324402e-05
+          }
+        ],
+        "validation_scope": "numeric citation syntax/range only"
+      }
+    },
+    {
+      "record_id": "atlas_pages:k2::baseline",
+      "suite": "retrieved",
+      "initial_check": {
+        "schema_version": 1,
+        "valid": true,
+        "labels": [
+          1,
+          2
+        ],
+        "out_of_range": [],
+        "malformed_numeric_spans": [],
+        "empty_answer": false,
+        "has_numeric_citation": true,
+        "scope": "Numeric citation syntax/range only; no factual-support, completeness, or semantic-abstention guarantee"
+      },
+      "live_calls": 0,
+      "context_sha256": "6380e82ddb92c346855bdb350a4e5e7deb4f82bc746b485ff95ea59ebf2cb2ee",
+      "question": "Who must approve ATLAS-R12, and why did ATLAS-418 fail? Cite the supporting pages.",
+      "guard": {
+        "status": "accepted",
+        "answer": "ATLAS-R12 requires approval from both the quality lead and the operations lead [1]. ATLAS-418 failed because the artifact registry access token had expired [2].",
+        "attempts": [
+          {
+            "attempt": 1,
+            "status": "accepted",
+            "feedback": null,
+            "draft": "ATLAS-R12 requires approval from both the quality lead and the operations lead [1]. ATLAS-418 failed because the artifact registry access token had expired [2].",
+            "check": {
+              "schema_version": 1,
+              "valid": true,
+              "labels": [
+                1,
+                2
+              ],
+              "out_of_range": [],
+              "malformed_numeric_spans": [],
+              "empty_answer": false,
+              "has_numeric_citation": true,
+              "scope": "Numeric citation syntax/range only; no factual-support, completeness, or semantic-abstention guarantee"
+            },
+            "elapsed_seconds": 3.040023148059845e-05
+          }
+        ],
+        "validation_scope": "numeric citation syntax/range only"
+      }
+    },
+    {
+      "record_id": "atlas_pages:k2::revised",
+      "suite": "retrieved",
+      "initial_check": {
+        "schema_version": 1,
+        "valid": true,
+        "labels": [
+          1,
+          2
+        ],
+        "out_of_range": [],
+        "malformed_numeric_spans": [],
+        "empty_answer": false,
+        "has_numeric_citation": true,
+        "scope": "Numeric citation syntax/range only; no factual-support, completeness, or semantic-abstention guarantee"
+      },
+      "live_calls": 0,
+      "context_sha256": "6380e82ddb92c346855bdb350a4e5e7deb4f82bc746b485ff95ea59ebf2cb2ee",
+      "question": "Who must approve ATLAS-R12, and why did ATLAS-418 fail? Cite the supporting pages.",
+      "guard": {
+        "status": "accepted",
+        "answer": "Based on the provided excerpts:\n\n*   **ATLAS-R12 Approval:** Release ATLAS-R12 requires approval from both the quality lead and the operations lead [1].\n*   **ATLAS-418 Failure:** Build ATLAS-418 failed because the artifact registry access token had expired [2].",
+        "attempts": [
+          {
+            "attempt": 1,
+            "status": "accepted",
+            "feedback": null,
+            "draft": "Based on the provided excerpts:\n\n*   **ATLAS-R12 Approval:** Release ATLAS-R12 requires approval from both the quality lead and the operations lead [1].\n*   **ATLAS-418 Failure:** Build ATLAS-418 failed because the artifact registry access token had expired [2].",
+            "check": {
+              "schema_version": 1,
+              "valid": true,
+              "labels": [
+                1,
+                2
+              ],
+              "out_of_range": [],
+              "malformed_numeric_spans": [],
+              "empty_answer": false,
+              "has_numeric_citation": true,
+              "scope": "Numeric citation syntax/range only; no factual-support, completeness, or semantic-abstention guarantee"
+            },
+            "elapsed_seconds": 3.2700132578611374e-05
+          }
+        ],
+        "validation_scope": "numeric citation syntax/range only"
+      }
+    },
+    {
+      "record_id": "atlas_pages:k4::baseline",
+      "suite": "retrieved",
+      "initial_check": {
+        "schema_version": 1,
+        "valid": true,
+        "labels": [
+          1,
+          2
+        ],
+        "out_of_range": [],
+        "malformed_numeric_spans": [],
+        "empty_answer": false,
+        "has_numeric_citation": true,
+        "scope": "Numeric citation syntax/range only; no factual-support, completeness, or semantic-abstention guarantee"
+      },
+      "live_calls": 0,
+      "context_sha256": "11b3dcc346f31226fa22409536f860129b636563468dae7d7a91a56e2564e797",
+      "question": "Who must approve ATLAS-R12, and why did ATLAS-418 fail? Cite the supporting pages.",
+      "guard": {
+        "status": "accepted",
+        "answer": "ATLAS-R12 requires approval from both the quality lead and the operations lead [1]. ATLAS-418 failed because the artifact registry access token had expired [2].",
+        "attempts": [
+          {
+            "attempt": 1,
+            "status": "accepted",
+            "feedback": null,
+            "draft": "ATLAS-R12 requires approval from both the quality lead and the operations lead [1]. ATLAS-418 failed because the artifact registry access token had expired [2].",
+            "check": {
+              "schema_version": 1,
+              "valid": true,
+              "labels": [
+                1,
+                2
+              ],
+              "out_of_range": [],
+              "malformed_numeric_spans": [],
+              "empty_answer": false,
+              "has_numeric_citation": true,
+              "scope": "Numeric citation syntax/range only; no factual-support, completeness, or semantic-abstention guarantee"
+            },
+            "elapsed_seconds": 3.0899886041879654e-05
+          }
+        ],
+        "validation_scope": "numeric citation syntax/range only"
+      }
+    },
+    {
+      "record_id": "atlas_pages:k4::revised",
+      "suite": "retrieved",
+      "initial_check": {
+        "schema_version": 1,
+        "valid": true,
+        "labels": [
+          1,
+          2
+        ],
+        "out_of_range": [],
+        "malformed_numeric_spans": [],
+        "empty_answer": false,
+        "has_numeric_citation": true,
+        "scope": "Numeric citation syntax/range only; no factual-support, completeness, or semantic-abstention guarantee"
+      },
+      "live_calls": 0,
+      "context_sha256": "11b3dcc346f31226fa22409536f860129b636563468dae7d7a91a56e2564e797",
+      "question": "Who must approve ATLAS-R12, and why did ATLAS-418 fail? Cite the supporting pages.",
+      "guard": {
+        "status": "accepted",
+        "answer": "Based on the provided documents:\n\n*   **ATLAS-R12 Approval:** Release ATLAS-R12 requires approval from both the quality lead and the operations lead [1].\n*   **ATLAS-418 Failure:** Build ATLAS-418 failed because the artifact registry access token had expired [2].",
+        "attempts": [
+          {
+            "attempt": 1,
+            "status": "accepted",
+            "feedback": null,
+            "draft": "Based on the provided documents:\n\n*   **ATLAS-R12 Approval:** Release ATLAS-R12 requires approval from both the quality lead and the operations lead [1].\n*   **ATLAS-418 Failure:** Build ATLAS-418 failed because the artifact registry access token had expired [2].",
+            "check": {
+              "schema_version": 1,
+              "valid": true,
+              "labels": [
+                1,
+                2
+              ],
+              "out_of_range": [],
+              "malformed_numeric_spans": [],
+              "empty_answer": false,
+              "has_numeric_citation": true,
+              "scope": "Numeric citation syntax/range only; no factual-support, completeness, or semantic-abstention guarantee"
+            },
+            "elapsed_seconds": 3.169989213347435e-05
+          }
+        ],
+        "validation_scope": "numeric citation syntax/range only"
+      }
+    },
+    {
+      "record_id": "atlas_pages:k4::refined",
+      "suite": "retrieved",
+      "initial_check": {
+        "schema_version": 1,
+        "valid": true,
+        "labels": [
+          1,
+          2
+        ],
+        "out_of_range": [],
+        "malformed_numeric_spans": [],
+        "empty_answer": false,
+        "has_numeric_citation": true,
+        "scope": "Numeric citation syntax/range only; no factual-support, completeness, or semantic-abstention guarantee"
+      },
+      "live_calls": 0,
+      "context_sha256": "11b3dcc346f31226fa22409536f860129b636563468dae7d7a91a56e2564e797",
+      "question": "Who must approve ATLAS-R12, and why did ATLAS-418 fail? Cite the supporting pages.",
+      "guard": {
+        "status": "accepted",
+        "answer": "Based on the retrieved excerpts:\n\n*   **ATLAS-R12 Approval:** Release ATLAS-R12 requires approval from both the quality lead and the operations lead [1].\n*   **ATLAS-418 Failure:** Build ATLAS-418 failed because the artifact registry access token had expired [2].",
+        "attempts": [
+          {
+            "attempt": 1,
+            "status": "accepted",
+            "feedback": null,
+            "draft": "Based on the retrieved excerpts:\n\n*   **ATLAS-R12 Approval:** Release ATLAS-R12 requires approval from both the quality lead and the operations lead [1].\n*   **ATLAS-418 Failure:** Build ATLAS-418 failed because the artifact registry access token had expired [2].",
+            "check": {
+              "schema_version": 1,
+              "valid": true,
+              "labels": [
+                1,
+                2
+              ],
+              "out_of_range": [],
+              "malformed_numeric_spans": [],
+              "empty_answer": false,
+              "has_numeric_citation": true,
+              "scope": "Numeric citation syntax/range only; no factual-support, completeness, or semantic-abstention guarantee"
+            },
+            "elapsed_seconds": 3.1600240617990494e-05
+          }
+        ],
+        "validation_scope": "numeric citation syntax/range only"
+      }
+    },
+    {
+      "record_id": "cedar_birch_missing:k2::revised",
+      "suite": "retrieved",
+      "initial_check": {
+        "schema_version": 1,
+        "valid": true,
+        "labels": [
+          1,
+          2
+        ],
+        "out_of_range": [],
+        "malformed_numeric_spans": [],
+        "empty_answer": false,
+        "has_numeric_citation": true,
+        "scope": "Numeric citation syntax/range only; no factual-support, completeness, or semantic-abstention guarantee"
+      },
+      "live_calls": 0,
+      "context_sha256": "7e9e9d69e1711cf7afaa6028bf24c9dc2dd988cebaaab2ea9b596bd525dbe222",
+      "question": "Compare the release approval requirements for Cedar and Birch. Cite the evidence and identify any missing information.",
+      "guard": {
+        "status": "accepted",
+        "answer": "### Project Cedar\n*   **Release Approval Requirements:** A release requires all required tests to pass and explicit approval from a maintainer [1]. Additionally, a failed required test blocks the release workflow until the problem is reviewed [1].\n*   **Missing Information:** The document does not specify a production deployment date or a cloud provider [1].\n\n### Project Birch\n*   **Release Approval Requirements:** There are no specified release approval requirements in the provided document [2].\n*   **Missing Information:** The document explicitly states that it does not specify release approval requirements [2]. It also notes that build BIRCH-309 failed due to insufficient disk space, but this is a build failure detail rather than a release policy constraint [2].\n\n**Comparison Summary:**\nProject Cedar has defined release approval requirements involving maintainer approval and passing required tests, whereas Project Birch's document contains no specified release approval requirements.",
+        "attempts": [
+          {
+            "attempt": 1,
+            "status": "accepted",
+            "feedback": null,
+            "draft": "### Project Cedar\n*   **Release Approval Requirements:** A release requires all required tests to pass and explicit approval from a maintainer [1]. Additionally, a failed required test blocks the release workflow until the problem is reviewed [1].\n*   **Missing Information:** The document does not specify a production deployment date or a cloud provider [1].\n\n### Project Birch\n*   **Release Approval Requirements:** There are no specified release approval requirements in the provided document [2].\n*   **Missing Information:** The document explicitly states that it does not specify release approval requirements [2]. It also notes that build BIRCH-309 failed due to insufficient disk space, but this is a build failure detail rather than a release policy constraint [2].\n\n**Comparison Summary:**\nProject Cedar has defined release approval requirements involving maintainer approval and passing required tests, whereas Project Birch's document contains no specified release approval requirements.",
+            "check": {
+              "schema_version": 1,
+              "valid": true,
+              "labels": [
+                1,
+                2
+              ],
+              "out_of_range": [],
+              "malformed_numeric_spans": [],
+              "empty_answer": false,
+              "has_numeric_citation": true,
+              "scope": "Numeric citation syntax/range only; no factual-support, completeness, or semantic-abstention guarantee"
+            },
+            "elapsed_seconds": 4.0499959141016006e-05
+          }
+        ],
+        "validation_scope": "numeric citation syntax/range only"
+      }
+    },
+    {
+      "record_id": "cedar_birch_missing:k2::refined",
+      "suite": "retrieved",
+      "initial_check": {
+        "schema_version": 1,
+        "valid": true,
+        "labels": [
+          1,
+          2
+        ],
+        "out_of_range": [],
+        "malformed_numeric_spans": [],
+        "empty_answer": false,
+        "has_numeric_citation": true,
+        "scope": "Numeric citation syntax/range only; no factual-support, completeness, or semantic-abstention guarantee"
+      },
+      "live_calls": 0,
+      "context_sha256": "7e9e9d69e1711cf7afaa6028bf24c9dc2dd988cebaaab2ea9b596bd525dbe222",
+      "question": "Compare the release approval requirements for Cedar and Birch. Cite the evidence and identify any missing information.",
+      "guard": {
+        "status": "accepted",
+        "answer": "### Project Cedar\n*   **Release Approval Requirements:** A release requires all required tests to pass and approval from a maintainer [1]. Additionally, a failed required test blocks the release workflow until the problem is reviewed [1].\n*   **Missing Information:** The document does not specify a production deployment date or a cloud provider [1].\n\n### Project Birch\n*   **Release Approval Requirements:** The provided excerpts do not contain information regarding release approval requirements for Project Birch; the document explicitly states it does not specify them [2].\n*   **Missing Information:** It cannot be determined from the retrieved excerpts what the release approval requirements are for Project Birch.",
+        "attempts": [
+          {
+            "attempt": 1,
+            "status": "accepted",
+            "feedback": null,
+            "draft": "### Project Cedar\n*   **Release Approval Requirements:** A release requires all required tests to pass and approval from a maintainer [1]. Additionally, a failed required test blocks the release workflow until the problem is reviewed [1].\n*   **Missing Information:** The document does not specify a production deployment date or a cloud provider [1].\n\n### Project Birch\n*   **Release Approval Requirements:** The provided excerpts do not contain information regarding release approval requirements for Project Birch; the document explicitly states it does not specify them [2].\n*   **Missing Information:** It cannot be determined from the retrieved excerpts what the release approval requirements are for Project Birch.",
+            "check": {
+              "schema_version": 1,
+              "valid": true,
+              "labels": [
+                1,
+                2
+              ],
+              "out_of_range": [],
+              "malformed_numeric_spans": [],
+              "empty_answer": false,
+              "has_numeric_citation": true,
+              "scope": "Numeric citation syntax/range only; no factual-support, completeness, or semantic-abstention guarantee"
+            },
+            "elapsed_seconds": 3.749970346689224e-05
+          }
+        ],
+        "validation_scope": "numeric citation syntax/range only"
+      }
+    },
+    {
+      "record_id": "cedar_birch_missing:k2::baseline",
+      "suite": "retrieved",
+      "initial_check": {
+        "schema_version": 1,
+        "valid": true,
+        "labels": [
+          1,
+          2
+        ],
+        "out_of_range": [],
+        "malformed_numeric_spans": [],
+        "empty_answer": false,
+        "has_numeric_citation": true,
+        "scope": "Numeric citation syntax/range only; no factual-support, completeness, or semantic-abstention guarantee"
+      },
+      "live_calls": 0,
+      "context_sha256": "7e9e9d69e1711cf7afaa6028bf24c9dc2dd988cebaaab2ea9b596bd525dbe222",
+      "question": "Compare the release approval requirements for Cedar and Birch. Cite the evidence and identify any missing information.",
+      "guard": {
+        "status": "accepted",
+        "answer": "Based on the provided documents, here is the comparison of release approval requirements:\n\n*   **Project Cedar:** A release requires all required tests to pass and explicit approval from a maintainer. Additionally, a failed required test blocks the release workflow until the issue is reviewed [1].\n*   **Project Birch:** The document does not specify any release approval requirements; it only notes that the project uses a nightly build schedule [2].\n\n**Missing Information:**\nThe provided documents do not contain information regarding specific release approval requirements for Project Birch, as this section is explicitly omitted from its documentation [2].",
+        "attempts": [
+          {
+            "attempt": 1,
+            "status": "accepted",
+            "feedback": null,
+            "draft": "Based on the provided documents, here is the comparison of release approval requirements:\n\n*   **Project Cedar:** A release requires all required tests to pass and explicit approval from a maintainer. Additionally, a failed required test blocks the release workflow until the issue is reviewed [1].\n*   **Project Birch:** The document does not specify any release approval requirements; it only notes that the project uses a nightly build schedule [2].\n\n**Missing Information:**\nThe provided documents do not contain information regarding specific release approval requirements for Project Birch, as this section is explicitly omitted from its documentation [2].",
+            "check": {
+              "schema_version": 1,
+              "valid": true,
+              "labels": [
+                1,
+                2
+              ],
+              "out_of_range": [],
+              "malformed_numeric_spans": [],
+              "empty_answer": false,
+              "has_numeric_citation": true,
+              "scope": "Numeric citation syntax/range only; no factual-support, completeness, or semantic-abstention guarantee"
+            },
+            "elapsed_seconds": 6.240000948309898e-05
+          }
+        ],
+        "validation_scope": "numeric citation syntax/range only"
+      }
+    },
+    {
+      "record_id": "cedar_birch_missing:k4::refined",
+      "suite": "retrieved",
+      "initial_check": {
+        "schema_version": 1,
+        "valid": true,
+        "labels": [
+          1,
+          2
+        ],
+        "out_of_range": [],
+        "malformed_numeric_spans": [],
+        "empty_answer": false,
+        "has_numeric_citation": true,
+        "scope": "Numeric citation syntax/range only; no factual-support, completeness, or semantic-abstention guarantee"
+      },
+      "live_calls": 0,
+      "context_sha256": "4f2b5a755170c0cd2868346425cd07349b15ad5f2dabc80dc96da671f16abac4",
+      "question": "Compare the release approval requirements for Cedar and Birch. Cite the evidence and identify any missing information.",
+      "guard": {
+        "status": "accepted",
+        "answer": "### Project Cedar\n*   **Required Tests:** A release requires all required tests to pass [1].\n*   **Maintainer Approval:** A release requires approval from a maintainer [1].\n*   **Blocking Condition:** A failed required test blocks the release workflow until the problem is reviewed [1].\n\n### Project Birch\n*   **Release Approval Requirements:** The provided document does not specify release approval requirements for Project Birch; this information cannot be determined from the retrieved excerpts [2].\n    *   *Limitation Statement:* Its requested requirements cannot be determined from the retrieved excerpts.",
+        "attempts": [
+          {
+            "attempt": 1,
+            "status": "accepted",
+            "feedback": null,
+            "draft": "### Project Cedar\n*   **Required Tests:** A release requires all required tests to pass [1].\n*   **Maintainer Approval:** A release requires approval from a maintainer [1].\n*   **Blocking Condition:** A failed required test blocks the release workflow until the problem is reviewed [1].\n\n### Project Birch\n*   **Release Approval Requirements:** The provided document does not specify release approval requirements for Project Birch; this information cannot be determined from the retrieved excerpts [2].\n    *   *Limitation Statement:* Its requested requirements cannot be determined from the retrieved excerpts.",
+            "check": {
+              "schema_version": 1,
+              "valid": true,
+              "labels": [
+                1,
+                2
+              ],
+              "out_of_range": [],
+              "malformed_numeric_spans": [],
+              "empty_answer": false,
+              "has_numeric_citation": true,
+              "scope": "Numeric citation syntax/range only; no factual-support, completeness, or semantic-abstention guarantee"
+            },
+            "elapsed_seconds": 7.019983604550362e-05
+          }
+        ],
+        "validation_scope": "numeric citation syntax/range only"
+      }
+    },
+    {
+      "record_id": "cedar_birch_missing:k4::baseline",
+      "suite": "retrieved",
+      "initial_check": {
+        "schema_version": 1,
+        "valid": true,
+        "labels": [
+          1,
+          2
+        ],
+        "out_of_range": [],
+        "malformed_numeric_spans": [],
+        "empty_answer": false,
+        "has_numeric_citation": true,
+        "scope": "Numeric citation syntax/range only; no factual-support, completeness, or semantic-abstention guarantee"
+      },
+      "live_calls": 0,
+      "context_sha256": "4f2b5a755170c0cd2868346425cd07349b15ad5f2dabc80dc96da671f16abac4",
+      "question": "Compare the release approval requirements for Cedar and Birch. Cite the evidence and identify any missing information.",
+      "guard": {
+        "status": "accepted",
+        "answer": "Based on the provided documents, here is the comparison of release approval requirements for Project Cedar and Project Birch:\n\n*   **Project Cedar:**\n    *   A release requires all required tests to pass and approval from a maintainer [1].\n    *   A failed required test blocks the release workflow until the problem is reviewed [1].\n    *   Passing tests alone does not prove the software has no defects, but it is a prerequisite for release [1].\n\n*   **Project Birch:**\n    *   The document explicitly states that it does not specify release approval requirements [2].\n    *   Build failures (e.g., disk space issues) prevent rerunning the build, but specific release approval criteria are not defined in the text [2].\n\n**Missing Information:**\n*   There is no information regarding the specific nature of \"required tests\" for either project beyond Cedar's mention of regression and automated tests [1].\n*   For Project Birch, there is a complete absence of data regarding its release approval process [2].",
+        "attempts": [
+          {
+            "attempt": 1,
+            "status": "accepted",
+            "feedback": null,
+            "draft": "Based on the provided documents, here is the comparison of release approval requirements for Project Cedar and Project Birch:\n\n*   **Project Cedar:**\n    *   A release requires all required tests to pass and approval from a maintainer [1].\n    *   A failed required test blocks the release workflow until the problem is reviewed [1].\n    *   Passing tests alone does not prove the software has no defects, but it is a prerequisite for release [1].\n\n*   **Project Birch:**\n    *   The document explicitly states that it does not specify release approval requirements [2].\n    *   Build failures (e.g., disk space issues) prevent rerunning the build, but specific release approval criteria are not defined in the text [2].\n\n**Missing Information:**\n*   There is no information regarding the specific nature of \"required tests\" for either project beyond Cedar's mention of regression and automated tests [1].\n*   For Project Birch, there is a complete absence of data regarding its release approval process [2].",
+            "check": {
+              "schema_version": 1,
+              "valid": true,
+              "labels": [
+                1,
+                2
+              ],
+              "out_of_range": [],
+              "malformed_numeric_spans": [],
+              "empty_answer": false,
+              "has_numeric_citation": true,
+              "scope": "Numeric citation syntax/range only; no factual-support, completeness, or semantic-abstention guarantee"
+            },
+            "elapsed_seconds": 8.599972352385521e-05
+          }
+        ],
+        "validation_scope": "numeric citation syntax/range only"
+      }
+    },
+    {
+      "record_id": "cedar_birch_missing:k4::revised",
+      "suite": "retrieved",
+      "initial_check": {
+        "schema_version": 1,
+        "valid": true,
+        "labels": [
+          1,
+          2
+        ],
+        "out_of_range": [],
+        "malformed_numeric_spans": [],
+        "empty_answer": false,
+        "has_numeric_citation": true,
+        "scope": "Numeric citation syntax/range only; no factual-support, completeness, or semantic-abstention guarantee"
+      },
+      "live_calls": 0,
+      "context_sha256": "4f2b5a755170c0cd2868346425cd07349b15ad5f2dabc80dc96da671f16abac4",
+      "question": "Compare the release approval requirements for Cedar and Birch. Cite the evidence and identify any missing information.",
+      "guard": {
+        "status": "accepted",
+        "answer": "Based on the provided documents, here is the comparison of release approval requirements for Project Cedar and Project Birch:\n\n**Project Cedar**\n*   **Requirements:** A release requires all required tests to pass and approval from a maintainer [1]. Additionally, a failed required test blocks the release workflow until the problem is reviewed [1].\n*   **Missing Information:** The document does not specify a production deployment date or a cloud provider [1].\n\n**Project Birch**\n*   **Requirements:** The provided documents do not specify release approval requirements for Project Birch [2].\n*   **Missing Information:** It cannot be determined from the retrieved excerpts what the specific release approval requirements are, as the document explicitly states it does not contain this information [2].",
+        "attempts": [
+          {
+            "attempt": 1,
+            "status": "accepted",
+            "feedback": null,
+            "draft": "Based on the provided documents, here is the comparison of release approval requirements for Project Cedar and Project Birch:\n\n**Project Cedar**\n*   **Requirements:** A release requires all required tests to pass and approval from a maintainer [1]. Additionally, a failed required test blocks the release workflow until the problem is reviewed [1].\n*   **Missing Information:** The document does not specify a production deployment date or a cloud provider [1].\n\n**Project Birch**\n*   **Requirements:** The provided documents do not specify release approval requirements for Project Birch [2].\n*   **Missing Information:** It cannot be determined from the retrieved excerpts what the specific release approval requirements are, as the document explicitly states it does not contain this information [2].",
+            "check": {
+              "schema_version": 1,
+              "valid": true,
+              "labels": [
+                1,
+                2
+              ],
+              "out_of_range": [],
+              "malformed_numeric_spans": [],
+              "empty_answer": false,
+              "has_numeric_citation": true,
+              "scope": "Numeric citation syntax/range only; no factual-support, completeness, or semantic-abstention guarantee"
+            },
+            "elapsed_seconds": 8.939998224377632e-05
+          }
+        ],
+        "validation_scope": "numeric citation syntax/range only"
+      }
+    },
+    {
+      "record_id": "three_unit_approvals:k2::baseline",
+      "suite": "retrieved",
+      "initial_check": {
+        "schema_version": 1,
+        "valid": true,
+        "labels": [
+          1,
+          2
+        ],
+        "out_of_range": [],
+        "malformed_numeric_spans": [],
+        "empty_answer": false,
+        "has_numeric_citation": true,
+        "scope": "Numeric citation syntax/range only; no factual-support, completeness, or semantic-abstention guarantee"
+      },
+      "live_calls": 0,
+      "context_sha256": "10b29e199cfaa5a2833c1236224a59cb9efe0ebe909868e2efa1afaac5c45dee",
+      "question": "Compare release approval requirements for Cedar, Maple, and ATLAS-R12. Include required checks and approvers, and cite each source.",
+      "guard": {
+        "status": "accepted",
+        "answer": "Based on the provided documents, information is available only for **ATLAS-R12** and **Maple**. There is no mention of a project named \"Cedar.\"\n\n*   **ATLAS-R12**: Requires approval from both the quality lead and the operations lead. Additionally, all required integration tests must pass; a passing test run alone does not authorize the release [1].\n*   **Maple**: Requires passing security checks and approval from the release manager [2].",
+        "attempts": [
+          {
+            "attempt": 1,
+            "status": "accepted",
+            "feedback": null,
+            "draft": "Based on the provided documents, information is available only for **ATLAS-R12** and **Maple**. There is no mention of a project named \"Cedar.\"\n\n*   **ATLAS-R12**: Requires approval from both the quality lead and the operations lead. Additionally, all required integration tests must pass; a passing test run alone does not authorize the release [1].\n*   **Maple**: Requires passing security checks and approval from the release manager [2].",
+            "check": {
+              "schema_version": 1,
+              "valid": true,
+              "labels": [
+                1,
+                2
+              ],
+              "out_of_range": [],
+              "malformed_numeric_spans": [],
+              "empty_answer": false,
+              "has_numeric_citation": true,
+              "scope": "Numeric citation syntax/range only; no factual-support, completeness, or semantic-abstention guarantee"
+            },
+            "elapsed_seconds": 5.779974162578583e-05
+          }
+        ],
+        "validation_scope": "numeric citation syntax/range only"
+      }
+    },
+    {
+      "record_id": "three_unit_approvals:k2::revised",
+      "suite": "retrieved",
+      "initial_check": {
+        "schema_version": 1,
+        "valid": true,
+        "labels": [
+          1,
+          2
+        ],
+        "out_of_range": [],
+        "malformed_numeric_spans": [],
+        "empty_answer": false,
+        "has_numeric_citation": true,
+        "scope": "Numeric citation syntax/range only; no factual-support, completeness, or semantic-abstention guarantee"
+      },
+      "live_calls": 0,
+      "context_sha256": "10b29e199cfaa5a2833c1236224a59cb9efe0ebe909868e2efa1afaac5c45dee",
+      "question": "Compare release approval requirements for Cedar, Maple, and ATLAS-R12. Include required checks and approvers, and cite each source.",
+      "guard": {
+        "status": "accepted",
+        "answer": "Based on the provided excerpts, here is the comparison of release approval requirements:\n\n*   **Cedar**: There is no information regarding release approval requirements for \"Cedar\" in the retrieved documents. It cannot be determined from the provided excerpts [1][2].\n*   **Maple**:\n    *   **Required Checks**: A Maple release requires passing security checks [2]. Additionally, a build failure due to an expired signing certificate indicates that verifying the signing service uses a renewed certificate is necessary before rerunning the build [2].\n    *   **Aппrovers**: Approval must come from the release manager [2].\n*   **ATLAS-R12**:\n    *   **Required Checks**: All required integration tests must pass before approval; a passing test run alone does not authorize the release [1].\n    *   **Aппrovers**: Release requires approval from both the quality lead and the operations lead [1].",
+        "attempts": [
+          {
+            "attempt": 1,
+            "status": "accepted",
+            "feedback": null,
+            "draft": "Based on the provided excerpts, here is the comparison of release approval requirements:\n\n*   **Cedar**: There is no information regarding release approval requirements for \"Cedar\" in the retrieved documents. It cannot be determined from the provided excerpts [1][2].\n*   **Maple**:\n    *   **Required Checks**: A Maple release requires passing security checks [2]. Additionally, a build failure due to an expired signing certificate indicates that verifying the signing service uses a renewed certificate is necessary before rerunning the build [2].\n    *   **Aппrovers**: Approval must come from the release manager [2].\n*   **ATLAS-R12**:\n    *   **Required Checks**: All required integration tests must pass before approval; a passing test run alone does not authorize the release [1].\n    *   **Aппrovers**: Release requires approval from both the quality lead and the operations lead [1].",
+            "check": {
+              "schema_version": 1,
+              "valid": true,
+              "labels": [
+                1,
+                2
+              ],
+              "out_of_range": [],
+              "malformed_numeric_spans": [],
+              "empty_answer": false,
+              "has_numeric_citation": true,
+              "scope": "Numeric citation syntax/range only; no factual-support, completeness, or semantic-abstention guarantee"
+            },
+            "elapsed_seconds": 7.930025458335876e-05
+          }
+        ],
+        "validation_scope": "numeric citation syntax/range only"
+      }
+    },
+    {
+      "record_id": "three_unit_approvals:k2::refined",
+      "suite": "retrieved",
+      "initial_check": {
+        "schema_version": 1,
+        "valid": false,
+        "labels": [
+          1,
+          2,
+          7
+        ],
+        "out_of_range": [
+          7
+        ],
+        "malformed_numeric_spans": [],
+        "empty_answer": false,
+        "has_numeric_citation": true,
+        "scope": "Numeric citation syntax/range only; no factual-support, completeness, or semantic-abstention guarantee"
+      },
+      "live_calls": 1,
+      "context_sha256": "10b29e199cfaa5a2833c1236224a59cb9efe0ebe909868e2efa1afaac5c45dee",
+      "question": "Compare release approval requirements for Cedar, Maple, and ATLAS-R12. Include required checks and approvers, and cite each source.",
+      "guard": {
+        "status": "abstained",
+        "answer": "Answer withheld because its citation labels could not be validated. Please review the retrieved sources or rephrase the question.",
+        "attempts": [
+          {
+            "attempt": 1,
+            "status": "rejected",
+            "feedback": null,
+            "draft": "Based on the provided excerpts, here is the comparison of release approval requirements:\n\n*   **Cedar**: There is no information regarding release approval requirements for Cedar in the retrieved excerpts. Its requested requirements cannot be determined from the retrieved excerpts [7].\n*   **Maple**:\n    *   **Required Checks**: A Maple release requires passing security checks [2].\n    *   **Aprovers**: Approval must come from the release manager [2].\n*   **ATLAS-R12**:\n    *   **Required Checks**: All required integration tests must pass before approval; a passing test run alone does not authorize the release [1].\n    *   **Aprovers**: Release requires approval from both the quality lead and the operations lead [1].",
+            "check": {
+              "schema_version": 1,
+              "valid": false,
+              "labels": [
+                1,
+                2,
+                7
+              ],
+              "out_of_range": [
+                7
+              ],
+              "malformed_numeric_spans": [],
+              "empty_answer": false,
+              "has_numeric_citation": true,
+              "scope": "Numeric citation syntax/range only; no factual-support, completeness, or semantic-abstention guarantee"
+            },
+            "elapsed_seconds": 4.5000109821558e-05
+          },
+          {
+            "attempt": 2,
+            "status": "rejected",
+            "feedback": "The previous draft failed numeric-citation validation. Generate a fresh answer to the same question using the same excerpts. Available source labels are [1], [2]. Use only those source labels in [n] or [n, m] form. Do not cite numbered instructions as sources. Do not merely remove labels from unsupported claims; answer only from supplied evidence and state when information is unavailable.",
+            "draft": "Based on the provided excerpts, here are the release approval requirements:\n\n*   **Cedar**: Information regarding release approval requirements for Cedar is not available in the retrieved excerpts. Its requested requirements cannot be determined from the retrieved excerpts [7].\n*   **Maple**: A Maple release requires passing security checks and approval from the release manager [2].\n*   **ATLAS-R12**: Release ATLAS-R12 requires approval from both the quality lead and the operations lead, and all required integration tests must pass before approval [1].",
+            "check": {
+              "schema_version": 1,
+              "valid": false,
+              "labels": [
+                1,
+                2,
+                7
+              ],
+              "out_of_range": [
+                7
+              ],
+              "malformed_numeric_spans": [],
+              "empty_answer": false,
+              "has_numeric_citation": true,
+              "scope": "Numeric citation syntax/range only; no factual-support, completeness, or semantic-abstention guarantee"
+            },
+            "elapsed_seconds": 36.92187589965761
+          }
+        ],
+        "validation_scope": "numeric citation syntax/range only",
+        "reason": "invalid_citations"
+      }
+    },
+    {
+      "record_id": "three_unit_approvals:k4::revised",
+      "suite": "retrieved",
+      "initial_check": {
+        "schema_version": 1,
+        "valid": true,
+        "labels": [
+          1,
+          2,
+          3
+        ],
+        "out_of_range": [],
+        "malformed_numeric_spans": [],
+        "empty_answer": false,
+        "has_numeric_citation": true,
+        "scope": "Numeric citation syntax/range only; no factual-support, completeness, or semantic-abstention guarantee"
+      },
+      "live_calls": 0,
+      "context_sha256": "ae71be4e416457972900047bc5405c27207f7d88c6b8f340f95d25594723aa90",
+      "question": "Compare release approval requirements for Cedar, Maple, and ATLAS-R12. Include required checks and approvers, and cite each source.",
+      "guard": {
+        "status": "accepted",
+        "answer": "Based on the provided documents, here is the comparison of release approval requirements:\n\n**ATLAS-R12**\n*   **Required Checks:** All required integration tests must pass; a passing test run alone does not authorize the release [1].\n*   **Required Approvers:** Approval from both the quality lead and the operations lead [1].\n\n**Maple**\n*   **Required Checks:** Must pass security checks [2].\n*   **Required Approvers:** Approval from the release manager [2].\n\n**Cedar**\n*   **Required Checks:** All required tests must pass; a failed required test blocks the release workflow until reviewed [3].\n*   **Required Approvers:** Approval from a maintainer [3].",
+        "attempts": [
+          {
+            "attempt": 1,
+            "status": "accepted",
+            "feedback": null,
+            "draft": "Based on the provided documents, here is the comparison of release approval requirements:\n\n**ATLAS-R12**\n*   **Required Checks:** All required integration tests must pass; a passing test run alone does not authorize the release [1].\n*   **Required Approvers:** Approval from both the quality lead and the operations lead [1].\n\n**Maple**\n*   **Required Checks:** Must pass security checks [2].\n*   **Required Approvers:** Approval from the release manager [2].\n\n**Cedar**\n*   **Required Checks:** All required tests must pass; a failed required test blocks the release workflow until reviewed [3].\n*   **Required Approvers:** Approval from a maintainer [3].",
+            "check": {
+              "schema_version": 1,
+              "valid": true,
+              "labels": [
+                1,
+                2,
+                3
+              ],
+              "out_of_range": [],
+              "malformed_numeric_spans": [],
+              "empty_answer": false,
+              "has_numeric_citation": true,
+              "scope": "Numeric citation syntax/range only; no factual-support, completeness, or semantic-abstention guarantee"
+            },
+            "elapsed_seconds": 7.180031388998032e-05
+          }
+        ],
+        "validation_scope": "numeric citation syntax/range only"
+      }
+    },
+    {
+      "record_id": "three_unit_approvals:k4::refined",
+      "suite": "retrieved",
+      "initial_check": {
+        "schema_version": 1,
+        "valid": true,
+        "labels": [
+          1,
+          2,
+          3
+        ],
+        "out_of_range": [],
+        "malformed_numeric_spans": [],
+        "empty_answer": false,
+        "has_numeric_citation": true,
+        "scope": "Numeric citation syntax/range only; no factual-support, completeness, or semantic-abstention guarantee"
+      },
+      "live_calls": 0,
+      "context_sha256": "ae71be4e416457972900047bc5405c27207f7d88c6b8f340f95d25594723aa90",
+      "question": "Compare release approval requirements for Cedar, Maple, and ATLAS-R12. Include required checks and approvers, and cite each source.",
+      "guard": {
+        "status": "accepted",
+        "answer": "Here is the comparison of release approval requirements based on the provided excerpts:\n\n**ATLAS-R12**\n*   **Required Checks:** All required integration tests must pass; a passing test run alone does not authorize the release [1].\n*   **Required Approvers:** Approval from both the quality lead and the operations lead is required [1].\n\n**Maple**\n*   **Required Checks:** Passing security checks are required [2].\n*   **Required Approvers:** Approval from the release manager is required [2].\n\n**Cedar**\n*   **Required Checks:** All required tests must pass; a failed required test blocks the release workflow until the problem is reviewed [3].\n*   **Required Approvers:** Approval from a maintainer is required [3].\n\nThe excerpts do not specify production deployment dates, cloud providers, or other operational details for any of these projects [3].",
+        "attempts": [
+          {
+            "attempt": 1,
+            "status": "accepted",
+            "feedback": null,
+            "draft": "Here is the comparison of release approval requirements based on the provided excerpts:\n\n**ATLAS-R12**\n*   **Required Checks:** All required integration tests must pass; a passing test run alone does not authorize the release [1].\n*   **Required Approvers:** Approval from both the quality lead and the operations lead is required [1].\n\n**Maple**\n*   **Required Checks:** Passing security checks are required [2].\n*   **Required Approvers:** Approval from the release manager is required [2].\n\n**Cedar**\n*   **Required Checks:** All required tests must pass; a failed required test blocks the release workflow until the problem is reviewed [3].\n*   **Required Approvers:** Approval from a maintainer is required [3].\n\nThe excerpts do not specify production deployment dates, cloud providers, or other operational details for any of these projects [3].",
+            "check": {
+              "schema_version": 1,
+              "valid": true,
+              "labels": [
+                1,
+                2,
+                3
+              ],
+              "out_of_range": [],
+              "malformed_numeric_spans": [],
+              "empty_answer": false,
+              "has_numeric_citation": true,
+              "scope": "Numeric citation syntax/range only; no factual-support, completeness, or semantic-abstention guarantee"
+            },
+            "elapsed_seconds": 9.059999138116837e-05
+          }
+        ],
+        "validation_scope": "numeric citation syntax/range only"
+      }
+    },
+    {
+      "record_id": "three_unit_approvals:k4::baseline",
+      "suite": "retrieved",
+      "initial_check": {
+        "schema_version": 1,
+        "valid": true,
+        "labels": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "out_of_range": [],
+        "malformed_numeric_spans": [],
+        "empty_answer": false,
+        "has_numeric_citation": true,
+        "scope": "Numeric citation syntax/range only; no factual-support, completeness, or semantic-abstention guarantee"
+      },
+      "live_calls": 0,
+      "context_sha256": "ae71be4e416457972900047bc5405c27207f7d88c6b8f340f95d25594723aa90",
+      "question": "Compare release approval requirements for Cedar, Maple, and ATLAS-R12. Include required checks and approvers, and cite each source.",
+      "guard": {
+        "status": "accepted",
+        "answer": "Based on the provided documents, here is a comparison of the release approval requirements:\n\n*   **ATLAS-R12**: Requires approval from both the quality lead and the operations lead. Additionally, all required integration tests must pass; a passing test run alone does not authorize the release [1].\n*   **Maple**: Requires passing security checks and approval from the release manager [2].\n*   **Cedar**: Requires all required tests to pass and approval from a maintainer. Failed required tests block the release workflow until reviewed [3].\n\n**Note:** The document for Project Birch does not specify release approval requirements [4].",
+        "attempts": [
+          {
+            "attempt": 1,
+            "status": "accepted",
+            "feedback": null,
+            "draft": "Based on the provided documents, here is a comparison of the release approval requirements:\n\n*   **ATLAS-R12**: Requires approval from both the quality lead and the operations lead. Additionally, all required integration tests must pass; a passing test run alone does not authorize the release [1].\n*   **Maple**: Requires passing security checks and approval from the release manager [2].\n*   **Cedar**: Requires all required tests to pass and approval from a maintainer. Failed required tests block the release workflow until reviewed [3].\n\n**Note:** The document for Project Birch does not specify release approval requirements [4].",
+            "check": {
+              "schema_version": 1,
+              "valid": true,
+              "labels": [
+                1,
+                2,
+                3,
+                4
+              ],
+              "out_of_range": [],
+              "malformed_numeric_spans": [],
+              "empty_answer": false,
+              "has_numeric_citation": true,
+              "scope": "Numeric citation syntax/range only; no factual-support, completeness, or semantic-abstention guarantee"
+            },
+            "elapsed_seconds": 6.669992581009865e-05
+          }
+        ],
+        "validation_scope": "numeric citation syntax/range only"
+      }
+    },
+    {
+      "record_id": "four_unit_failures:k2::refined",
+      "suite": "retrieved",
+      "initial_check": {
+        "schema_version": 1,
+        "valid": true,
+        "labels": [
+          1,
+          2
+        ],
+        "out_of_range": [],
+        "malformed_numeric_spans": [],
+        "empty_answer": false,
+        "has_numeric_citation": true,
+        "scope": "Numeric citation syntax/range only; no factual-support, completeness, or semantic-abstention guarantee"
+      },
+      "live_calls": 0,
+      "context_sha256": "a05b99d5e0b6b5517c36628fe2959f1f2b2afd14cdefa2a4c326d9a7027960fd",
+      "question": "Compare the causes of CEDAR-104, MAPLE-207, BIRCH-309, and ATLAS-418 failures. Cite evidence for each build.",
+      "guard": {
+        "status": "accepted",
+        "answer": "Based on the provided excerpts, here is the comparison of the failure causes:\n\n*   **CEDAR-104**: The build failed because the dependency `cedar-utils==9.9.9` could not be found in the configured package index [1].\n*   **MAPLE-207**: The build failed because the signing certificate had expired [2].\n*   **BIRCH-309**: There is no information regarding the cause of this failure in the retrieved excerpts; its requested requirements cannot be determined from the retrieved excerpts.\n*   **ATLAS-418**: There is no information regarding the cause of this failure in the retrieved excerpts; its requested requirements cannot be determined from the retrieved excerpts.",
+        "attempts": [
+          {
+            "attempt": 1,
+            "status": "accepted",
+            "feedback": null,
+            "draft": "Based on the provided excerpts, here is the comparison of the failure causes:\n\n*   **CEDAR-104**: The build failed because the dependency `cedar-utils==9.9.9` could not be found in the configured package index [1].\n*   **MAPLE-207**: The build failed because the signing certificate had expired [2].\n*   **BIRCH-309**: There is no information regarding the cause of this failure in the retrieved excerpts; its requested requirements cannot be determined from the retrieved excerpts.\n*   **ATLAS-418**: There is no information regarding the cause of this failure in the retrieved excerpts; its requested requirements cannot be determined from the retrieved excerpts.",
+            "check": {
+              "schema_version": 1,
+              "valid": true,
+              "labels": [
+                1,
+                2
+              ],
+              "out_of_range": [],
+              "malformed_numeric_spans": [],
+              "empty_answer": false,
+              "has_numeric_citation": true,
+              "scope": "Numeric citation syntax/range only; no factual-support, completeness, or semantic-abstention guarantee"
+            },
+            "elapsed_seconds": 5.349982529878616e-05
+          }
+        ],
+        "validation_scope": "numeric citation syntax/range only"
+      }
+    },
+    {
+      "record_id": "four_unit_failures:k2::baseline",
+      "suite": "retrieved",
+      "initial_check": {
+        "schema_version": 1,
+        "valid": true,
+        "labels": [
+          1,
+          2
+        ],
+        "out_of_range": [],
+        "malformed_numeric_spans": [],
+        "empty_answer": false,
+        "has_numeric_citation": true,
+        "scope": "Numeric citation syntax/range only; no factual-support, completeness, or semantic-abstention guarantee"
+      },
+      "live_calls": 0,
+      "context_sha256": "a05b99d5e0b6b5517c36628fe2959f1f2b2afd14cdefa2a4c326d9a7027960fd",
+      "question": "Compare the causes of CEDAR-104, MAPLE-207, BIRCH-309, and ATLAS-418 failures. Cite evidence for each build.",
+      "guard": {
+        "status": "accepted",
+        "answer": "Based on the provided documents, here is the comparison of the failure causes:\n\n*   **CEDAR-104**: The build failed because the dependency `cedar-utils==9.9.9` could not be found in the configured package index [1].\n*   **MAPLE-207**: The build failed because the signing certificate had expired [2].\n*   **BIRCH-309**: There is no information regarding this build failure in the provided documents; the excerpts do not mention Project Birch or build BIRCH-309 [1, 2].\n*   **ATLAS-418**: There is no information regarding this build failure in the provided documents; the excerpts do not mention Project Atlas or build ATLAS-418 [1, 2].",
+        "attempts": [
+          {
+            "attempt": 1,
+            "status": "accepted",
+            "feedback": null,
+            "draft": "Based on the provided documents, here is the comparison of the failure causes:\n\n*   **CEDAR-104**: The build failed because the dependency `cedar-utils==9.9.9` could not be found in the configured package index [1].\n*   **MAPLE-207**: The build failed because the signing certificate had expired [2].\n*   **BIRCH-309**: There is no information regarding this build failure in the provided documents; the excerpts do not mention Project Birch or build BIRCH-309 [1, 2].\n*   **ATLAS-418**: There is no information regarding this build failure in the provided documents; the excerpts do not mention Project Atlas or build ATLAS-418 [1, 2].",
+            "check": {
+              "schema_version": 1,
+              "valid": true,
+              "labels": [
+                1,
+                2
+              ],
+              "out_of_range": [],
+              "malformed_numeric_spans": [],
+              "empty_answer": false,
+              "has_numeric_citation": true,
+              "scope": "Numeric citation syntax/range only; no factual-support, completeness, or semantic-abstention guarantee"
+            },
+            "elapsed_seconds": 6.649969145655632e-05
+          }
+        ],
+        "validation_scope": "numeric citation syntax/range only"
+      }
+    },
+    {
+      "record_id": "four_unit_failures:k2::revised",
+      "suite": "retrieved",
+      "initial_check": {
+        "schema_version": 1,
+        "valid": true,
+        "labels": [
+          1,
+          2
+        ],
+        "out_of_range": [],
+        "malformed_numeric_spans": [],
+        "empty_answer": false,
+        "has_numeric_citation": true,
+        "scope": "Numeric citation syntax/range only; no factual-support, completeness, or semantic-abstention guarantee"
+      },
+      "live_calls": 0,
+      "context_sha256": "a05b99d5e0b6b5517c36628fe2959f1f2b2afd14cdefa2a4c326d9a7027960fd",
+      "question": "Compare the causes of CEDAR-104, MAPLE-207, BIRCH-309, and ATLAS-418 failures. Cite evidence for each build.",
+      "guard": {
+        "status": "accepted",
+        "answer": "Based on the provided excerpts, here is the comparison of the failure causes:\n\n*   **CEDAR-104**: The build failed because the dependency `cedar-utils==9.9.9` could not be found in the configured package index [1].\n*   **MAPLE-207**: The build failed because the signing certificate had expired [2].\n*   **BIRCH-309**: There is no information regarding the cause of this failure in the provided documents; it cannot be determined from the retrieved excerpts.\n*   **ATLAS-418**: There is no information regarding the cause of this failure in the provided documents; it cannot be determined from the retrieved excerpts.",
+        "attempts": [
+          {
+            "attempt": 1,
+            "status": "accepted",
+            "feedback": null,
+            "draft": "Based on the provided excerpts, here is the comparison of the failure causes:\n\n*   **CEDAR-104**: The build failed because the dependency `cedar-utils==9.9.9` could not be found in the configured package index [1].\n*   **MAPLE-207**: The build failed because the signing certificate had expired [2].\n*   **BIRCH-309**: There is no information regarding the cause of this failure in the provided documents; it cannot be determined from the retrieved excerpts.\n*   **ATLAS-418**: There is no information regarding the cause of this failure in the provided documents; it cannot be determined from the retrieved excerpts.",
+            "check": {
+              "schema_version": 1,
+              "valid": true,
+              "labels": [
+                1,
+                2
+              ],
+              "out_of_range": [],
+              "malformed_numeric_spans": [],
+              "empty_answer": false,
+              "has_numeric_citation": true,
+              "scope": "Numeric citation syntax/range only; no factual-support, completeness, or semantic-abstention guarantee"
+            },
+            "elapsed_seconds": 0.0003209998831152916
+          }
+        ],
+        "validation_scope": "numeric citation syntax/range only"
+      }
+    },
+    {
+      "record_id": "four_unit_failures:k4::baseline",
+      "suite": "retrieved",
+      "initial_check": {
+        "schema_version": 1,
+        "valid": true,
+        "labels": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "out_of_range": [],
+        "malformed_numeric_spans": [],
+        "empty_answer": false,
+        "has_numeric_citation": true,
+        "scope": "Numeric citation syntax/range only; no factual-support, completeness, or semantic-abstention guarantee"
+      },
+      "live_calls": 0,
+      "context_sha256": "306d4ec6c0cf9d926fb9660a32c938cb1fcce85e8e0e6e7af7a35dd6fdeac6c7",
+      "question": "Compare the causes of CEDAR-104, MAPLE-207, BIRCH-309, and ATLAS-418 failures. Cite evidence for each build.",
+      "guard": {
+        "status": "accepted",
+        "answer": "Based on the provided documents, here is a comparison of the failure causes:\n\n*   **CEDAR-104**: The build failed because the dependency `cedar-utils==9.9.9` could not be found in the configured package index [1].\n*   **MAPLE-207**: The build failed because the signing certificate had expired [2].\n*   **BIRCH-309**: The build failed because the build runner ran out of disk space [3].\n*   **ATLAS-418**: The build failed because the artifact registry access token had expired [4].",
+        "attempts": [
+          {
+            "attempt": 1,
+            "status": "accepted",
+            "feedback": null,
+            "draft": "Based on the provided documents, here is a comparison of the failure causes:\n\n*   **CEDAR-104**: The build failed because the dependency `cedar-utils==9.9.9` could not be found in the configured package index [1].\n*   **MAPLE-207**: The build failed because the signing certificate had expired [2].\n*   **BIRCH-309**: The build failed because the build runner ran out of disk space [3].\n*   **ATLAS-418**: The build failed because the artifact registry access token had expired [4].",
+            "check": {
+              "schema_version": 1,
+              "valid": true,
+              "labels": [
+                1,
+                2,
+                3,
+                4
+              ],
+              "out_of_range": [],
+              "malformed_numeric_spans": [],
+              "empty_answer": false,
+              "has_numeric_citation": true,
+              "scope": "Numeric citation syntax/range only; no factual-support, completeness, or semantic-abstention guarantee"
+            },
+            "elapsed_seconds": 5.869986489415169e-05
+          }
+        ],
+        "validation_scope": "numeric citation syntax/range only"
+      }
+    },
+    {
+      "record_id": "four_unit_failures:k4::revised",
+      "suite": "retrieved",
+      "initial_check": {
+        "schema_version": 1,
+        "valid": true,
+        "labels": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "out_of_range": [],
+        "malformed_numeric_spans": [],
+        "empty_answer": false,
+        "has_numeric_citation": true,
+        "scope": "Numeric citation syntax/range only; no factual-support, completeness, or semantic-abstention guarantee"
+      },
+      "live_calls": 0,
+      "context_sha256": "306d4ec6c0cf9d926fb9660a32c938cb1fcce85e8e0e6e7af7a35dd6fdeac6c7",
+      "question": "Compare the causes of CEDAR-104, MAPLE-207, BIRCH-309, and ATLAS-418 failures. Cite evidence for each build.",
+      "guard": {
+        "status": "accepted",
+        "answer": "Based on the provided excerpts, here are the causes for each build failure:\n\n*   **CEDAR-104**: The build failed because the dependency `cedar-utils==9.9.9` could not be found in the configured package index [1].\n*   **MAPLE-207**: The build failed because the signing certificate had expired [2].\n*   **BIRCH-309**: The build failed because the build runner ran out of disk space [3].\n*   **ATLAS-418**: The build failed because the artifact registry access token had expired [4].",
+        "attempts": [
+          {
+            "attempt": 1,
+            "status": "accepted",
+            "feedback": null,
+            "draft": "Based on the provided excerpts, here are the causes for each build failure:\n\n*   **CEDAR-104**: The build failed because the dependency `cedar-utils==9.9.9` could not be found in the configured package index [1].\n*   **MAPLE-207**: The build failed because the signing certificate had expired [2].\n*   **BIRCH-309**: The build failed because the build runner ran out of disk space [3].\n*   **ATLAS-418**: The build failed because the artifact registry access token had expired [4].",
+            "check": {
+              "schema_version": 1,
+              "valid": true,
+              "labels": [
+                1,
+                2,
+                3,
+                4
+              ],
+              "out_of_range": [],
+              "malformed_numeric_spans": [],
+              "empty_answer": false,
+              "has_numeric_citation": true,
+              "scope": "Numeric citation syntax/range only; no factual-support, completeness, or semantic-abstention guarantee"
+            },
+            "elapsed_seconds": 9.63001511991024e-05
+          }
+        ],
+        "validation_scope": "numeric citation syntax/range only"
+      }
+    },
+    {
+      "record_id": "four_unit_failures:k4::refined",
+      "suite": "retrieved",
+      "initial_check": {
+        "schema_version": 1,
+        "valid": true,
+        "labels": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "out_of_range": [],
+        "malformed_numeric_spans": [],
+        "empty_answer": false,
+        "has_numeric_citation": true,
+        "scope": "Numeric citation syntax/range only; no factual-support, completeness, or semantic-abstention guarantee"
+      },
+      "live_calls": 0,
+      "context_sha256": "306d4ec6c0cf9d926fb9660a32c938cb1fcce85e8e0e6e7af7a35dd6fdeac6c7",
+      "question": "Compare the causes of CEDAR-104, MAPLE-207, BIRCH-309, and ATLAS-418 failures. Cite evidence for each build.",
+      "guard": {
+        "status": "accepted",
+        "answer": "Here is the comparison of the failure causes for each requested entity based on the provided excerpts:\n\n*   **CEDAR-104**: The build failed because the dependency `cedar-utils==9.9.9` could not be found in the configured package index [1].\n*   **MAPLE-207**: The build failed because the signing certificate had expired [2].\n*   **BIRCH-309**: The build failed because the build runner ran out of disk space [3].\n*   **ATLAS-418**: The build failed because the artifact registry access token had expired [4].",
+        "attempts": [
+          {
+            "attempt": 1,
+            "status": "accepted",
+            "feedback": null,
+            "draft": "Here is the comparison of the failure causes for each requested entity based on the provided excerpts:\n\n*   **CEDAR-104**: The build failed because the dependency `cedar-utils==9.9.9` could not be found in the configured package index [1].\n*   **MAPLE-207**: The build failed because the signing certificate had expired [2].\n*   **BIRCH-309**: The build failed because the build runner ran out of disk space [3].\n*   **ATLAS-418**: The build failed because the artifact registry access token had expired [4].",
+            "check": {
+              "schema_version": 1,
+              "valid": true,
+              "labels": [
+                1,
+                2,
+                3,
+                4
+              ],
+              "out_of_range": [],
+              "malformed_numeric_spans": [],
+              "empty_answer": false,
+              "has_numeric_citation": true,
+              "scope": "Numeric citation syntax/range only; no factual-support, completeness, or semantic-abstention guarantee"
+            },
+            "elapsed_seconds": 7.039960473775864e-05
+          }
+        ],
+        "validation_scope": "numeric citation syntax/range only"
+      }
+    },
+    {
+      "record_id": "known_unknown:k2::revised",
+      "suite": "retrieved",
+      "initial_check": {
+        "schema_version": 1,
+        "valid": true,
+        "labels": [
+          1,
+          2
+        ],
+        "out_of_range": [],
+        "malformed_numeric_spans": [],
+        "empty_answer": false,
+        "has_numeric_citation": true,
+        "scope": "Numeric citation syntax/range only; no factual-support, completeness, or semantic-abstention guarantee"
+      },
+      "live_calls": 0,
+      "context_sha256": "a05b99d5e0b6b5517c36628fe2959f1f2b2afd14cdefa2a4c326d9a7027960fd",
+      "question": "Compare release approval requirements for Cedar and Project Willow. Cite evidence and identify what cannot be determined.",
+      "guard": {
+        "status": "accepted",
+        "answer": "Based on the provided documents, here is the comparison of release approval requirements:\n\n*   **Project Cedar**: A release requires all required tests to pass and approval from a maintainer [1].\n*   **Project Willow**: There is no information regarding Project Willow in the retrieved excerpts. The documents only contain release notes for Project Cedar and Project Maple [2]. Therefore, it cannot be determined what the release approval requirements are for Project Willow.",
+        "attempts": [
+          {
+            "attempt": 1,
+            "status": "accepted",
+            "feedback": null,
+            "draft": "Based on the provided documents, here is the comparison of release approval requirements:\n\n*   **Project Cedar**: A release requires all required tests to pass and approval from a maintainer [1].\n*   **Project Willow**: There is no information regarding Project Willow in the retrieved excerpts. The documents only contain release notes for Project Cedar and Project Maple [2]. Therefore, it cannot be determined what the release approval requirements are for Project Willow.",
+            "check": {
+              "schema_version": 1,
+              "valid": true,
+              "labels": [
+                1,
+                2
+              ],
+              "out_of_range": [],
+              "malformed_numeric_spans": [],
+              "empty_answer": false,
+              "has_numeric_citation": true,
+              "scope": "Numeric citation syntax/range only; no factual-support, completeness, or semantic-abstention guarantee"
+            },
+            "elapsed_seconds": 5.450006574392319e-05
+          }
+        ],
+        "validation_scope": "numeric citation syntax/range only"
+      }
+    },
+    {
+      "record_id": "known_unknown:k2::refined",
+      "suite": "retrieved",
+      "initial_check": {
+        "schema_version": 1,
+        "valid": true,
+        "labels": [
+          1,
+          2
+        ],
+        "out_of_range": [],
+        "malformed_numeric_spans": [],
+        "empty_answer": false,
+        "has_numeric_citation": true,
+        "scope": "Numeric citation syntax/range only; no factual-support, completeness, or semantic-abstention guarantee"
+      },
+      "live_calls": 0,
+      "context_sha256": "a05b99d5e0b6b5517c36628fe2959f1f2b2afd14cdefa2a4c326d9a7027960fd",
+      "question": "Compare release approval requirements for Cedar and Project Willow. Cite evidence and identify what cannot be determined.",
+      "guard": {
+        "status": "accepted",
+        "answer": "Based on the provided excerpts, here is the comparison of release approval requirements:\n\n*   **Project Cedar**: A release requires all required tests to pass and approval from a maintainer [1]. Additionally, a failed required test blocks the release workflow until the problem is reviewed [1].\n*   **Project Willow**: There is no information regarding Project Willow in the retrieved excerpts. Consequently, its release approval requirements cannot be determined from the provided documents [2].\n\n**Limitation Statement**: The requested requirements for Project Willow cannot be determined from the retrieved excerpts.",
+        "attempts": [
+          {
+            "attempt": 1,
+            "status": "accepted",
+            "feedback": null,
+            "draft": "Based on the provided excerpts, here is the comparison of release approval requirements:\n\n*   **Project Cedar**: A release requires all required tests to pass and approval from a maintainer [1]. Additionally, a failed required test blocks the release workflow until the problem is reviewed [1].\n*   **Project Willow**: There is no information regarding Project Willow in the retrieved excerpts. Consequently, its release approval requirements cannot be determined from the provided documents [2].\n\n**Limitation Statement**: The requested requirements for Project Willow cannot be determined from the retrieved excerpts.",
+            "check": {
+              "schema_version": 1,
+              "valid": true,
+              "labels": [
+                1,
+                2
+              ],
+              "out_of_range": [],
+              "malformed_numeric_spans": [],
+              "empty_answer": false,
+              "has_numeric_citation": true,
+              "scope": "Numeric citation syntax/range only; no factual-support, completeness, or semantic-abstention guarantee"
+            },
+            "elapsed_seconds": 5.6399963796138763e-05
+          }
+        ],
+        "validation_scope": "numeric citation syntax/range only"
+      }
+    },
+    {
+      "record_id": "known_unknown:k2::baseline",
+      "suite": "retrieved",
+      "initial_check": {
+        "schema_version": 1,
+        "valid": true,
+        "labels": [
+          1,
+          2
+        ],
+        "out_of_range": [],
+        "malformed_numeric_spans": [],
+        "empty_answer": false,
+        "has_numeric_citation": true,
+        "scope": "Numeric citation syntax/range only; no factual-support, completeness, or semantic-abstention guarantee"
+      },
+      "live_calls": 0,
+      "context_sha256": "a05b99d5e0b6b5517c36628fe2959f1f2b2afd14cdefa2a4c326d9a7027960fd",
+      "question": "Compare release approval requirements for Cedar and Project Willow. Cite evidence and identify what cannot be determined.",
+      "guard": {
+        "status": "accepted",
+        "answer": "Based on the provided documents, here is the comparison of release approval requirements:\n\n*   **Project Cedar**: A release requires all required tests to pass and approval from a maintainer [1].\n*   **Project Willow**: There is no information regarding Project Willow in the retrieved excerpts. The documents only contain details for Project Cedar and Project Maple [2]. Therefore, it cannot be determined what the release approval requirements are for Project Willow.\n\n**Evidence:**\n*   Cedar requirements: \"[1] docs/cedar-project.md\"\n*   Lack of Willow information: \"[2] docs/maple-project.md\" (The only other document provided is for Project Maple, not Willow).",
+        "attempts": [
+          {
+            "attempt": 1,
+            "status": "accepted",
+            "feedback": null,
+            "draft": "Based on the provided documents, here is the comparison of release approval requirements:\n\n*   **Project Cedar**: A release requires all required tests to pass and approval from a maintainer [1].\n*   **Project Willow**: There is no information regarding Project Willow in the retrieved excerpts. The documents only contain details for Project Cedar and Project Maple [2]. Therefore, it cannot be determined what the release approval requirements are for Project Willow.\n\n**Evidence:**\n*   Cedar requirements: \"[1] docs/cedar-project.md\"\n*   Lack of Willow information: \"[2] docs/maple-project.md\" (The only other document provided is for Project Maple, not Willow).",
+            "check": {
+              "schema_version": 1,
+              "valid": true,
+              "labels": [
+                1,
+                2
+              ],
+              "out_of_range": [],
+              "malformed_numeric_spans": [],
+              "empty_answer": false,
+              "has_numeric_citation": true,
+              "scope": "Numeric citation syntax/range only; no factual-support, completeness, or semantic-abstention guarantee"
+            },
+            "elapsed_seconds": 5.230028182268143e-05
+          }
+        ],
+        "validation_scope": "numeric citation syntax/range only"
+      }
+    },
+    {
+      "record_id": "known_unknown:k4::refined",
+      "suite": "retrieved",
+      "initial_check": {
+        "schema_version": 1,
+        "valid": false,
+        "labels": [
+          1,
+          7
+        ],
+        "out_of_range": [
+          7
+        ],
+        "malformed_numeric_spans": [],
+        "empty_answer": false,
+        "has_numeric_citation": true,
+        "scope": "Numeric citation syntax/range only; no factual-support, completeness, or semantic-abstention guarantee"
+      },
+      "live_calls": 1,
+      "context_sha256": "f4cf862c9dd4727a94f3f56a649e62e7c3ae396020396fb8d6cf9eec33b9371c",
+      "question": "Compare release approval requirements for Cedar and Project Willow. Cite evidence and identify what cannot be determined.",
+      "guard": {
+        "status": "accepted",
+        "answer": "Based on the provided excerpts, here is the comparison of release approval requirements:\n\n*   **Project Cedar**: A release requires all required tests to pass and approval from a maintainer [1].\n*   **Project Willow**: There is no information regarding Project Willow in the retrieved excerpts. Its release approval requirements cannot be determined from the provided documents [4].",
+        "attempts": [
+          {
+            "attempt": 1,
+            "status": "rejected",
+            "feedback": null,
+            "draft": "Based on the provided excerpts, here is the comparison of release approval requirements:\n\n**Project Cedar**\n*   **Requirements:** A release requires all required tests to pass and approval from a maintainer [1].\n*   **Blocking Conditions:** A failed required test blocks the release workflow until the problem is reviewed [1].\n*   **Missing Information:** The excerpts do not specify requirements for Project Willow.\n\n**Project Willow**\n*   **Status:** There is no document or excerpt provided regarding Project Willow. Consequently, its release approval requirements cannot be determined from the retrieved excerpts [7].",
+            "check": {
+              "schema_version": 1,
+              "valid": false,
+              "labels": [
+                1,
+                7
+              ],
+              "out_of_range": [
+                7
+              ],
+              "malformed_numeric_spans": [],
+              "empty_answer": false,
+              "has_numeric_citation": true,
+              "scope": "Numeric citation syntax/range only; no factual-support, completeness, or semantic-abstention guarantee"
+            },
+            "elapsed_seconds": 5.589984357357025e-05
+          },
+          {
+            "attempt": 2,
+            "status": "accepted",
+            "feedback": "The previous draft failed numeric-citation validation. Generate a fresh answer to the same question using the same excerpts. Available source labels are [1], [2], [3], [4]. Use only those source labels in [n] or [n, m] form. Do not cite numbered instructions as sources. Do not merely remove labels from unsupported claims; answer only from supplied evidence and state when information is unavailable.",
+            "draft": "Based on the provided excerpts, here is the comparison of release approval requirements:\n\n*   **Project Cedar**: A release requires all required tests to pass and approval from a maintainer [1].\n*   **Project Willow**: There is no information regarding Project Willow in the retrieved excerpts. Its release approval requirements cannot be determined from the provided documents [4].",
+            "check": {
+              "schema_version": 1,
+              "valid": true,
+              "labels": [
+                1,
+                4
+              ],
+              "out_of_range": [],
+              "malformed_numeric_spans": [],
+              "empty_answer": false,
+              "has_numeric_citation": true,
+              "scope": "Numeric citation syntax/range only; no factual-support, completeness, or semantic-abstention guarantee"
+            },
+            "elapsed_seconds": 19.951671699993312
+          }
+        ],
+        "validation_scope": "numeric citation syntax/range only"
+      }
+    },
+    {
+      "record_id": "known_unknown:k4::baseline",
+      "suite": "retrieved",
+      "initial_check": {
+        "schema_version": 1,
+        "valid": true,
+        "labels": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "out_of_range": [],
+        "malformed_numeric_spans": [],
+        "empty_answer": false,
+        "has_numeric_citation": true,
+        "scope": "Numeric citation syntax/range only; no factual-support, completeness, or semantic-abstention guarantee"
+      },
+      "live_calls": 0,
+      "context_sha256": "f4cf862c9dd4727a94f3f56a649e62e7c3ae396020396fb8d6cf9eec33b9371c",
+      "question": "Compare release approval requirements for Cedar and Project Willow. Cite evidence and identify what cannot be determined.",
+      "guard": {
+        "status": "accepted",
+        "answer": "Based on the provided documents, here is the comparison of release approval requirements:\n\n*   **Project Cedar**: A release requires all required tests to pass and approval from a maintainer [1].\n*   **Project Willow**: There is no information regarding Project Willow's release approval requirements in the retrieved excerpts. The documents only contain notes for Projects Cedar, Maple, Atlas, and Birch [1][2][3][4].\n\n**What cannot be determined:**\nThe specific release approval requirements for **Project Willow** cannot be determined from the provided text, as no document excerpt discusses this project [1][2][3][4].",
+        "attempts": [
+          {
+            "attempt": 1,
+            "status": "accepted",
+            "feedback": null,
+            "draft": "Based on the provided documents, here is the comparison of release approval requirements:\n\n*   **Project Cedar**: A release requires all required tests to pass and approval from a maintainer [1].\n*   **Project Willow**: There is no information regarding Project Willow's release approval requirements in the retrieved excerpts. The documents only contain notes for Projects Cedar, Maple, Atlas, and Birch [1][2][3][4].\n\n**What cannot be determined:**\nThe specific release approval requirements for **Project Willow** cannot be determined from the provided text, as no document excerpt discusses this project [1][2][3][4].",
+            "check": {
+              "schema_version": 1,
+              "valid": true,
+              "labels": [
+                1,
+                2,
+                3,
+                4
+              ],
+              "out_of_range": [],
+              "malformed_numeric_spans": [],
+              "empty_answer": false,
+              "has_numeric_citation": true,
+              "scope": "Numeric citation syntax/range only; no factual-support, completeness, or semantic-abstention guarantee"
+            },
+            "elapsed_seconds": 8.200015872716904e-05
+          }
+        ],
+        "validation_scope": "numeric citation syntax/range only"
+      }
+    },
+    {
+      "record_id": "known_unknown:k4::revised",
+      "suite": "retrieved",
+      "initial_check": {
+        "schema_version": 1,
+        "valid": true,
+        "labels": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "out_of_range": [],
+        "malformed_numeric_spans": [],
+        "empty_answer": false,
+        "has_numeric_citation": true,
+        "scope": "Numeric citation syntax/range only; no factual-support, completeness, or semantic-abstention guarantee"
+      },
+      "live_calls": 0,
+      "context_sha256": "f4cf862c9dd4727a94f3f56a649e62e7c3ae396020396fb8d6cf9eec33b9371c",
+      "question": "Compare release approval requirements for Cedar and Project Willow. Cite evidence and identify what cannot be determined.",
+      "guard": {
+        "status": "accepted",
+        "answer": "Based on the provided documents, here is the comparison of release approval requirements:\n\n*   **Project Cedar**: A release requires all required tests to pass and approval from a maintainer [1].\n*   **Project Willow**: There is no information regarding Project Willow in the retrieved excerpts. The documents only contain data for Projects Cedar, Maple, Atlas, and Birch [1][2][3][4].\n\n**What cannot be determined:**\n*   It cannot be determined what the release approval requirements are for Project Willow, as it is not mentioned in any of the provided excerpts [1][2][3][4].",
+        "attempts": [
+          {
+            "attempt": 1,
+            "status": "accepted",
+            "feedback": null,
+            "draft": "Based on the provided documents, here is the comparison of release approval requirements:\n\n*   **Project Cedar**: A release requires all required tests to pass and approval from a maintainer [1].\n*   **Project Willow**: There is no information regarding Project Willow in the retrieved excerpts. The documents only contain data for Projects Cedar, Maple, Atlas, and Birch [1][2][3][4].\n\n**What cannot be determined:**\n*   It cannot be determined what the release approval requirements are for Project Willow, as it is not mentioned in any of the provided excerpts [1][2][3][4].",
+            "check": {
+              "schema_version": 1,
+              "valid": true,
+              "labels": [
+                1,
+                2,
+                3,
+                4
+              ],
+              "out_of_range": [],
+              "malformed_numeric_spans": [],
+              "empty_answer": false,
+              "has_numeric_citation": true,
+              "scope": "Numeric citation syntax/range only; no factual-support, completeness, or semantic-abstention guarantee"
+            },
+            "elapsed_seconds": 0.00035429978743195534
+          }
+        ],
+        "validation_scope": "numeric citation syntax/range only"
+      }
+    },
+    {
+      "record_id": "conflicting_approvals:control::baseline",
+      "suite": "context_control",
+      "initial_check": {
+        "schema_version": 1,
+        "valid": true,
+        "labels": [
+          1,
+          2
+        ],
+        "out_of_range": [],
+        "malformed_numeric_spans": [],
+        "empty_answer": false,
+        "has_numeric_citation": true,
+        "scope": "Numeric citation syntax/range only; no factual-support, completeness, or semantic-abstention guarantee"
+      },
+      "live_calls": 0,
+      "context_sha256": "82b33a366bda85a897eef875fa5eda457a356e089348ea9d76ddb5fbbb50c873",
+      "question": "Who must approve LARCH-R7? Explain any conflict and cite both notes.",
+      "guard": {
+        "status": "accepted",
+        "answer": "Based on the provided documents, there is a direct conflict regarding who must approve the LARCH-R7 release:\n\n*   One note states that approval is required from the **security lead** [1].\n*   Another note states that approval is required from the **operations lead only** [2].\n\nBoth notes explicitly mention that they lack a revision date or authority ranking, which contributes to this unresolved conflict.",
+        "attempts": [
+          {
+            "attempt": 1,
+            "status": "accepted",
+            "feedback": null,
+            "draft": "Based on the provided documents, there is a direct conflict regarding who must approve the LARCH-R7 release:\n\n*   One note states that approval is required from the **security lead** [1].\n*   Another note states that approval is required from the **operations lead only** [2].\n\nBoth notes explicitly mention that they lack a revision date or authority ranking, which contributes to this unresolved conflict.",
+            "check": {
+              "schema_version": 1,
+              "valid": true,
+              "labels": [
+                1,
+                2
+              ],
+              "out_of_range": [],
+              "malformed_numeric_spans": [],
+              "empty_answer": false,
+              "has_numeric_citation": true,
+              "scope": "Numeric citation syntax/range only; no factual-support, completeness, or semantic-abstention guarantee"
+            },
+            "elapsed_seconds": 8.009979501366615e-05
+          }
+        ],
+        "validation_scope": "numeric citation syntax/range only"
+      }
+    },
+    {
+      "record_id": "conflicting_approvals:control::revised",
+      "suite": "context_control",
+      "initial_check": {
+        "schema_version": 1,
+        "valid": true,
+        "labels": [
+          1,
+          2
+        ],
+        "out_of_range": [],
+        "malformed_numeric_spans": [],
+        "empty_answer": false,
+        "has_numeric_citation": true,
+        "scope": "Numeric citation syntax/range only; no factual-support, completeness, or semantic-abstention guarantee"
+      },
+      "live_calls": 0,
+      "context_sha256": "82b33a366bda85a897eef875fa5eda457a356e089348ea9d76ddb5fbbb50c873",
+      "question": "Who must approve LARCH-R7? Explain any conflict and cite both notes.",
+      "guard": {
+        "status": "accepted",
+        "answer": "Based on the provided excerpts, there is a direct conflict regarding who must approve the fictional Project Larch release LARCH-R7:\n\n*   **Excerpt [1]** states that LARCH-R7 requires approval from the **security lead**.\n*   **Excerpt [2]** states that LARCH-R7 requires approval from the **operations lead only**.\n\nThe excerpts do not resolve this conflict, and both notes lack a revision date or authority ranking.",
+        "attempts": [
+          {
+            "attempt": 1,
+            "status": "accepted",
+            "feedback": null,
+            "draft": "Based on the provided excerpts, there is a direct conflict regarding who must approve the fictional Project Larch release LARCH-R7:\n\n*   **Excerpt [1]** states that LARCH-R7 requires approval from the **security lead**.\n*   **Excerpt [2]** states that LARCH-R7 requires approval from the **operations lead only**.\n\nThe excerpts do not resolve this conflict, and both notes lack a revision date or authority ranking.",
+            "check": {
+              "schema_version": 1,
+              "valid": true,
+              "labels": [
+                1,
+                2
+              ],
+              "out_of_range": [],
+              "malformed_numeric_spans": [],
+              "empty_answer": false,
+              "has_numeric_citation": true,
+              "scope": "Numeric citation syntax/range only; no factual-support, completeness, or semantic-abstention guarantee"
+            },
+            "elapsed_seconds": 6.0700345784425735e-05
+          }
+        ],
+        "validation_scope": "numeric citation syntax/range only"
+      }
+    },
+    {
+      "record_id": "conflicting_approvals:control::refined",
+      "suite": "context_control",
+      "initial_check": {
+        "schema_version": 1,
+        "valid": true,
+        "labels": [
+          1,
+          2
+        ],
+        "out_of_range": [],
+        "malformed_numeric_spans": [],
+        "empty_answer": false,
+        "has_numeric_citation": true,
+        "scope": "Numeric citation syntax/range only; no factual-support, completeness, or semantic-abstention guarantee"
+      },
+      "live_calls": 0,
+      "context_sha256": "82b33a366bda85a897eef875fa5eda457a356e089348ea9d76ddb5fbbb50c873",
+      "question": "Who must approve LARCH-R7? Explain any conflict and cite both notes.",
+      "guard": {
+        "status": "accepted",
+        "answer": "Based on the provided excerpts, there is a direct conflict regarding who must approve the release LARCH-R7:\n\n*   **Excerpt [1]** states that the release requires approval from the **security lead**.\n*   **Excerpt [2]** states that the release requires approval from the **operations lead only**.\n\nThe two notes present mutually exclusive requirements for the same entity (LARCH-R7). Neither note provides a revision date or authority ranking to resolve this discrepancy.",
+        "attempts": [
+          {
+            "attempt": 1,
+            "status": "accepted",
+            "feedback": null,
+            "draft": "Based on the provided excerpts, there is a direct conflict regarding who must approve the release LARCH-R7:\n\n*   **Excerpt [1]** states that the release requires approval from the **security lead**.\n*   **Excerpt [2]** states that the release requires approval from the **operations lead only**.\n\nThe two notes present mutually exclusive requirements for the same entity (LARCH-R7). Neither note provides a revision date or authority ranking to resolve this discrepancy.",
+            "check": {
+              "schema_version": 1,
+              "valid": true,
+              "labels": [
+                1,
+                2
+              ],
+              "out_of_range": [],
+              "malformed_numeric_spans": [],
+              "empty_answer": false,
+              "has_numeric_citation": true,
+              "scope": "Numeric citation syntax/range only; no factual-support, completeness, or semantic-abstention guarantee"
+            },
+            "elapsed_seconds": 8.250027894973755e-05
+          }
+        ],
+        "validation_scope": "numeric citation syntax/range only"
+      }
+    }
+  ],
+  "started_utc": "2026-11-11T01:15:24.362273+00:00",
+  "python": "3.12.10",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "mode": "saved_draft_plus_live_repair",
+  "source_run_id": "20261111T001306Z-98deeb8f",
+  "source_sha256": "41c5ff89e755c50f44d8225cb24b25a49e08a990e13d5a977280e4c911f82366",
+  "code_sha256": {
+    "citation_guard.py": "6340d86d601a926b2388e4c11f2f6d5b197a561d30c3baaea6b142a57ab0a640",
+    "eval_citation_guard.py": "6af669eb8c789e75c32ad5aa0954800adee9818df0fc72fc24c5fdc30b0a6f30",
+    "qa_agent.py": "9c566aef4cca1e2b33786947e3c81c3def71ea3146ae4e96ed423df100a0922d"
+  },
+  "git_commit": "50bf8ba8e4b2cc02db22bf1a21ce2395541538fc",
+  "git_dirty": false,
+  "model_identity": {
+    "requested_name": "qwen3.5:4b",
+    "resolved_name": "qwen3.5:4b",
+    "digest": "d8b0f5e9760cd1682034f292d7ef72ec46f432149be0df7574bf2d6e92e38c04",
+    "details": {
+      "parent_model": "model.gguf",
+      "format": "gguf",
+      "family": "qwen35",
+      "families": [
+        "qwen35"
+      ],
+      "parameter_size": "4.2B",
+      "quantization_level": "Q4_K_M",
+      "context_length": 262144,
+      "embedding_length": 2560,
+      "runner": "llamacpp"
+    }
+  },
+  "model_digest_matches_source_capture": true,
+  "packages": {
+    "langchain": "1.4.9",
+    "langchain-core": "1.7.6",
+    "langchain-ollama": "1.1.0"
+  },
+  "ended_utc": "2026-11-11T01:16:32.659781+00:00"
+}
