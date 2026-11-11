@@ -2,6 +2,9 @@
 
 **🟩 Observed or checked · 🟠 Pending · 🔴 Preserved failure**
 
+[🗺️ Central tutorial + extension tracker](../guides/PROJECT_TRACKER.md) ·
+[🎨 Shared project standard](../PROJECT_STANDARD.md)
+
 This is the repository's verification index. Status describes the cited checks,
 not universal reliability or completion of a thesis experiment.
 
@@ -22,13 +25,14 @@ not universal reliability or completion of a thesis experiment.
 | 📊 Extension 4: paired local evaluation | 🟩 Completed and audited | [Paired dashboard](identifier-runs/20261110T200859Z-0651f827/summary.md); [audit](identifier-run-audit-20261110.md) |
 | 💬 Extension 4: interactive answer and citations | 🟩 One misleading Maple example passed | [Transcript and citation inspection](identifier-interactive-20261110.md); semantic remains the default |
 | 📚 Extension 5: manual multi-document answers | 🟩 Three inspected; Birch wording caveat | [Observed answers](multidoc-manual-20261110.md) |
-| 🧪 Extension 5: capture and review implementation | 🟩 52 offline tests in development; live capture completed; 🟠 Windows test output not supplied | [Checks](multidoc-implementation.md); [guide](../guides/MULTIDOC_EVALUATION.md) |
+| 🧪 Extension 5: capture and review implementation | 🟩 Included in later 72-test Windows pass; live capture completed; 🟠 human ratings pending | [Checks](multidoc-implementation.md); [guide](../guides/MULTIDOC_EVALUATION.md) |
 | 📊 Extension 5: first 13-answer capture | 🟩 Artifact checks passed; assistant review recorded; 🟠 human ratings pending | [Audit and proposed ratings](multidoc-run-audit-20261110.md); [raw capture](multidoc-runs/20261110T222813Z-bc04d7e8/summary.md) |
-| 🧪 Extension 5 follow-up: frozen-context prompt comparison | 🟩 65 offline tests in development; paired capture audited; 🟠 Windows test output and independent human ratings pending | [Checks](prompt-comparison-implementation.md); [design](../guides/PROMPT_COMPARISON.md) |
+| 🧪 Extension 5 follow-up: frozen-context prompt comparison | 🟩 Included in later 72-test Windows pass; paired capture audited; 🟠 independent human ratings pending | [Checks](prompt-comparison-implementation.md); [design](../guides/PROMPT_COMPARISON.md) |
 | 📊 Extension 5 follow-up: first prompt capture | 🟩 13 pairs audited; AI source review recorded; 🟠 human confirmation pending | [Audit and adoption recommendation](prompt-run-audit-20261110.md) |
-| 🧪 Extension 5 follow-up: second prompt refinement | 🟩 72 offline tests in development; live run audited; 🔴 refined candidate rejected; 🟠 Windows test output/human ratings pending | [Checks](prompt-refinement-implementation.md); [three-prompt design](../guides/PROMPT_REFINEMENT.md) |
+| 🧪 Extension 5 follow-up: second prompt refinement | 🟩 72 tests passed on Windows; live run audited; 🔴 refined candidate rejected; 🟠 human ratings pending | [Checks](prompt-refinement-implementation.md); [three-prompt design](../guides/PROMPT_REFINEMENT.md) |
 | 🔴 Second refinement: empirical result | 39 answers captured; two invalid [7] labels; proposed citation support regressed | [Audit and preserved failures](prompt-refinement-run-audit-20261110.md) |
-| 🔗 Extension 6: numeric citation guard | 🟩 89 development tests; offline saved-failure replay verified; 🟠 live repair/semantic evaluation pending | [Implementation](citation-guard-implementation.md); [scope](../guides/CITATION_GUARD.md) |
+| 🔗 Extension 6: numeric citation guard | 🟩 89 development tests; two live retries audited; 🟠 claim support/semantic evaluation pending | [Implementation](citation-guard-implementation.md); [scope](../guides/CITATION_GUARD.md) |
+| 💬 Extension 6: first live retry run | 🟩 One withheld after invalid retry; 🔴 accepted Willow repair still cites unrelated Birch | [Raw capture and source audit](citation-guard-live-audit-20261110.md) |
 | 🛡️ Retrieved-document instruction robustness | 🟠 Not evaluated | Future extension |
 
 ## 🎨 Where the measured-results dashboard appears
@@ -113,3 +117,13 @@ Then proceed to 7 document-instruction robustness, 8 interactive evidence viewer
 and 9 automated tests/CI. The [roadmap](../guides/EXTENSION_ROADMAP.md) preserves
 this project-specific numbering. Existing 72 tests passed on the user's Windows
 machine; the newly expanded 89-test suite is verified in development only.
+
+
+## 🔗 Guard Checkpoint and Central Tracking
+
+The [guard audit](citation-guard-live-audit-20261110.md) reconstructed 39 records
+and 41 attempt checks: 37 unchanged replay acceptances, one accepted live retry,
+and one withheld live retry. The accepted repair still fails semantic citation
+support. Keep numeric validity, factual support, and abstention quality separate.
+Use [the tracker](../guides/PROJECT_TRACKER.md) as the current status table for
+both the tutorial and all extensions. Future implementation remains planned.

@@ -1,0 +1,20 @@
+{
+  "status": "passed",
+  "scope": "Saved artifact consistency and deterministic numeric decisions; not live model reproduction or factual accuracy",
+  "records_checked": 39,
+  "attempt_checks_recomputed": 41,
+  "replayed_initial_drafts": 39,
+  "initial_invalid_drafts": 2,
+  "live_calls_recorded": 2,
+  "accepted_without_live_call": 37,
+  "accepted_after_live_retry": 1,
+  "withheld_after_live_retry": 1,
+  "accepted": 38,
+  "abstained": 1,
+  "source_snapshot_digest_checked": true,
+  "code_digest_line_endings": {
+    "citation_guard.py": "CRLF",
+    "eval_citation_guard.py": "CRLF",
+    "qa_agent.py": "CRLF"
+  }
+}

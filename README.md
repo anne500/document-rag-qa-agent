@@ -10,7 +10,7 @@
 
 ## 🧭 Explore the project
 
-[🧩 Architecture](#architecture) · [🚀 Setup](#setup-on-windows-powershell) · [🧪 Results & verification](#initial-verification) · [🗂️ Evidence & guides](#visual-guide-and-pdf-verification) · [🧪 Evaluation lab](#retrieval-evaluation-lab) · [📊 Measured results](#recorded-retrieval-results) · [🔎 Identifier retrieval](#identifier-aware-retrieval) · [📚 Multi-document lab](#multi-document-answer-evaluation) · [🧪 Prompt comparison](#frozen-context-prompt-comparison) · [🧪 Refinement](#second-prompt-refinement) · [🔗 Citation guard](#citation-guard) · [📋 Verification dashboard](verification/DASHBOARD.md) · [🎨 Visual standard](VISUAL_STYLE.md)
+[🗺️ Tutorial + extension tracker](guides/PROJECT_TRACKER.md) · [🧩 Architecture](#architecture) · [🚀 Setup](#setup-on-windows-powershell) · [🧪 Results & verification](#initial-verification) · [🗂️ Evidence & guides](#visual-guide-and-pdf-verification) · [🧪 Evaluation lab](#retrieval-evaluation-lab) · [📊 Measured results](#recorded-retrieval-results) · [🔎 Identifier retrieval](#identifier-aware-retrieval) · [📚 Multi-document lab](#multi-document-answer-evaluation) · [🧪 Prompt comparison](#frozen-context-prompt-comparison) · [🧪 Refinement](#second-prompt-refinement) · [🔗 Citation guard](#citation-guard) · [📋 Verification dashboard](verification/DASHBOARD.md) · [🎨 Visual standard](VISUAL_STYLE.md)
 
 🎨 [Shared architecture colors and diagram conventions](VISUAL_STYLE.md)
 
@@ -19,6 +19,20 @@ Qwen, and Chroma. Built to learn retrieval-augmented generation and
 explore evidence-based answers for Build, Release and Integration engineering.
 
 Adapted from [Darsh Shah's freeCodeCamp tutorial](https://www.freecodecamp.org/news/build-a-private-rag-qa-ai-agent-for-your-documents-using-langchain).
+
+## 🗺️ Tutorial and Extension Progress
+
+![Tutorial and extension progress](assets/project-progress.svg)
+
+**[Open the full tutorial + extension tracker](guides/PROJECT_TRACKER.md)** for
+separate tables of the five base tutorial steps, Extensions 1–9, evidence links,
+and remaining work. Current work is Extension 6: its numeric guard is locally
+exercised, while claim support and semantic-abstention evaluation remain pending.
+
+The [shared project documentation standard](PROJECT_STANDARD.md) preserves the
+same base-tutorial-then-extensions pattern used in
+[Project 1](https://github.com/anne500/multi-agent-study-guide), with readable
+colors, diagrams, provenance, verification, and explicit pending work.
 
 <a id="architecture"></a>
 
@@ -495,8 +509,8 @@ corruption: it reports the two citation warnings while passing consistency.
 
 ## 🔗 Extension 6: Citation and Abstention Evaluation
 
-**🟩 Numeric guard implemented; 89 offline tests passed in development.
-🟠 Live repair and broader semantic evaluation pending.**
+**🟩 Numeric guard and two live retry outcomes audited; 89 development tests passed.
+🟠 Factual-support and broader semantic-abstention evaluation pending.**
 
 The optional answer-boundary check validates numeric labels before display,
 retries once using the same excerpts, and withholds a still-invalid answer.
@@ -511,7 +525,9 @@ python .\eval_citation_guard.py --repair-invalid
 
 The evaluation replays 39 saved first drafts and makes only two live repair
 calls for the observed [7] failures. Development offline replay withheld both
-failures, without calling a model. The new repair effects remain unmeasured.
+failures, without calling a model. In the first live repair run, one draft was
+withheld after another invalid [7]; the Willow repair passed numeric checks
+but still cited unrelated Birch [4]. [Read the source audit](verification/citation-guard-live-audit-20261110.md).
 
 To opt into the guard in the interactive app:
 
@@ -523,7 +539,8 @@ The original interactive mode remains available without the flag.
 
 [🎨 Guard behavior and evaluation limits](guides/CITATION_GUARD.md) ·
 [🧪 Implementation checks](verification/citation-guard-implementation.md) ·
-[🗺️ Extensions 1–9 and current status](guides/EXTENSION_ROADMAP.md)
+[🗺️ Tutorial + extension status tracker](guides/PROJECT_TRACKER.md) ·
+[Extension numbering](guides/EXTENSION_ROADMAP.md)
 
 <a id="tutorial-acknowledgment-and-attribution"></a>
 
@@ -543,6 +560,7 @@ Published: July 2, 2026.
 | Repository extensions | Fictional project fixtures, page-specific PDF verification, retrieval experiments, automatic startup index refresh, retrieval evaluation, identifier-priority comparison, multi-document answer-review, frozen-context prompt comparison labs, and citation-guard evaluation, verification records, and visual documentation |
 
 The original tutorial is credited for the learning foundation. Repository adaptations, experiments, and research connections are documented separately.
+
 
 
 

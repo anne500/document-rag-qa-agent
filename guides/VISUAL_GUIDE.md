@@ -192,3 +192,18 @@ check, one retry, and withholding branch. Saved [7] failures are replayed;
 live repair requires only two new model calls. The [extension roadmap](EXTENSION_ROADMAP.md)
 keeps robustness, the viewer, and CI as Extensions 7–9. Numeric validity is not
 factual support, and Extension 6's broader semantic evaluation remains pending.
+
+
+## 🗺️ Tutorial and Extension Tracker
+
+![Current project status](../assets/project-progress.svg)
+
+The [central tracker](PROJECT_TRACKER.md) separates five tutorial steps from
+all nine extensions, with colored labels, evidence links, remaining tasks,
+and a compact progression diagram. The [shared standard](../PROJECT_STANDARD.md)
+uses the same tutorial-baseline-plus-extensions pattern as Project 1.
+
+The [live guard audit](../verification/citation-guard-live-audit-20261110.md)
+records one withheld retry and one numeric pass whose citation support still
+fails. Extension 6 remains current; Extensions 7 and 8 are planned, and CI
+remains to add under Extension 9 even though tests already exist.

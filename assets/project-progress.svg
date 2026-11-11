@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="550" viewBox="0 0 1120 550" role="img" aria-labelledby="title desc">
+<title id="title">Document RAG tutorial and extension status</title>
+<desc id="desc">Tutorial baseline and Extensions 1 through 4 have recorded scoped checks. Extension 5 retains evaluated failures. Extension 6 is current with semantic review pending. Extensions 7 and 8 are planned; tests exist and CI is planned for Extension 9.</desc>
+<rect width="1120" height="550" rx="18" fill="#FFFFFF"/>
+<text x="30" y="40" font-family="Arial,sans-serif" font-size="26" font-weight="700" fill="#0F172A">Document RAG · Tutorial + Extensions</text>
+<text x="30" y="68" font-family="Arial,sans-serif" font-size="16" fill="#475569">Evidence-based progress · November 10, 2026 · Local date: America/Los_Angeles</text>
+<rect x="30" y="92" width="522" height="120" rx="12" fill="#DCFCE7" stroke="#15803D" stroke-width="2"/>
+<text x="48" y="115" font-family="Arial,sans-serif" font-size="13" font-weight="700" fill="#14532D">TUTORIAL BASELINE</text>
+<text x="48" y="141" font-family="Arial,sans-serif" font-size="22" font-weight="700" fill="#14532D">Five core steps</text>
+<text x="48" y="167" font-family="Arial,sans-serif" font-size="16" font-weight="400" fill="#14532D">Local operation recorded</text>
+<text x="48" y="192" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#14532D">Original tutorial credit and step mapping</text>
+<rect x="578" y="92" width="522" height="120" rx="12" fill="#DCFCE7" stroke="#15803D" stroke-width="2"/>
+<text x="596" y="115" font-family="Arial,sans-serif" font-size="13" font-weight="700" fill="#14532D">EXTENSIONS 1–4</text>
+<text x="596" y="141" font-family="Arial,sans-serif" font-size="22" font-weight="700" fill="#14532D">Verified checkpoints</text>
+<text x="596" y="167" font-family="Arial,sans-serif" font-size="16" font-weight="400" fill="#14532D">PDF, indexing, retrieval, identifiers</text>
+<text x="596" y="192" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#14532D">Scope and evidence linked in the tracker</text>
+<rect x="30" y="229" width="522" height="120" rx="12" fill="#DBEAFE" stroke="#2563EB" stroke-width="2"/>
+<text x="48" y="252" font-family="Arial,sans-serif" font-size="13" font-weight="700" fill="#172554">EXTENSION 5</text>
+<text x="48" y="278" font-family="Arial,sans-serif" font-size="22" font-weight="700" fill="#172554">Evidence recorded</text>
+<text x="48" y="304" font-family="Arial,sans-serif" font-size="16" font-weight="400" fill="#172554">Multi-document and prompt experiments</text>
+<text x="48" y="329" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#172554">Refinement rejected; human review pending</text>
+<rect x="578" y="229" width="522" height="120" rx="12" fill="#FEF3C7" stroke="#B45309" stroke-width="2"/>
+<text x="596" y="252" font-family="Arial,sans-serif" font-size="13" font-weight="700" fill="#78350F">EXTENSION 6 · CURRENT</text>
+<text x="596" y="278" font-family="Arial,sans-serif" font-size="22" font-weight="700" fill="#78350F">Numeric guard exercised</text>
+<text x="596" y="304" font-family="Arial,sans-serif" font-size="16" font-weight="400" fill="#78350F">Two live retries: one withheld, one accepted</text>
+<text x="596" y="329" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#78350F">Accepted repair still has unsupported citation</text>
+<rect x="30" y="366" width="522" height="120" rx="12" fill="#F8FAFC" stroke="#475569" stroke-width="2"/>
+<text x="48" y="389" font-family="Arial,sans-serif" font-size="13" font-weight="700" fill="#0F172A">EXTENSIONS 7–8</text>
+<text x="48" y="415" font-family="Arial,sans-serif" font-size="22" font-weight="700" fill="#0F172A">Planned</text>
+<text x="48" y="441" font-family="Arial,sans-serif" font-size="16" font-weight="400" fill="#0F172A">Document robustness and evidence viewer</text>
+<text x="48" y="466" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#0F172A">Implementation and verification remain</text>
+<rect x="578" y="366" width="522" height="120" rx="12" fill="#FEF3C7" stroke="#B45309" stroke-width="2"/>
+<text x="596" y="389" font-family="Arial,sans-serif" font-size="13" font-weight="700" fill="#78350F">EXTENSION 9</text>
+<text x="596" y="415" font-family="Arial,sans-serif" font-size="22" font-weight="700" fill="#78350F">Partly implemented</text>
+<text x="596" y="441" font-family="Arial,sans-serif" font-size="16" font-weight="400" fill="#78350F">89 development tests; CI still planned</text>
+<text x="596" y="466" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#78350F">Earlier 72 tests passed on Windows</text>
+<text x="30" y="526" font-family="Arial,sans-serif" font-size="15" fill="#475569">Status labels describe linked checkpoints. Numeric validity does not establish factual support.</text>
+</svg>

@@ -1,6 +1,6 @@
 # 🔗 Extension 6: Citation Guard and Abstention Evaluation
 
-**🟩 Numeric guard implemented; 89 development tests passed. 🟠 Live repair and broader semantic abstention evaluation pending.**
+**🟩 Numeric guard and two live retry outcomes audited; 89 development tests passed. 🟠 Claim support, broader semantic abstention, and human validation pending.**
 
 This starts Extension 6 in the [Document RAG roadmap](EXTENSION_ROADMAP.md).
 The rejected refined prompt remains rejected. The guard is an optional runtime
@@ -134,7 +134,7 @@ Snapshots contain complete document text; current fixtures are fictional.
 
 ## 🟠 Remaining Extension 6 work
 
-- Verify the two live repairs and one guarded interactive example locally.
+- The two live retries are now audited; a standalone guarded interactive example remains to record.
 - Evaluate citation support with claim/excerpt review; numeric validity alone is insufficient.
 - Separate correct missing-evidence abstention, unnecessary refusal when evidence
   exists, unresolved conflict, and guard-induced withholding in the evaluation rubric.
@@ -147,3 +147,17 @@ document-instruction robustness, followed by the evidence viewer and CI work.
 [Implementation verification](../verification/citation-guard-implementation.md) ·
 [Extension roadmap](EXTENSION_ROADMAP.md) ·
 [Tutorial acknowledgment](../README.md#tutorial-acknowledgment-and-attribution)
+
+
+## 📊 First Live Follow-up
+
+The [two-retry audit](../verification/citation-guard-live-audit-20261110.md)
+reconstructs 39 records and 41 attempt checks. One retry retained [7] and was
+withheld; the other used existing Birch [4] for a Willow limitation and passed
+numeric validation while still failing assistant-proposed citation support.
+The other 37 numeric acceptances are unchanged replay, not newly checked facts.
+
+This verifies the numeric runtime checkpoint without completing broader
+Extension 6 evaluation. The [project tracker](PROJECT_TRACKER.md) records the
+remaining work and Extensions 7–9. The earlier 72-test Windows observation is
+recorded; new 89-test Windows output remains pending.

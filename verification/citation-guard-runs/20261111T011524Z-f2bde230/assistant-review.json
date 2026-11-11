@@ -1,0 +1,35 @@
+{
+  "review_type": "assistant_source_review",
+  "reviewer_type": "ChatGPT/Codex AI assistant; independent human review pending",
+  "reviewed_date": "2026-11-10",
+  "report_canonical_sha256": "3bcaa4b03dec42682795e91165fbe6daead2bf39c2308c1628a7e7536de8a9c6",
+  "scope": "Only the two newly generated retry drafts are reviewed here. The other 37 accepted drafts are unchanged replay, not newly validated answers.",
+  "records": [
+    {
+      "record_id": "three_unit_approvals:k2::refined",
+      "guard_outcome": "abstained",
+      "retry_numeric_check": "failed: [7] is outside available labels [1] and [2]",
+      "retry_draft_ratings": {
+        "completeness": "fail",
+        "attribution": "pass",
+        "citation_support": "fail",
+        "uncertainty": "pass"
+      },
+      "notes": "The retry correctly states Maple security checks/release-manager approval [2], and Atlas integration tests/quality and operations leads [1] on PDF page 1. Cedar evidence is absent, so full expected-answer completeness fails. Missing Cedar requirements are correctly scoped to retrieved excerpts, but the limitation again cites nonexistent [7]. The guard correctly withholds the complete draft after its single retry. The displayed fixed withholding message is a guard decision, not a claim that the sources contain no useful facts. Partial supported facts are withheld too; that is the designed trade-off.",
+      "displayed_answer_review": "Fixed numeric-validation withholding message; not rated as a generated factual answer."
+    },
+    {
+      "record_id": "known_unknown:k4::refined",
+      "guard_outcome": "accepted",
+      "retry_numeric_check": "passed: [1] and [4] exist",
+      "retry_draft_ratings": {
+        "completeness": "pass",
+        "attribution": "pass",
+        "citation_support": "fail",
+        "uncertainty": "pass"
+      },
+      "notes": "Cedar required tests and maintainer approval [1] are supported. The answer correctly says Willow policy cannot be determined from retrieved excerpts and does not invent one. However, that Willow statement cites [4], which is docs/birch-project.md. Birch documents BIRCH-309 disk space/recovery and its own unspecified approval policy; it does not establish a Willow policy or the entire supplied-context absence finding. This fails the same source-scope rule used in prior reviews. Moving [7] to an existing [4] repairs numeric validity without repairing citation support.",
+      "displayed_answer_review": "The accepted visible answer still has an unsupported citation. Guard acceptance is not factual validation."
+    }
+  ]
+}
