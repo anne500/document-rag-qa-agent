@@ -183,3 +183,12 @@ preserves a negative result: two invented [7] citations and additional unsupport
 claims. The refinement is rejected for adoption. The saved data is consistent;
 that does not make its answers correct. AI-proposed ratings and human-review
 status remain separate.
+
+
+## 🔗 Extension 6: Citation Guard
+
+The [guard diagram and evaluation guide](CITATION_GUARD.md) shows the numeric
+check, one retry, and withholding branch. Saved [7] failures are replayed;
+live repair requires only two new model calls. The [extension roadmap](EXTENSION_ROADMAP.md)
+keeps robustness, the viewer, and CI as Extensions 7–9. Numeric validity is not
+factual support, and Extension 6's broader semantic evaluation remains pending.

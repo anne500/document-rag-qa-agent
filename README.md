@@ -10,7 +10,7 @@
 
 ## 🧭 Explore the project
 
-[🧩 Architecture](#architecture) · [🚀 Setup](#setup-on-windows-powershell) · [🧪 Results & verification](#initial-verification) · [🗂️ Evidence & guides](#visual-guide-and-pdf-verification) · [🧪 Evaluation lab](#retrieval-evaluation-lab) · [📊 Measured results](#recorded-retrieval-results) · [🔎 Identifier retrieval](#identifier-aware-retrieval) · [📚 Multi-document lab](#multi-document-answer-evaluation) · [🧪 Prompt comparison](#frozen-context-prompt-comparison) · [🧪 Refinement](#second-prompt-refinement) · [📋 Verification dashboard](verification/DASHBOARD.md) · [🎨 Visual standard](VISUAL_STYLE.md)
+[🧩 Architecture](#architecture) · [🚀 Setup](#setup-on-windows-powershell) · [🧪 Results & verification](#initial-verification) · [🗂️ Evidence & guides](#visual-guide-and-pdf-verification) · [🧪 Evaluation lab](#retrieval-evaluation-lab) · [📊 Measured results](#recorded-retrieval-results) · [🔎 Identifier retrieval](#identifier-aware-retrieval) · [📚 Multi-document lab](#multi-document-answer-evaluation) · [🧪 Prompt comparison](#frozen-context-prompt-comparison) · [🧪 Refinement](#second-prompt-refinement) · [🔗 Citation guard](#citation-guard) · [📋 Verification dashboard](verification/DASHBOARD.md) · [🎨 Visual standard](VISUAL_STYLE.md)
 
 🎨 [Shared architecture colors and diagram conventions](VISUAL_STYLE.md)
 
@@ -491,6 +491,40 @@ corruption: it reports the two citation warnings while passing consistency.
 [🎨 Refinement design and review checks](guides/PROMPT_REFINEMENT.md) ·
 [🧪 Verification](verification/prompt-refinement-implementation.md)
 
+<a id="citation-guard"></a>
+
+## 🔗 Extension 6: Citation and Abstention Evaluation
+
+**🟩 Numeric guard implemented; 89 offline tests passed in development.
+🟠 Live repair and broader semantic evaluation pending.**
+
+The optional answer-boundary check validates numeric labels before display,
+retries once using the same excerpts, and withholds a still-invalid answer.
+It never fixes a draft by deleting its references. A valid/no-label answer can
+still be unsupported; factual support and semantic abstention are separate checks.
+
+```powershell
+python -m unittest discover -s tests -v
+python .\eval_citation_guard.py --validate-only
+python .\eval_citation_guard.py --repair-invalid
+```
+
+The evaluation replays 39 saved first drafts and makes only two live repair
+calls for the observed [7] failures. Development offline replay withheld both
+failures, without calling a model. The new repair effects remain unmeasured.
+
+To opt into the guard in the interactive app:
+
+```powershell
+python .\qa_agent.py --retrieval-mode id_priority --citation-guard
+```
+
+The original interactive mode remains available without the flag.
+
+[🎨 Guard behavior and evaluation limits](guides/CITATION_GUARD.md) ·
+[🧪 Implementation checks](verification/citation-guard-implementation.md) ·
+[🗺️ Extensions 1–9 and current status](guides/EXTENSION_ROADMAP.md)
+
 <a id="tutorial-acknowledgment-and-attribution"></a>
 
 ## 📚 Tutorial Acknowledgment and Attribution
@@ -506,9 +540,10 @@ Published: July 2, 2026.
 | Original author | Darsh Shah |
 | Publisher | freeCodeCamp |
 | Tutorial foundation | Local document loading, chunking, Ollama embeddings, Chroma persistence, retrieval middleware, and document Q&A |
-| Repository extensions | Fictional project fixtures, page-specific PDF verification, retrieval experiments, automatic startup index refresh, retrieval evaluation, identifier-priority comparison, multi-document answer-review, and frozen-context prompt comparison labs, verification records, and visual documentation |
+| Repository extensions | Fictional project fixtures, page-specific PDF verification, retrieval experiments, automatic startup index refresh, retrieval evaluation, identifier-priority comparison, multi-document answer-review, frozen-context prompt comparison labs, and citation-guard evaluation, verification records, and visual documentation |
 
 The original tutorial is credited for the learning foundation. Repository adaptations, experiments, and research connections are documented separately.
+
 
 
 

@@ -12,6 +12,7 @@ from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_ollama import ChatOllama, OllamaEmbeddings
 from langchain_chroma import Chroma
 from id_retrieval import IdentifierAwareRetriever
+from citation_guard import guarded_answer
 
 
 BASE_DIR = Path(__file__).resolve().parent
@@ -173,6 +174,9 @@ def build_agent(system_prompt=None):
                 f"<retrieved_excerpts>\n{context}\n</retrieved_excerpts>"
             ),
         })
+        feedback = request.runtime.context.get("citation_feedback")
+        if feedback:
+            blocks.append({"type": "text", "text": feedback})
         return handler(
             request.override(system_message=SystemMessage(content=blocks))
         )
@@ -196,6 +200,8 @@ def main(argv=None):
         "--retrieval-mode", choices=["semantic", "id_priority"], default="semantic"
     )
     parser.add_argument("--candidate-pool", type=int, default=20)
+    parser.add_argument("--citation-guard", action="store_true",
+                        help="Validate numeric labels; retry once, then withhold invalid answers")
     args = parser.parse_args(argv)
     if args.candidate_pool < 1:
         parser.error("candidate-pool must be positive")
@@ -237,12 +243,28 @@ def main(argv=None):
             for number, document in enumerate(documents, start=1)
         )
 
-        result = agent.invoke(
-            {"messages": [{"role": "user", "content": question}]},
-            context={"excerpts": excerpts},
-        )
+        if args.citation_guard:
+            def generate(q, context, feedback):
+                response = agent.invoke(
+                    {"messages": [{"role": "user", "content": q}]},
+                    context={"excerpts": context, "citation_feedback": feedback},
+                )
+                return response["messages"][-1].content
 
-        print("\nAnswer:", result["messages"][-1].content)
+            guarded = guarded_answer(question, excerpts, len(documents), generate)
+            print("Citation guard:", json.dumps({
+                "status": guarded["status"], "attempts": len(guarded["attempts"]),
+                "scope": guarded["validation_scope"],
+            }))
+            answer = guarded["answer"]
+        else:
+            result = agent.invoke(
+                {"messages": [{"role": "user", "content": question}]},
+                context={"excerpts": excerpts},
+            )
+            answer = result["messages"][-1].content
+
+        print("\nAnswer:", answer)
         print("\nRetrieved sources:")
         for number, document in enumerate(documents, start=1):
             print(f"[{number}] {source_label(document)}")
@@ -252,6 +274,7 @@ def main(argv=None):
 
 if __name__ == "__main__":
     main()
+
 
 
 

@@ -28,6 +28,7 @@ not universal reliability or completion of a thesis experiment.
 | 📊 Extension 5 follow-up: first prompt capture | 🟩 13 pairs audited; AI source review recorded; 🟠 human confirmation pending | [Audit and adoption recommendation](prompt-run-audit-20261110.md) |
 | 🧪 Extension 5 follow-up: second prompt refinement | 🟩 72 offline tests in development; live run audited; 🔴 refined candidate rejected; 🟠 Windows test output/human ratings pending | [Checks](prompt-refinement-implementation.md); [three-prompt design](../guides/PROMPT_REFINEMENT.md) |
 | 🔴 Second refinement: empirical result | 39 answers captured; two invalid [7] labels; proposed citation support regressed | [Audit and preserved failures](prompt-refinement-run-audit-20261110.md) |
+| 🔗 Extension 6: numeric citation guard | 🟩 89 development tests; offline saved-failure replay verified; 🟠 live repair/semantic evaluation pending | [Implementation](citation-guard-implementation.md); [scope](../guides/CITATION_GUARD.md) |
 | 🛡️ Retrieved-document instruction robustness | 🟠 Not evaluated | Future extension |
 
 ## 🎨 Where the measured-results dashboard appears
@@ -102,3 +103,13 @@ remains pending.
 
 
 
+
+
+## 🗺️ Remaining Extension Sequence
+
+[Extension 6](../guides/CITATION_GUARD.md) starts numeric citation checking and
+bounded withholding; broader claim-support and abstention evaluation remain.
+Then proceed to 7 document-instruction robustness, 8 interactive evidence viewer,
+and 9 automated tests/CI. The [roadmap](../guides/EXTENSION_ROADMAP.md) preserves
+this project-specific numbering. Existing 72 tests passed on the user's Windows
+machine; the newly expanded 89-test suite is verified in development only.
