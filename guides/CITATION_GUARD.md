@@ -141,8 +141,7 @@ Snapshots contain complete document text; current fixtures are fictional.
 - Include new questions and independent human review. Do not relabel earlier
   assistant proposals as human ground truth.
 
-This is a bounded first checkpoint for Extension 6. Extension 7 remains
-document-instruction robustness, followed by the evidence viewer and CI work.
+The numeric guard is part of the broader citation and abstention evaluation. The closeout adds the review lab, document-instruction cases, viewer, and CI. [Closeout guide](PROJECT_FINISH.md)
 
 [Implementation verification](../verification/citation-guard-implementation.md) ·
 [Extension roadmap](EXTENSION_ROADMAP.md) ·
@@ -159,5 +158,4 @@ The other 37 numeric acceptances are unchanged replay, not newly checked facts.
 
 This verifies the numeric runtime checkpoint without completing broader
 Extension 6 evaluation. The [project tracker](PROJECT_TRACKER.md) records the
-remaining work and Extensions 7–9. The earlier 72-test Windows observation is
-recorded; new 89-test Windows output remains pending.
+remaining work and Extensions 7–9. The 94-test suite passed in both hosted jobs. [CI run](https://github.com/anne500/document-rag-qa-agent/actions/runs/42942803173)

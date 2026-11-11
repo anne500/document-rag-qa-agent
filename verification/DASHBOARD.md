@@ -116,7 +116,7 @@ remains pending.
 | Citation and abstention lab | Seven cases, 14 authored drafts. New live review pending. |
 | Document-instruction cases | Three attack fixtures and middleware role separation checked offline. |
 | Evidence viewer | Saved and authored reports rendered to standalone HTML. Browser interaction check pending. |
-| Tests and CI | 94 local tests passed. Windows and Ubuntu workflow configured. |
+| Tests and CI | 94 tests passed on Windows and Ubuntu. [Run and viewer artifacts](https://github.com/anne500/document-rag-qa-agent/actions/runs/42942803173) |
 
 [Closeout guide](../guides/PROJECT_FINISH.md) · [Workflow runs](https://github.com/anne500/document-rag-qa-agent/actions/workflows/verify.yml)
 

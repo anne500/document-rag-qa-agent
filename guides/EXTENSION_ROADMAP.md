@@ -18,7 +18,7 @@ own numbered roadmap.
 | 6 🔗 | Citation and abstention evaluation | Guard audited and review lab exercised with authored examples. Live review remains open. |
 | 7 🛡️ | Document-instruction robustness | Structured context and three attack cases tested offline. Live model behavior remains open. |
 | 8 🖥️ | Interactive evidence viewer | HTML generator and source checks exercised. Browser interaction check remains open. |
-| 9 ⚙️ | Automated tests and CI | 94 local tests passed. Windows and Ubuntu workflow configured. |
+| 9 ⚙️ | Automated tests and CI | 94 tests and saved audits passed in both hosted jobs. [CI results](https://github.com/anne500/document-rag-qa-agent/actions/runs/42942803173) |
 
 Checkpoint completion describes observed work, not universal reliability or
 completed thesis evidence. Human validation remains separate from assistant

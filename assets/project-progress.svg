@@ -29,10 +29,10 @@
 <text x="48" y="415" font-family="Arial,sans-serif" font-size="22" font-weight="700" fill="#0F172A">Implemented</text>
 <text x="48" y="441" font-family="Arial,sans-serif" font-size="16" font-weight="400" fill="#0F172A">Structured context and evidence viewer</text>
 <text x="48" y="466" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#0F172A">Offline checks passed</text>
-<rect x="578" y="366" width="522" height="120" rx="12" fill="#FEF3C7" stroke="#B45309" stroke-width="2"/>
-<text x="596" y="389" font-family="Arial,sans-serif" font-size="13" font-weight="700" fill="#78350F">EXTENSION 9</text>
-<text x="596" y="415" font-family="Arial,sans-serif" font-size="22" font-weight="700" fill="#78350F">Offline suite and CI</text>
-<text x="596" y="441" font-family="Arial,sans-serif" font-size="16" font-weight="400" fill="#78350F">94 local tests passed</text>
-<text x="596" y="466" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#78350F">Windows and Ubuntu workflow configured</text>
+<rect x="578" y="366" width="522" height="120" rx="12" fill="#DCFCE7" stroke="#15803D" stroke-width="2"/>
+<text x="596" y="389" font-family="Arial,sans-serif" font-size="13" font-weight="700" fill="#14532D">EXTENSION 9</text>
+<text x="596" y="415" font-family="Arial,sans-serif" font-size="22" font-weight="700" fill="#14532D">Offline suite and CI</text>
+<text x="596" y="441" font-family="Arial,sans-serif" font-size="16" font-weight="400" fill="#14532D">94 tests passed</text>
+<text x="596" y="466" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#14532D">Windows and Ubuntu CI passed</text>
 <text x="30" y="526" font-family="Arial,sans-serif" font-size="15" fill="#475569">Status labels describe linked checkpoints. Numeric validity does not establish factual support.</text>
 </svg>

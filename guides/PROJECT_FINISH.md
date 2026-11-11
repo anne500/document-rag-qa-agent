@@ -5,7 +5,7 @@
 | 6 🔗 Citation and abstention | Claim and source rubric, expected dispositions, guarded evaluator | Seven cases and 14 authored examples exercised locally. Two prior live retries and their source review are recorded. [Dataset](../evaluation/answer-evidence-cases.json) · [Live guard audit](../verification/citation-guard-live-audit-20261110.md) |
 | 7 🛡️ Document instructions | Opt-in structured context and three attack fixtures with a shared clean control | Offline middleware test keeps fake role markers and closing delimiters inside user data. Live model behavior awaits capture. [Tests](../tests/test_answer_evidence.py) |
 | 8 🔎 Evidence viewer | Standalone HTML with search, outcome filters, citation navigation, attempts, and source review | Historical report and lab examples generate HTML successfully. Source mapping and escaping tested. [Viewer builder](../tools/build_evidence_viewer.py) |
-| 9 ⚙️ Tests and CI | Offline suite, saved-run audits, and HTML artifacts on Windows and Ubuntu | 94 tests and both saved-run audits passed locally. [Workflow](../.github/workflows/verify.yml) · [GitHub Actions](https://github.com/anne500/document-rag-qa-agent/actions/workflows/verify.yml) |
+| 9 ⚙️ Tests and CI | Offline suite, saved-run audits, and HTML artifacts on Windows and Ubuntu | 94 tests and both saved-run audits passed locally and in both hosted jobs. [Workflow](../.github/workflows/verify.yml) · [Passing CI run](https://github.com/anne500/document-rag-qa-agent/actions/runs/42942803173) |
 
 ## 🔎 Open the viewer
 
@@ -44,6 +44,6 @@ Use `python qa_agent.py --citation-guard --harden-documents` to try both options
 - The offline lab evaluated 14 authored drafts across seven cases. Thirteen passed the numeric check and one was withheld. The authored labels include five citation-support failures and one unnecessary refusal. Three drafts contain an attack marker and two reach the displayed answer. These are deliberate examples of successes and failures.
 - The saved guard audit reproduced 39 records and 41 attempt checks. The Willow retry cites Birch for a Willow claim. The three-project comparison is withheld after another invalid `[7]`.
 - The viewer builder verified the saved source snapshot and context hashes before rendering the historical run. Tests check the Birch mapping, the withheld draft, and escaping of script tags. An interactive browser check was blocked by this environment's local-file navigation policy.
-- The workflow runs offline tests, validates saved input, reproduces both audits, and builds two viewer artifacts. Live generation and independent human ratings have their own verification steps.
+- The Windows and Ubuntu jobs passed at commit `70898d7`. Both jobs ran all 94 tests, reproduced both saved audits, and uploaded the viewer files. [Run and artifacts](https://github.com/anne500/document-rag-qa-agent/actions/runs/42942803173)
 
 [Project tracker](PROJECT_TRACKER.md) · [Verification dashboard](../verification/DASHBOARD.md)

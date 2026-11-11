@@ -42,7 +42,7 @@ diagrams are references, not an assessment of the learner's understanding.
 | **6 🔗** | Citation and abstention evaluation | [Guard](../citation_guard.py) and [review lab](../eval_answer_evidence.py) | 🟩 Two prior live retries audited and 14 authored examples exercised | 🟠 Review new live answers and capture a guarded interactive example |
 | **7 🛡️** | Document-instruction robustness | [Structured context](../qa_agent.py) and [three attack fixtures](../evaluation/answer-evidence-cases.json) | 🟩 Offline role separation and fixture checks passed | 🟠 Review live attack behavior against the clean control |
 | **8 🖥️** | Interactive evidence viewer | [HTML viewer](../viewer/index.html) and [builder](../tools/build_evidence_viewer.py) | 🟩 Historical and lab pages generated with tested source mapping and escaping | 🟠 Confirm the interactions in a browser |
-| **9 ⚙️** | Automated tests and CI | [Tests](../tests/) and [Windows/Ubuntu workflow](../.github/workflows/verify.yml) | 🟩 94 local tests passed and both saved audits reproduced | 🟠 Record the first hosted CI result |
+| **9 ⚙️** | Automated tests and CI | [Tests](../tests/) and [Windows/Ubuntu workflow](../.github/workflows/verify.yml) | 🟩 94 tests and both saved audits passed on Windows and Ubuntu | [Passing CI and artifacts](https://github.com/anne500/document-rag-qa-agent/actions/runs/42942803173) |
 
 The extension sequence comes from this learning project. It is separate from
 the tutorial author's five steps and from the overall AI-project roadmap where
@@ -70,7 +70,6 @@ flowchart TD
 | --- | --- |
 | Live citation and document-instruction cases | Saved answers plus claim-level review against excerpts |
 | Guarded interactive command and evidence viewer | Observed answer or withholding and a browser interaction check |
-| Hosted CI | Completed Windows and Ubuntu workflow jobs and artifacts |
 
 Use the [closeout guide](PROJECT_FINISH.md) for the local commands.
 
@@ -80,7 +79,7 @@ Use the [closeout guide](PROJECT_FINISH.md) for the local commands.
   observation passed its stated scope. Neither means universal reliability.
 - **Assistant review** is explicitly AI-assisted. Independent human ratings are
   still pending and must never be inferred from a completed capture.
-- The user supplied a Windows run of 72 tests, all passing, at c581f3d. The 94-test suite passed in the development checkout.
+- The user supplied a Windows run of 72 tests, all passing, at c581f3d. The 94-test suite passed locally and in both hosted jobs. [CI evidence](https://github.com/anne500/document-rag-qa-agent/actions/runs/42942803173)
 - No completion percentage is invented from rows or file counts. Different tasks
   have different size, and future scope may evolve.
 - Update this tracker with each implementation/verification commit. Keep the
