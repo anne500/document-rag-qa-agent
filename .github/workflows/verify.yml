@@ -1,0 +1,53 @@
+name: Verify Document RAG
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  offline:
+    name: Offline checks (${{ matrix.os }})
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 10
+    defaults:
+      run:
+        shell: bash
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Run offline tests
+        run: python -m unittest discover -s tests -v
+      - name: Validate saved inputs
+        run: |
+          python eval_prompt_comparison.py --include-refined --validate-only
+          python eval_citation_guard.py --validate-only
+      - name: Reproduce saved audits
+        run: |
+          python tools/audit_prompt_run.py verification/prompt-runs/20261111T001306Z-98deeb8f
+          python tools/audit_citation_guard_run.py verification/citation-guard-runs/20261111T011524Z-f2bde230
+      - name: Exercise the evidence lab and build viewers
+        run: |
+          python eval_answer_evidence.py --output evidence-examples.json
+          python tools/build_evidence_viewer.py --output guard-viewer.html
+          python tools/build_evidence_viewer.py evidence-examples.json --output evidence-examples-viewer.html
+      - uses: actions/upload-artifact@v4
+        with:
+          name: evidence-viewers-${{ matrix.os }}
+          path: |
+            guard-viewer.html
+            evidence-examples-viewer.html
+            evidence-examples.json
+          if-no-files-found: error

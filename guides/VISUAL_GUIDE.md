@@ -205,5 +205,5 @@ uses the same tutorial-baseline-plus-extensions pattern as Project 1.
 
 The [live guard audit](../verification/citation-guard-live-audit-20261110.md)
 records one withheld retry and one numeric pass whose citation support still
-fails. Extension 6 remains current; Extensions 7 and 8 are planned, and CI
-remains to add under Extension 9 even though tests already exist.
+fails. The closeout adds the answer evidence lab, structured context, HTML viewer, and CI.
+[Open the closeout guide](PROJECT_FINISH.md).

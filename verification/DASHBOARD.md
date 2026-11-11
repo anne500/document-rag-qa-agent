@@ -109,14 +109,16 @@ remains pending.
 
 
 
-## 🗺️ Remaining Extension Sequence
+## 🗺️ Extensions 6–9
 
-[Extension 6](../guides/CITATION_GUARD.md) starts numeric citation checking and
-bounded withholding; broader claim-support and abstention evaluation remain.
-Then proceed to 7 document-instruction robustness, 8 interactive evidence viewer,
-and 9 automated tests/CI. The [roadmap](../guides/EXTENSION_ROADMAP.md) preserves
-this project-specific numbering. Existing 72 tests passed on the user's Windows
-machine; the newly expanded 89-test suite is verified in development only.
+| Check | Result |
+| --- | --- |
+| Citation and abstention lab | Seven cases, 14 authored drafts. New live review pending. |
+| Document-instruction cases | Three attack fixtures and middleware role separation checked offline. |
+| Evidence viewer | Saved and authored reports rendered to standalone HTML. Browser interaction check pending. |
+| Tests and CI | 94 local tests passed. Windows and Ubuntu workflow configured. |
+
+[Closeout guide](../guides/PROJECT_FINISH.md) · [Workflow runs](https://github.com/anne500/document-rag-qa-agent/actions/workflows/verify.yml)
 
 
 ## 🔗 Guard Checkpoint and Central Tracking

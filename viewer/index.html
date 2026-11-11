@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'">
+<title>RAG Evidence Viewer</title>
+<style>
+:root { color-scheme:light; --ink:#172338; --muted:#526176; --line:#dce3ec; --blue:#214bb0; --surface:#fff; }
+* {box-sizing:border-box}
+body {margin:0;background:#f2f5fa;color:var(--ink);font:16px/1.5 system-ui,sans-serif}
+header,main {max-width:1220px;margin:auto;padding:24px}
+header {padding-block:34px 12px}
+h1 {font-size:clamp(2rem,5vw,3.5rem);letter-spacing:-.05em;line-height:1.1;margin:0 0 12px}
+h2 {font-size:1.2rem;margin:0 0 14px}
+h3 {margin:0 0 10px;font-size:1rem}
+p {margin:0 0 14px}
+.meta {color:var(--muted);overflow-wrap:anywhere}
+nav {display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+nav a,.cite {padding:5px 10px;border-radius:7px;background:#e8efff;color:#173d92;font-weight:650}
+.layout {display:grid;grid-template-columns:minmax(230px, .8fr) minmax(0,2fr);gap:18px}
+.card {background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:20px;min-width:0}
+label {display:block;font-weight:650;margin-bottom:5px}
+input,select,button {font:inherit}
+input,select {width:100%;padding:8px 10px;margin-bottom:12px;border:1px solid #a8b5c9;border-radius:8px;background:white;color:var(--ink)}
+button {cursor:pointer}
+#records {max-height:59vh;overflow:auto;display:grid;gap:5px}
+.record {text-align:left;overflow-wrap:anywhere;padding:9px 10px;border:1px solid transparent;background:#f5f7fb;color:var(--ink);border-radius:8px}
+.record[aria-current=true] {background:#e6eeff;border-color:#7798e4}
+.badge {display:inline-block;font-size:.85rem;border-radius:999px;padding:3px 9px;font-weight:650;background:#e7edf8;color:#243b64;margin-bottom:12px}
+.badge[data-status=accepted] {background:#dff4e8;color:#155035}
+.badge[data-status=abstained] {background:#fff1d1;color:#714900}
+.badge[data-status=generation_failed] {background:#fee4e2;color:#8d251e}
+section+section {margin-top:22px}
+pre {white-space:pre-wrap;overflow-wrap:anywhere;margin:0;font:inherit}
+.answer,.source,.review {padding:14px;background:#f5f7fb;border-radius:9px}
+.source {margin-top:9px;scroll-margin:16px}
+.source:target,.source:focus {outline:2px solid var(--blue)}
+details {margin-top:9px;padding:12px;border:1px solid var(--line);border-radius:8px}
+summary {cursor:pointer;font-weight:650}
+details pre {margin-top:10px}
+:focus-visible {outline:3px solid #305ec7;outline-offset:2px}
+@media(max-width:730px){header,main{padding:16px}.layout{grid-template-columns:1fr}#records{max-height:210px}}
+</style>
+</head>
+<body>
+<header>
+  <h1>🔎 RAG Evidence Viewer</h1>
+  <p id="run" class="meta"></p>
+  <p>Inspect saved answers, source excerpts, and citation checks.</p>
+</header>
+<main class="layout">
+  <aside class="card" aria-label="Find a record">
+    <label for="search">Search records</label><input id="search" type="search">
+    <label for="status">Guard outcome</label><select id="status"><option value="">All outcomes</option></select>
+    <p id="count" class="meta" aria-live="polite"></p>
+    <div id="records"></div>
+  </aside>
+  <article id="detail" class="card" aria-label="Selected evidence"></article>
+</main>
+<script type="application/json" id="evidence">__EVIDENCE_JSON__</script>
+<script>
+"use strict";
+const data = JSON.parse(document.getElementById("evidence").textContent);
+const byId = id => document.getElementById(id);
+const labels = {accepted:"Numeric check passed", abstained:"Guard withheld answer",
+  generation_failed:"Generation failed", running:"Running", interrupted:"Interrupted", rejected:"Rejected"};
+const display = status => labels[status] || status;
+function element(tag, text, cls) {
+  const node = document.createElement(tag);
+  if (text !== undefined) node.textContent = text;
+  if (cls) node.className = cls;
+  return node;
+}
+function section(title) {
+  const s = element("section");
+  s.append(element("h2", title));
+  return s;
+}
+const detail = byId("detail");
+let selected = data.records.find(row => row.live_calls > 0 && row.status === "accepted")?.id || "";
+function show(row) {
+  selected = row.id;
+  for (const button of byId("records").children) {
+    button.setAttribute("aria-current", String(button.dataset.id === selected));
+  }
+  detail.replaceChildren(element("h2", row.question), element("p", row.id, "meta"));
+  const badge = element("span", display(row.status), "badge");
+  badge.dataset.status = row.status;
+  detail.append(badge);
+  if (row.live_calls !== null) detail.append(element("p", `Live calls: ${row.live_calls}`, "meta"));
+  const answer = section("Displayed answer");
+  answer.append(element("pre", row.answer || "No final answer recorded.", "answer"));
+  if (row.reason) answer.append(element("p", row.reason, "meta"));
+  const nav = element("nav");
+  nav.setAttribute("aria-label", "Cited excerpts");
+  for (const label of row.labels) {
+    if (label < 1 || label > row.excerpts.length) continue;
+    const link = element("a", `[${label}] Open excerpt`, "cite");
+    link.href = `#excerpt-${label}`;
+    link.addEventListener("click", event => {
+      event.preventDefault();
+      byId(`excerpt-${label}`).focus();
+      byId(`excerpt-${label}`).scrollIntoView({block:"nearest"});
+    });
+    nav.append(link);
+  }
+  answer.append(nav);
+  detail.append(answer);
+  const review = section("Source review");
+  if (row.review) {
+    review.append(element("p", row.review_kind, "meta"));
+    const box = element("div", undefined, "review");
+    const ratings = row.review.retry_draft_ratings || row.review;
+    const captions = {completeness:"Completeness", attribution:"Attribution",
+      citation_support:"Citation support", uncertainty:"Uncertainty", disposition:"Disposition"};
+    for (const [key, caption] of Object.entries(captions)) {
+      if (ratings[key]) {
+        const item = element("p");
+        item.append(element("strong", caption + " "), ratings[key].replaceAll("_", " "));
+        box.append(item);
+      }
+    }
+    if (row.review.displayed_answer_review) box.append(element("p", row.review.displayed_answer_review));
+    if (row.review.notes) box.append(element("p", row.review.notes));
+    review.append(box);
+  } else {
+    review.append(element("p", "Source review pending.", "meta"));
+  }
+  if (row.expectation) review.append(element("p", row.expectation));
+  detail.append(review);
+  const sources = section("Retrieved excerpts");
+  row.excerpts.forEach((excerpt, i) => {
+    const box = element("div", undefined, "source");
+    box.id = `excerpt-${i + 1}`;
+    box.tabIndex = -1;
+    const page = excerpt.page == null ? "" : ` · page ${excerpt.page}`;
+    box.append(element("h3", `[${i + 1}] ${excerpt.source}${page}`), element("pre", excerpt.text));
+    sources.append(box);
+  });
+  detail.append(sources);
+  const attempts = section("Generation attempts");
+  row.attempts.forEach(attempt => {
+    const box = element("details");
+    box.append(element("summary", `Attempt ${attempt.attempt} · ${display(attempt.status)}`));
+    if (attempt.check) {
+      box.append(element("p", `Labels: ${attempt.check.labels.join(", ") || "none"} · Out of range: ${attempt.check.out_of_range.join(", ") || "none"}`));
+      if (attempt.check.malformed_numeric_spans.length) {
+        box.append(element("p", `Malformed: ${attempt.check.malformed_numeric_spans.join(", ")}`));
+      }
+    }
+    if (attempt.feedback) box.append(element("p", attempt.feedback, "meta"));
+    box.append(element("pre", attempt.draft || attempt.error || "No draft recorded."));
+    attempts.append(box);
+  });
+  detail.append(attempts);
+}
+function filter() {
+  const query = byId("search").value.toLowerCase().trim();
+  const status = byId("status").value;
+  const rows = data.records.filter(row => (!status || row.status === status) &&
+    (row.id + " " + row.question).toLowerCase().includes(query));
+  byId("count").textContent = `${rows.length} of ${data.records.length} records`;
+  byId("records").replaceChildren(...rows.map(row => {
+    const button = element("button", row.id, "record");
+    button.type = "button";
+    button.dataset.id = row.id;
+    button.addEventListener("click", () => show(row));
+    return button;
+  }));
+  if (rows.length) show(rows.find(row => row.id === selected) || rows[0]);
+  else detail.replaceChildren(element("p", "No records match your filters."));
+}
+byId("run").textContent = `${data.run} · ${data.mode} · ${data.status}`;
+for (const status of new Set(data.records.map(row => row.status))) {
+  const option = element("option", display(status));
+  option.value = status;
+  byId("status").append(option);
+}
+byId("search").addEventListener("input", filter);
+byId("status").addEventListener("change", filter);
+filter();
+</script>
+</body>
+</html>

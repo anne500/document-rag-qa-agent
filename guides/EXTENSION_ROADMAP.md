@@ -15,18 +15,16 @@ own numbered roadmap.
 | 3 🧪 | Retrieval Evaluation Lab | First saved run and metric audit recorded |
 | 4 🔎 | Exact-ID and semantic retrieval | Paired ranking audit and interactive Maple example recorded |
 | 5 📚 | Multi-document answers | Captures and assistant reviews recorded; second refinement rejected; independent human ratings pending |
-| **6 🔗** | **Citation and abstention evaluation** | **Current: numeric guard and two live retry outcomes audited; claim support and broader semantic evaluation pending** |
-| 7 🛡️ | Document-instruction robustness | Planned adversarial document tests; prompt instruction alone is not verification |
-| 8 🖥️ | Interactive evidence viewer | Planned source/page/excerpt inspection |
-| 9 ⚙️ | Automated tests and CI | Tests already developed incrementally; CI and final integrated checks remain planned |
+| 6 🔗 | Citation and abstention evaluation | Guard audited and review lab exercised with authored examples. Live review remains open. |
+| 7 🛡️ | Document-instruction robustness | Structured context and three attack cases tested offline. Live model behavior remains open. |
+| 8 🖥️ | Interactive evidence viewer | HTML generator and source checks exercised. Browser interaction check remains open. |
+| 9 ⚙️ | Automated tests and CI | 94 local tests passed. Windows and Ubuntu workflow configured. |
 
 Checkpoint completion describes observed work, not universal reliability or
 completed thesis evidence. Human validation remains separate from assistant
 source review. Preserve earlier raw runs and negative results as work advances.
 
-We now move through Extension 6 rather than adding more prompt layers to
-Extension 5. [The first Extension 6 guide](CITATION_GUARD.md) specifies the exact
-numeric-guard scope, replay/live distinction, and remaining evaluation tasks.
+See the [closeout guide](PROJECT_FINISH.md) for usage and verification.
 
 [Central tracker](PROJECT_TRACKER.md) ·
 [Verification dashboard](../verification/DASHBOARD.md) ·

@@ -26,8 +26,9 @@ Adapted from [Darsh Shah's freeCodeCamp tutorial](https://www.freecodecamp.org/n
 
 **[Open the full tutorial + extension tracker](guides/PROJECT_TRACKER.md)** for
 separate tables of the five base tutorial steps, Extensions 1–9, evidence links,
-and remaining work. Current work is Extension 6: its numeric guard is locally
-exercised, while claim support and semantic-abstention evaluation remain pending.
+and verification evidence. Extensions 6–9 add a citation and abstention lab,
+structured document context, an evidence viewer, and Windows/Ubuntu CI.
+See the [closeout guide](guides/PROJECT_FINISH.md) for commands and results.
 
 The [shared project documentation standard](PROJECT_STANDARD.md) preserves the
 same base-tutorial-then-extensions pattern used in
