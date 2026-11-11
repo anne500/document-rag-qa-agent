@@ -20,16 +20,16 @@ SOURCE = ROOT / "verification/multidoc-runs/20261110T222813Z-bc04d7e8"
 
 def write_artifacts(directory, report):
     lab.write_json(directory / "report.json", report)
+    variants = list(report.get("prompts", {"baseline": "", "revised": ""}))
     lines = ["# 🧪 Frozen-Context Prompt Comparison", "",
              f"Capture status: **{report['status']}**. Answer quality: **unreviewed**.", "",
-             "Both answers are freshly generated from the same frozen excerpts. No retrieval is performed.", "",
-             "| Source record | Order | Baseline | Revised |",
-             "| --- | --- | --- | --- |"]
+             "All variant answers are freshly generated from the same frozen excerpts. No retrieval is performed.", "",
+             "| Source record | Order | " + " | ".join(v.title() for v in variants) + " |",
+             "| --- | --- | " + " | ".join("---" for _ in variants) + " |"]
     for pair in report["pairs"]:
         lines.append("| " + " | ".join([
             pair["record_id"], ", ".join(pair["call_order"]),
-            pair["variants"].get("baseline", {}).get("status", "not started"),
-            pair["variants"].get("revised", {}).get("status", "not started"),
+            *(pair["variants"].get(v, {}).get("status", "not started") for v in variants),
         ]) + " |")
     lines.extend(["", "Inspect report.json and review.json for completeness, attribution, citation support, and uncertainty. "
                   "Syntax checks and capture completion are not answer-quality scores. "
@@ -41,6 +41,7 @@ def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--source-run", type=Path, default=SOURCE)
     parser.add_argument("--case-ids", nargs="+", help="Optional case IDs, not record IDs with :k suffixes")
+    parser.add_argument("--include-refined", action="store_true", help="Compare baseline, revised, and the second refinement")
     parser.add_argument("--validate-only", action="store_true")
     args = parser.parse_args(argv)
     source = args.source_run.resolve()
@@ -51,8 +52,9 @@ def main(argv=None):
         records = select_records(validate_frozen(original, dataset, corpus), args.case_ids)
     except ValueError as exc:
         parser.error(str(exc))
-    prompts = prompts_for(original["settings"]["system_prompt"])
-    print(f"Validated {len(original['records'])} frozen source records; selected {len(records)} pairs ({2*len(records)} new chat calls).")
+    prompts = prompts_for(original["settings"]["system_prompt"], include_refined=args.include_refined)
+    label = "three-prompt contexts" if args.include_refined else "pairs"
+    print(f"Validated {len(original['records'])} frozen source records; selected {len(records)} {label} ({len(prompts)*len(records)} new chat calls).")
     if args.validate_only:
         print("Validation only: no chat, embedding, retrieval, or index calls.")
         return 0
@@ -68,7 +70,9 @@ def main(argv=None):
         "settings": {"selected_record_ids": [r["record_id"] for r in records],
                      "model": original["settings"]["chat_model"], "temperature": 0, "reasoning": False,
                      "ollama_url": "http://localhost:11434", "repeats": 1,
-                     "order": "alternating baseline-first and revised-first by selected record",
+                     "variants": list(prompts), "include_refined": args.include_refined,
+                     "order": ("cyclic baseline/revised/refined by selected record" if args.include_refined
+                               else "alternating baseline-first and revised-first by selected record"),
                      "retrieval_performed": False},
         "prompts": prompts,
         "code_sha256": {name: hashlib.sha256((ROOT / name).read_bytes()).hexdigest()
@@ -135,3 +139,4 @@ def main(argv=None):
 
 if __name__ == "__main__":
     raise SystemExit(main())
+

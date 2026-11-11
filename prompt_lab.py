@@ -27,11 +27,30 @@ REVISION = (
 )
 VARIANTS = ("baseline", "revised")
 
+REFINEMENT = (
+    "\n\nAnswer-scope refinements:\n"
+    "7. For an entity with missing information, use a short limitation statement: "
+    "its requested requirements cannot be determined from the retrieved excerpts. "
+    "Do not list other projects or inventory the supplied documents to justify this "
+    "limitation. Do not attach an unrelated source citation to it. A source that "
+    "explicitly states that its own policy is unspecified may be cited for that statement.\n"
+    "8. Keep release-approval requirements, build-failure causes, and build-recovery "
+    "steps distinct. Include only the categories requested by the question. "
+    "Do not place build-recovery advice under release-approval checks unless an "
+    "excerpt explicitly establishes it as a release-approval requirement.\n"
+    "9. Answer only the requested comparison and missing information relevant to it. "
+    "Do not add deployment dates, cloud providers, unrelated failures, or other "
+    "details merely because they appear in the excerpts."
+)
 
-def prompts_for(baseline):
+
+def prompts_for(baseline, include_refined=False):
     if not isinstance(baseline, str) or not baseline.strip():
         raise ValueError("The saved baseline prompt must be nonempty text")
-    return {"baseline": baseline, "revised": baseline + REVISION}
+    prompts = {"baseline": baseline, "revised": baseline + REVISION}
+    if include_refined:
+        prompts["refined"] = baseline + REVISION + REFINEMENT
+    return prompts
 
 
 def validate_frozen(report, dataset, corpus):
@@ -91,9 +110,14 @@ def citation_check(answer, excerpt_count):
 
 def run_pairs(records, prompts, generate, checkpoint):
     pairs = []
+    variants = list(prompts)
+    if variants not in [list(VARIANTS), [*VARIANTS, "refined"]]:
+        raise ValueError("Use baseline/revised, optionally followed by refined")
     for number, source in enumerate(records):
         context = format_excerpts(source["excerpts"])
-        order = list(VARIANTS if number % 2 == 0 else reversed(VARIANTS))
+        # Preserve the historical two-prompt order; rotate the new three-prompt set.
+        offset = number % len(variants)
+        order = variants[offset:] + variants[:offset]
         pair = {"record_id": source["record_id"], "case_id": source["case_id"],
                 "suite": source["suite"], "k": source["k"], "question": source["question"],
                 "excerpts": source["excerpts"], "context_text": context,
@@ -132,3 +156,4 @@ def completed_review_records(pairs):
     return [{"record_id": pair["record_id"] + "::" + variant, "status": "complete"}
             for pair in pairs for variant, result in pair["variants"].items()
             if result["status"] == "complete"]
+

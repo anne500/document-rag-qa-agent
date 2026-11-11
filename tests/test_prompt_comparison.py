@@ -1,12 +1,17 @@
 import ast
 import copy
+from contextlib import redirect_stdout
+import io
+import hashlib
 import json
 from pathlib import Path
 import tempfile
 import unittest
 
-from eval_prompt_comparison import write_artifacts
+from eval_prompt_comparison import main, write_artifacts
 from multidoc_lab import review_template
+from eval_retrieval import fingerprint
+from tools.audit_prompt_run import audit
 from prompt_lab import (citation_check, completed_review_records, prompts_for,
                         run_pairs, select_records, validate_frozen)
 
@@ -147,6 +152,97 @@ class PromptComparisonTests(unittest.TestCase):
             self.assertIn("**failed**", summary)
             self.assertIn("**unreviewed**", summary)
 
+    def test_refinement_preserves_both_historical_prompts(self):
+        prompts = prompts_for(self.prompts["baseline"], include_refined=True)
+        self.assertEqual(list(prompts), ["baseline", "revised", "refined"])
+        self.assertEqual({k: prompts[k] for k in self.prompts}, self.prompts)
+        saved = json.loads((ROOT / "verification/prompt-runs/20261110T232200Z-d0f222aa/prompts.json").read_text(encoding="utf-8"))
+        self.assertEqual({k: prompts[k] for k in saved}, saved)
+        self.assertTrue(prompts["refined"].startswith(prompts["revised"]))
+        for name in ["Cedar", "Maple", "Birch", "Willow", "Larch", "ATLAS-R12"]:
+            self.assertNotIn(name, prompts["refined"])
+
+    def test_three_prompts_share_context_and_rotate_first_position(self):
+        prompts = prompts_for(self.prompts["baseline"], include_refined=True)
+        calls = []
+        def generate(variant, question, context):
+            calls.append((variant, question, context))
+            return "Claim [1]."
+        pairs = run_pairs(self.report["records"][:3], prompts, generate, lambda r: None)
+        self.assertEqual([p["call_order"] for p in pairs], [
+            ["baseline", "revised", "refined"], ["revised", "refined", "baseline"],
+            ["refined", "baseline", "revised"]])
+        for start in range(0, 9, 3):
+            self.assertEqual(len({(q, c) for _, q, c in calls[start:start+3]}), 1)
+        self.assertEqual(len(completed_review_records(pairs)), 9)
+
+    def test_refined_failure_preserves_two_completed_variants(self):
+        prompts = prompts_for(self.prompts["baseline"], include_refined=True)
+        saved = []
+        def generate(variant, question, context):
+            if variant == "refined":
+                raise RuntimeError("model unavailable")
+            return "Claim [1]."
+        with self.assertRaises(RuntimeError):
+            run_pairs(self.records[:1], prompts, generate, lambda r: saved.append(copy.deepcopy(r)))
+        pair = saved[-1][0]
+        self.assertEqual([pair["variants"][v]["status"] for v in prompts], ["complete", "complete", "failed"])
+        self.assertEqual(len(completed_review_records(saved[-1])), 2)
+
+    def test_three_variant_dashboard_keeps_refinement_unreviewed(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            path = Path(tmp)
+            write_artifacts(path, {"status": "running", "pairs": [],
+                                  "prompts": prompts_for(self.prompts["baseline"], include_refined=True)})
+            summary = (path / "summary.md").read_text(encoding="utf-8")
+            self.assertIn("Baseline | Revised | Refined", summary)
+            self.assertIn("**unreviewed**", summary)
+
+    def test_targeted_refinement_validation_counts_calls_without_models(self):
+        output = io.StringIO()
+        with redirect_stdout(output):
+            result = main(["--include-refined", "--case-ids", "known_unknown",
+                           "cedar_birch_missing", "--validate-only"])
+        self.assertEqual(result, 0)
+        self.assertIn("4 three-prompt contexts (12 new chat calls)", output.getvalue())
+        self.assertIn("no chat, embedding, retrieval, or index calls", output.getvalue())
+
+    def test_unknown_prompt_set_is_rejected_before_generation(self):
+        with self.assertRaises(ValueError):
+            run_pairs(self.records, {"unexpected": "prompt"},
+                      lambda *a: self.fail("Must not generate"), lambda r: None)
+
+    def test_three_variant_audit_and_refined_hash_tampering(self):
+        prompts = prompts_for(self.prompts["baseline"], include_refined=True)
+        pairs = run_pairs(self.records[:1], prompts, lambda *a: "Stub answer [1].", lambda r: None)
+        code = b"audit boundary stub\n"
+        report = {
+            "status": "complete", "experiment": "frozen_context_prompt_comparison",
+            "source_report_sha256": fingerprint(self.report),
+            "dataset_sha256": fingerprint(self.dataset), "corpus_sha256": fingerprint(self.corpus),
+            "prompts": prompts, "pairs": pairs, "source_run_id": self.report["run_id"],
+            "settings": {"include_refined": True, "selected_record_ids": [self.records[0]["record_id"]],
+                         "retrieval_performed": False, "model": self.report["settings"]["chat_model"]},
+            "model_identity": self.report["model_identities"][self.report["settings"]["chat_model"]],
+            "model_digest_matches_source_capture": True,
+            "code_sha256": {"stub.py": hashlib.sha256(code).hexdigest()},
+        }
+        with tempfile.TemporaryDirectory() as temp:
+            directory = Path(temp)
+            (directory / "stub.py").write_bytes(code)
+            values = {"report.json": report, "prompts.json": prompts,
+                      "source-report.snapshot.json": self.report, "cases.snapshot.json": self.dataset,
+                      "corpus.snapshot.json": self.corpus,
+                      "review.json": review_template(completed_review_records(pairs))}
+            for name, value in values.items():
+                (directory / name).write_text(json.dumps(value), encoding="utf-8")
+            self.assertEqual(audit(directory, directory)["answers_checked"], 3)
+            pairs[0]["variants"]["refined"]["context_sha256"] = "changed"
+            (directory / "report.json").write_text(json.dumps(report), encoding="utf-8")
+            with self.assertRaises(AssertionError):
+                audit(directory, directory)
+
 
 if __name__ == "__main__":
     unittest.main()
+

@@ -25,7 +25,9 @@ def audit(directory, source_dir=None):
     assert fingerprint(dataset) == report["dataset_sha256"]
     assert fingerprint(corpus) == report["corpus_sha256"]
     source_records = {r["record_id"]: r for r in validate_frozen(source, dataset, corpus)}
-    assert report["prompts"] == prompts == prompts_for(source["settings"]["system_prompt"])
+    refined = report["settings"].get("include_refined", False)
+    assert report["prompts"] == prompts == prompts_for(source["settings"]["system_prompt"], include_refined=refined)
+    prompt_variants = list(prompts)
     expected = report["settings"]["selected_record_ids"]
     pairs = report["pairs"]
     assert len(expected) == len(set(expected))
@@ -41,7 +43,8 @@ def audit(directory, source_dir=None):
         context = format_excerpts(original["excerpts"])
         assert pair["context_text"] == context
         assert pair["context_sha256"] == fingerprint(context)
-        order = ["baseline", "revised"] if i % 2 == 0 else ["revised", "baseline"]
+        offset = i % len(prompt_variants)
+        order = prompt_variants[offset:] + prompt_variants[:offset]
         assert pair["call_order"] == order
         assert list(pair["variants"]) == order
         for variant in order:
@@ -71,7 +74,7 @@ def audit(directory, source_dir=None):
         assert matches, "Code hash mismatch: " + name
         code[name] = matches[0]
     review = read("review.json")
-    expected_reviews = {p["record_id"] + "::" + v for p in pairs for v in ["baseline", "revised"]}
+    expected_reviews = {p["record_id"] + "::" + v for p in pairs for v in prompt_variants}
     assert len(review["records"]) == len(expected_reviews)
     assert {r["record_id"] for r in review["records"]} == expected_reviews
     assert all(all(v is None for v in r["ratings"].values()) for r in review["records"])
@@ -94,3 +97,4 @@ if __name__ == "__main__":
     parser.add_argument("--source-dir", type=Path, help="Optional frozen sources; defaults to git show of the recorded runtime commit")
     args = parser.parse_args()
     print(json.dumps(audit(args.run_directory, args.source_dir), indent=2))
+

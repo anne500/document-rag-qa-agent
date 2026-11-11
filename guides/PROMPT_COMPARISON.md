@@ -70,7 +70,7 @@ python -m unittest discover -s tests -v
 python .\eval_prompt_comparison.py --validate-only
 ```
 
-Expected: **65 passing tests**, then **13 frozen source records and 13 selected
+Expected: **72 passing tests**, then **13 frozen source records and 13 selected
 pairs (26 new chat calls)**. Validation makes no model or index calls.
 The default source is verification/multidoc-runs/20261110T222813Z-bc04d7e8.
 
@@ -170,3 +170,13 @@ without adding a new scored dimension after inspecting outputs.
 Keep the revised prompt experimental while these issues are addressed.
 Assistant-review artifacts are separate from the unchanged, unreviewed human
 worksheet. The original raw capture files and interactive prompt are preserved.
+
+
+## 🧪 Second Refinement Available
+
+The [three-prompt follow-up](PROMPT_REFINEMENT.md) preserves the original and
+first revised prompts, then adds a refined candidate for context-inventory and
+release-versus-recovery scope. --include-refined selects 39 calls over the same
+13 frozen contexts, in cyclic order. The default command remains the original
+two-prompt design. New refined effects are unmeasured; implementation checks
+now total 72 offline tests. The audit helper supports both report shapes.

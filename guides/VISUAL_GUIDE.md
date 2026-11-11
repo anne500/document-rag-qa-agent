@@ -168,3 +168,11 @@ The [first prompt audit](../verification/prompt-run-audit-20261110.md) checks
 for both Birch contexts; Willow k=2 remains problematic. Qualitative scope
 caveats are preserved separately from the four-dimension rubric. Human review
 is pending, and the interactive prompt remains the original default.
+
+
+## 🧪 Three-Prompt Refinement
+
+The [second-refinement guide](PROMPT_REFINEMENT.md) compares baseline, revised,
+and refined answers on identical saved contexts. A cyclic call-order table
+shows which variant runs first. All 72 development tests pass; live refined
+answers and their review remain pending. Previous measurements remain separate.

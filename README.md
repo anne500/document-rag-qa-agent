@@ -10,7 +10,7 @@
 
 ## 🧭 Explore the project
 
-[🧩 Architecture](#architecture) · [🚀 Setup](#setup-on-windows-powershell) · [🧪 Results & verification](#initial-verification) · [🗂️ Evidence & guides](#visual-guide-and-pdf-verification) · [🧪 Evaluation lab](#retrieval-evaluation-lab) · [📊 Measured results](#recorded-retrieval-results) · [🔎 Identifier retrieval](#identifier-aware-retrieval) · [📚 Multi-document lab](#multi-document-answer-evaluation) · [🧪 Prompt comparison](#frozen-context-prompt-comparison) · [📋 Verification dashboard](verification/DASHBOARD.md) · [🎨 Visual standard](VISUAL_STYLE.md)
+[🧩 Architecture](#architecture) · [🚀 Setup](#setup-on-windows-powershell) · [🧪 Results & verification](#initial-verification) · [🗂️ Evidence & guides](#visual-guide-and-pdf-verification) · [🧪 Evaluation lab](#retrieval-evaluation-lab) · [📊 Measured results](#recorded-retrieval-results) · [🔎 Identifier retrieval](#identifier-aware-retrieval) · [📚 Multi-document lab](#multi-document-answer-evaluation) · [🧪 Prompt comparison](#frozen-context-prompt-comparison) · [🧪 Refinement](#second-prompt-refinement) · [📋 Verification dashboard](verification/DASHBOARD.md) · [🎨 Visual standard](VISUAL_STYLE.md)
 
 🎨 [Shared architecture colors and diagram conventions](VISUAL_STYLE.md)
 
@@ -446,6 +446,31 @@ default is unchanged.
 [🧪 Offline verification](verification/prompt-comparison-implementation.md) ·
 [🔬 Source findings](verification/multidoc-run-audit-20261110.md)
 
+<a id="second-prompt-refinement"></a>
+
+## 🧪 Second Prompt Refinement
+
+**🟩 72 offline tests passed in development. 🟠 Refined model answers unmeasured.**
+
+The next candidate targets Willow's context-inventory citation and the placement
+of build recovery under release checks. It appends generic scope rules while
+preserving both earlier prompt texts. The explicit three-prompt mode generates
+baseline, revised, and refined answers using identical saved excerpts; call
+order rotates across contexts.
+
+```powershell
+python -m unittest discover -s tests -v
+python .\eval_prompt_comparison.py --include-refined --validate-only
+python .\eval_prompt_comparison.py --include-refined
+```
+
+The full comparison uses 13 contexts and 39 local chat calls, with no retrieval
+or embeddings. Existing two-prompt commands and the interactive default remain
+unchanged. Results and initially unreviewed ratings are saved in a new run.
+
+[🎨 Refinement design and review checks](guides/PROMPT_REFINEMENT.md) ·
+[🧪 Verification](verification/prompt-refinement-implementation.md)
+
 <a id="tutorial-acknowledgment-and-attribution"></a>
 
 ## 📚 Tutorial Acknowledgment and Attribution
@@ -464,6 +489,7 @@ Published: July 2, 2026.
 | Repository extensions | Fictional project fixtures, page-specific PDF verification, retrieval experiments, automatic startup index refresh, retrieval evaluation, identifier-priority comparison, multi-document answer-review, and frozen-context prompt comparison labs, verification records, and visual documentation |
 
 The original tutorial is credited for the learning foundation. Repository adaptations, experiments, and research connections are documented separately.
+
 
 
 
