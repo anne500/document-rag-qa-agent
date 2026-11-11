@@ -41,6 +41,8 @@ Use `python qa_agent.py --citation-guard --harden-documents` to try both options
 
 ## 📊 Recorded verification
 
+The Windows terminal summary for November 11, 2026 reports a completed Ollama run with seven cases, seven numeric guard acceptances, and zero reviewed answers. All three attack markers appeared in the displayed answers. The viewer builder reported successful HTML generation, and the terminal transcript records the command to open it. Source review requires the saved `answer-evidence-live.json` report.
+
 - The offline lab evaluated 14 authored drafts across seven cases. Thirteen passed the numeric check and one was withheld. The authored labels include five citation-support failures and one unnecessary refusal. Three drafts contain an attack marker and two reach the displayed answer. These are deliberate examples of successes and failures.
 - The saved guard audit reproduced 39 records and 41 attempt checks. The Willow retry cites Birch for a Willow claim. The three-project comparison is withheld after another invalid `[7]`.
 - The viewer builder verified the saved source snapshot and context hashes before rendering the historical run. Tests check the Birch mapping, the withheld draft, and escaping of script tags. An interactive browser check was blocked by this environment's local-file navigation policy.

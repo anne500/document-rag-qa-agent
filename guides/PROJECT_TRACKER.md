@@ -6,9 +6,8 @@
 
 **🟩 Verified checkpoint · 🟦 Implemented/evidence recorded · 🟠 In progress or review pending · ⬜ Planned · 🔴 Failed/rejected experiment**
 
-Extensions 1–9 have repository deliverables. The remaining checks are live model
-behavior on the new fixtures, interactive viewer verification, and independent
-human review. See the [closeout guide](PROJECT_FINISH.md) for commands and scope.
+Extensions 1–9 have repository deliverables. The Windows model run is recorded below. The remaining checks are source review
+of the saved answers and interactive viewer verification. See the [closeout guide](PROJECT_FINISH.md) for commands and scope.
 
 ## 📚 Part A: Base tutorial
 
@@ -39,8 +38,8 @@ diagrams are references, not an assessment of the learner's understanding.
 | **3 🧪** | Retrieval Evaluation Lab | [Runner](../eval_retrieval.py), [cases](../evaluation/cases.json), [tests](../tests/test_retrieval_lab.py) | 🟩 [Six-setting run](../verification/retrieval-runs/20261110T184155Z-a94eff34/summary.md) and [audit](../verification/retrieval-run-audit-20261110.md) | Authored-fixture checkpoint done; no claim of general retrieval accuracy |
 | **4 🔎** | Exact-ID and semantic retrieval | [Retriever](../id_retrieval.py), [paired runner](../eval_id_retrieval.py) | 🟩 [Paired audit](../verification/identifier-run-audit-20261110.md) and [interactive Maple](../verification/identifier-interactive-20261110.md) | Defined ranking/interactive checkpoint done |
 | **5 📚** | Multi-document answers | [Answer lab](../eval_multidoc.py), [prompt comparisons](../eval_prompt_comparison.py), raw snapshots, assistant reviews, and negative results | 🟦 Captures/audits recorded; 🔴 second prompt refinement rejected | Independent human ratings remain pending; preserve the rejection, do not equate more instructions with better answers |
-| **6 🔗** | Citation and abstention evaluation | [Guard](../citation_guard.py) and [review lab](../eval_answer_evidence.py) | 🟩 Two prior live retries audited and 14 authored examples exercised | 🟠 Review new live answers and capture a guarded interactive example |
-| **7 🛡️** | Document-instruction robustness | [Structured context](../qa_agent.py) and [three attack fixtures](../evaluation/answer-evidence-cases.json) | 🟩 Offline role separation and fixture checks passed | 🟠 Review live attack behavior against the clean control |
+| **6 🔗** | Citation and abstention evaluation | [Guard](../citation_guard.py) and [review lab](../eval_answer_evidence.py) | 🟩 Two prior live retries audited and 14 authored examples exercised | 🟠 Review the seven saved live answers and capture a guarded interactive example |
+| **7 🛡️** | Document-instruction robustness | [Structured context](../qa_agent.py) and [three attack fixtures](../evaluation/answer-evidence-cases.json) | 🟩 Offline role separation and fixture checks passed | 🔴 All three attack markers appeared in displayed answers on Windows. Review the exact answers against the clean control. |
 | **8 🖥️** | Interactive evidence viewer | [HTML viewer](../viewer/index.html) and [builder](../tools/build_evidence_viewer.py) | 🟩 Historical and lab pages generated with tested source mapping and escaping | 🟠 Confirm the interactions in a browser |
 | **9 ⚙️** | Automated tests and CI | [Tests](../tests/) and [Windows/Ubuntu workflow](../.github/workflows/verify.yml) | 🟩 94 tests and both saved audits passed on Windows and Ubuntu | [Passing CI and artifacts](https://github.com/anne500/document-rag-qa-agent/actions/runs/42942803173) |
 
@@ -68,7 +67,7 @@ flowchart TD
 
 | Check | Evidence |
 | --- | --- |
-| Live citation and document-instruction cases | Saved answers plus claim-level review against excerpts |
+| Live citation and document-instruction cases | Windows run completed with three displayed attack markers. Saved answers and claim-level review remain pending. |
 | Guarded interactive command and evidence viewer | Observed answer or withholding and a browser interaction check |
 
 Use the [closeout guide](PROJECT_FINISH.md) for the local commands.
