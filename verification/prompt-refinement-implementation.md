@@ -1,6 +1,6 @@
 # 🧪 Second Prompt Refinement: Implementation Verification
 
-**🟩 72 offline tests passed in development. 🟠 Windows tests and live three-prompt effects pending.**
+**🟩 72 offline tests passed in development; live three-prompt capture audited. 🔴 Refined candidate rejected. 🟠 Windows test output and human ratings pending.**
 
 On November 10, 2026, all 65 prior checks and seven additional checks passed
 with Python 3.12 in development. The full three-prompt selection validated 13
@@ -40,3 +40,19 @@ integration for the new variant. Independent human review remains pending.
 [Design and limitations](../guides/PROMPT_REFINEMENT.md) ·
 [Previous measured results](prompt-run-audit-20261110.md) ·
 [Tutorial provenance](../README.md#tutorial-acknowledgment-and-attribution)
+
+
+## 🔴 Live Follow-up and Audit Correction
+
+The [first three-prompt run](prompt-refinement-run-audit-20261110.md) contains
+39 completed answers. Both invalid [7] labels were correctly recorded by the
+runner. The earlier audit helper wrongly asserted all labels had to be valid;
+that assumption was removed so a faithfully saved model error is reported as
+an answer warning rather than artifact corruption. Syntax-result recomputation
+still rejects falsified metadata, and all context/prompt hash checks remain.
+
+All 72 offline tests passed again after this correction. The existing integration
+regression test now checks acceptance of a recorded bad label, rejection of
+concealed citation errors, and rejection of changed refined-context hashes.
+No generation code, prompt text, raw capture, or interactive behavior changed
+in this follow-up. Independent human answer review remains pending.

@@ -450,7 +450,7 @@ default is unchanged.
 
 ## 🧪 Second Prompt Refinement
 
-**🟩 72 offline tests passed in development. 🟠 Refined model answers unmeasured.**
+**🟩 39-answer capture audited. 🔴 Refined candidate rejected for adoption. 🟠 Independent human ratings pending.**
 
 The next candidate targets Willow's context-inventory citation and the placement
 of build recovery under release checks. It appends generic scope rules while
@@ -467,6 +467,26 @@ python .\eval_prompt_comparison.py --include-refined
 The full comparison uses 13 contexts and 39 local chat calls, with no retrieval
 or embeddings. Existing two-prompt commands and the interactive default remain
 unchanged. Results and initially unreviewed ratings are saved in a new run.
+
+### 📊 Second Refinement Findings
+
+| On 12 retrieved-context comparisons | Baseline | Revised | Refined |
+| --- | ---: | ---: | ---: |
+| Assistant-reviewed completeness | 10/12 | 10/12 | 10/12 |
+| Assistant-reviewed citation support | 9/12 | 11/12 | 6/12 |
+| Out-of-range citation answers | 0 | 0 | 2 |
+
+The refined prompt generated nonexistent [7] citations for two context-limited
+answers and added an unjustified limitation to Cedar/Maple. Willow's unrelated
+source citation also persists. Keep this negative result; the refinement is
+not adopted and the interactive default is unchanged. These are proposed AI
+source-review ratings, with independent human review pending.
+
+The audit helper now separates accurately saved model errors from artifact
+corruption: it reports the two citation warnings while passing consistency.
+
+[🔬 Full refinement audit and rejection rationale](verification/prompt-refinement-run-audit-20261110.md) ·
+[📊 Raw capture](verification/prompt-runs/20261111T001306Z-98deeb8f/summary.md)
 
 [🎨 Refinement design and review checks](guides/PROMPT_REFINEMENT.md) ·
 [🧪 Verification](verification/prompt-refinement-implementation.md)
@@ -489,6 +509,7 @@ Published: July 2, 2026.
 | Repository extensions | Fictional project fixtures, page-specific PDF verification, retrieval experiments, automatic startup index refresh, retrieval evaluation, identifier-priority comparison, multi-document answer-review, and frozen-context prompt comparison labs, verification records, and visual documentation |
 
 The original tutorial is credited for the learning foundation. Repository adaptations, experiments, and research connections are documented separately.
+
 
 
 

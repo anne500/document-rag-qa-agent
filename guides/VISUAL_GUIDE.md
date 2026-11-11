@@ -174,5 +174,12 @@ is pending, and the interactive prompt remains the original default.
 
 The [second-refinement guide](PROMPT_REFINEMENT.md) compares baseline, revised,
 and refined answers on identical saved contexts. A cyclic call-order table
-shows which variant runs first. All 72 development tests pass; live refined
-answers and their review remain pending. Previous measurements remain separate.
+shows which variant runs first. All 72 development tests pass; the first refined capture is now audited.
+Previous measurements remain separate.
+
+
+The [refinement audit](../verification/prompt-refinement-run-audit-20261110.md)
+preserves a negative result: two invented [7] citations and additional unsupported
+claims. The refinement is rejected for adoption. The saved data is consistent;
+that does not make its answers correct. AI-proposed ratings and human-review
+status remain separate.

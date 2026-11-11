@@ -237,6 +237,21 @@ class PromptComparisonTests(unittest.TestCase):
             for name, value in values.items():
                 (directory / name).write_text(json.dumps(value), encoding="utf-8")
             self.assertEqual(audit(directory, directory)["answers_checked"], 3)
+            # A faithfully recorded model error is not artifact corruption.
+            refined = pairs[0]["variants"]["refined"]
+            refined["answer"] = "Unsupported label [7]."
+            refined["citation_syntax_only"] = citation_check(refined["answer"], len(pairs[0]["excerpts"]))
+            (directory / "report.json").write_text(json.dumps(report), encoding="utf-8")
+            result = audit(directory, directory)
+            self.assertEqual(result["status"], "passed")
+            self.assertEqual(result["out_of_range_numeric_labels"], 1)
+            self.assertEqual(result["citation_warning_records"][0]["out_of_range"], [7])
+            # Hiding that error in the recorded syntax result is corruption.
+            refined["citation_syntax_only"]["out_of_range"] = []
+            (directory / "report.json").write_text(json.dumps(report), encoding="utf-8")
+            with self.assertRaises(AssertionError):
+                audit(directory, directory)
+            refined["citation_syntax_only"] = citation_check(refined["answer"], len(pairs[0]["excerpts"]))
             pairs[0]["variants"]["refined"]["context_sha256"] = "changed"
             (directory / "report.json").write_text(json.dumps(report), encoding="utf-8")
             with self.assertRaises(AssertionError):

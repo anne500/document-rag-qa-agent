@@ -35,6 +35,7 @@ def audit(directory, source_dir=None):
     baseline_matches = []
     total_excerpts = 0
     syntax_checks = 0
+    citation_warnings = []
     for i, pair in enumerate(pairs):
         original = source_records[pair["record_id"]]
         assert pair["status"] == "complete"
@@ -53,7 +54,10 @@ def audit(directory, source_dir=None):
             assert result["prompt_sha256"] == fingerprint(prompts[variant])
             assert result["context_sha256"] == pair["context_sha256"]
             assert result["citation_syntax_only"] == citation_check(result["answer"], len(pair["excerpts"]))
-            assert not result["citation_syntax_only"]["out_of_range"]
+            invalid = result["citation_syntax_only"]["out_of_range"]
+            if invalid:
+                citation_warnings.append({"record_id": pair["record_id"], "variant": variant,
+                                          "out_of_range": invalid})
             syntax_checks += 1
         if pair["variants"]["baseline"]["answer"] == original["answer"]:
             baseline_matches.append(pair["record_id"])
@@ -85,7 +89,8 @@ def audit(directory, source_dir=None):
             "snapshot_digests_checked": 3, "alternating_call_orders_checked": len(pairs),
             "citation_syntax_checks_recomputed": syntax_checks,
             "source_marker_score_values_recomputed": 5*len(source_records),
-            "out_of_range_numeric_labels": 0, "code_digest_line_endings": code,
+            "out_of_range_numeric_labels": sum(len(item["out_of_range"]) for item in citation_warnings),
+            "citation_warning_records": citation_warnings, "code_digest_line_endings": code,
             "saved_model_digest_matches_source_capture": same_digest,
             "baseline_answers_identical_to_original_capture": len(baseline_matches),
             "original_human_review": f"{len(expected_reviews)} records remain unreviewed"}

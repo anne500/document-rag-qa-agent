@@ -1,6 +1,6 @@
 # 🧪 Second Prompt Refinement: Scope and Missing Information
 
-**🟩 72 offline tests passed in development. 🟠 Live refined answers unmeasured.**
+**🟩 First live capture audited; 72 development tests passed. 🔴 Refinement rejected for adoption. 🟠 Human review pending.**
 
 The [first prompt audit](../verification/prompt-run-audit-20261110.md) found two
 Birch improvements, a persistent Willow citation-scope issue, and supported but
@@ -126,3 +126,17 @@ validation are needed before broader reliability claims or a default change.
 [Implementation verification](../verification/prompt-refinement-implementation.md) ·
 [Prior prompt comparison](PROMPT_COMPARISON.md) ·
 [Tutorial acknowledgment](../README.md#tutorial-acknowledgment-and-attribution)
+
+
+## 🔴 First Live Result: Refinement Rejected
+
+The [first 39-answer audit](../verification/prompt-refinement-run-audit-20261110.md)
+records regressions, including two nonexistent [7] labels, unsupported uncertainty,
+and a persistent Willow citation-scope defect. Proposed assistant citation-support
+passes are 9/12 baseline, 11/12 revised, and 6/12 refined. The conflict control
+remains separate. Human review is pending; the interactive default is unchanged.
+
+The audit helper now accepts correctly recorded citation failures and reports
+warning records. It rejects inconsistent metadata or changed context. Thus
+status passed establishes artifact consistency even when answer defects exist.
+The original capture and its null human-review worksheet are preserved.
