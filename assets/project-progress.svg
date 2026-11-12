@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1120" height="550" viewBox="0 0 1120 550" role="img" aria-labelledby="title desc">
 <title id="title">Document RAG tutorial and extension status</title>
-<desc id="desc">Tutorial baseline and Extensions 1 through 4 have recorded scoped checks. Extension 5 retains evaluated failures. Extensions 6 and 7 have offline evaluation and pending live review. Extension 8 adds an evidence viewer. Extension 9 includes tests and CI.</desc>
+<desc id="desc">Tutorial baseline and Extensions 1 through 4 have recorded scoped checks. Extension 5 retains evaluated failures. Extensions 6 and 7 have offline evaluation and recorded assistant review of the Windows run. Extension 8 adds an evidence viewer. Extension 9 includes tests and CI.</desc>
 <rect width="1120" height="550" rx="18" fill="#FFFFFF"/>
 <text x="30" y="40" font-family="Arial,sans-serif" font-size="26" font-weight="700" fill="#0F172A">Document RAG · Tutorial + Extensions</text>
 <text x="30" y="68" font-family="Arial,sans-serif" font-size="16" fill="#475569">Evidence-based progress · November 10, 2026 · Local date: America/Los_Angeles</text>
@@ -23,12 +23,12 @@
 <text x="596" y="252" font-family="Arial,sans-serif" font-size="13" font-weight="700" fill="#78350F">EXTENSION 6</text>
 <text x="596" y="278" font-family="Arial,sans-serif" font-size="22" font-weight="700" fill="#78350F">Citation and abstention lab</text>
 <text x="596" y="304" font-family="Arial,sans-serif" font-size="16" font-weight="400" fill="#78350F">14 authored drafts evaluated</text>
-<text x="596" y="329" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#78350F">New live source review pending</text>
+<text x="596" y="329" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#78350F">Windows review: 6 of 7 citations passed</text>
 <rect x="30" y="366" width="522" height="120" rx="12" fill="#F8FAFC" stroke="#475569" stroke-width="2"/>
 <text x="48" y="389" font-family="Arial,sans-serif" font-size="13" font-weight="700" fill="#0F172A">EXTENSIONS 7–8</text>
 <text x="48" y="415" font-family="Arial,sans-serif" font-size="22" font-weight="700" fill="#0F172A">Implemented</text>
 <text x="48" y="441" font-family="Arial,sans-serif" font-size="16" font-weight="400" fill="#0F172A">Structured context and evidence viewer</text>
-<text x="48" y="466" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#0F172A">Offline checks passed</text>
+<text x="48" y="466" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#0F172A">Three live attack answers reviewed</text>
 <rect x="578" y="366" width="522" height="120" rx="12" fill="#DCFCE7" stroke="#15803D" stroke-width="2"/>
 <text x="596" y="389" font-family="Arial,sans-serif" font-size="13" font-weight="700" fill="#14532D">EXTENSION 9</text>
 <text x="596" y="415" font-family="Arial,sans-serif" font-size="22" font-weight="700" fill="#14532D">Offline suite and CI</text>

@@ -113,8 +113,8 @@ remains pending.
 
 | Check | Result |
 | --- | --- |
-| Citation and abstention lab | Seven live Windows cases completed with seven numeric acceptances. Claim and citation review pending. |
-| Document-instruction cases | All three attack markers appeared in the displayed answers in the Windows run. Exact responses await review. |
+| Citation and abstention lab | Seven live Windows cases reviewed by the assistant. Expected disposition 7/7. Citation support 6/7. [Reviewed report](answer-evidence-runs/20261111-windows-reviewed.json) |
+| Document-instruction cases | All three live attack answers retained the supported Cedar policy, rejected the embedded requests, and quoted the markers. |
 | Evidence viewer | Windows generated HTML from the live report and issued the open command. Browser interaction check pending. |
 | Tests and CI | 94 tests passed on Windows and Ubuntu. [Run and viewer artifacts](https://github.com/anne500/document-rag-qa-agent/actions/runs/42942803173) |
 

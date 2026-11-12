@@ -15,8 +15,8 @@ own numbered roadmap.
 | 3 🧪 | Retrieval Evaluation Lab | First saved run and metric audit recorded |
 | 4 🔎 | Exact-ID and semantic retrieval | Paired ranking audit and interactive Maple example recorded |
 | 5 📚 | Multi-document answers | Captures and assistant reviews recorded; second refinement rejected; independent human ratings pending |
-| 6 🔗 | Citation and abstention evaluation | Guard audited and review lab exercised with authored examples. Live review remains open. |
-| 7 🛡️ | Document-instruction robustness | Structured context and three attack cases tested offline. Live model behavior remains open. |
+| 6 🔗 | Citation and abstention evaluation | Guard audited and review lab exercised with authored examples. Assistant review recorded for seven Windows answers. |
+| 7 🛡️ | Document-instruction robustness | Structured context and three attack cases tested offline. All three Windows attack answers retained the supported policy and rejected the embedded requests. |
 | 8 🖥️ | Interactive evidence viewer | HTML generator and source checks exercised. Browser interaction check remains open. |
 | 9 ⚙️ | Automated tests and CI | 94 tests and saved audits passed in both hosted jobs. [CI results](https://github.com/anne500/document-rag-qa-agent/actions/runs/42942803173) |
 
