@@ -20,6 +20,21 @@ explore evidence-based answers for Build, Release and Integration engineering.
 
 Adapted from [Darsh Shah's freeCodeCamp tutorial](https://www.freecodecamp.org/news/build-a-private-rag-qa-ai-agent-for-your-documents-using-langchain).
 
+## 🟦 Base tutorial
+
+The baseline runs local document Q&A with loading, chunking, Ollama embeddings, a persistent Chroma index, retrieval middleware, and cited answers. [Darsh Shah’s freeCodeCamp tutorial: How to Build a RAG Q&A AI Agent for Your Documents Using LangChain v1](https://www.freecodecamp.org/news/build-a-private-rag-qa-ai-agent-for-your-documents-using-langchain/)
+
+## 🧩 Extensions added in Project 5
+
+| Extension | What this project added |
+| --- | --- |
+| **1–2 · Document handling** | Added project fixtures, page-specific PDF verification, and automatic startup index updates. |
+| **3–5 · Retrieval and answer evaluation** | Built retrieval experiments, exact-ID comparisons, and multi-document and prompt comparison labs. |
+| **6–7 · Citation and instruction checks** | Added a citation guard, abstention evaluation, and document-instruction tests. |
+| **8–9 · Evidence viewer and CI** | Built an evidence viewer and automated verification on Windows and Ubuntu. |
+
+See the [tutorial and extension tracker](guides/PROJECT_TRACKER.md) for all nine extensions, supporting evidence, and open checks.
+
 ## 🗺️ Tutorial and Extension Progress
 
 ![Tutorial and extension progress](assets/project-progress.svg)
