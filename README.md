@@ -1,18 +1,20 @@
 # 📚 Local Document RAG Q&A Agent
 
-> **📚 Tutorial foundation:** Based on [Darsh Shah's freeCodeCamp tutorial](https://www.freecodecamp.org/news/build-a-private-rag-qa-ai-agent-for-your-documents-using-langchain). See [Tutorial Acknowledgment and Attribution](#tutorial-acknowledgment-and-attribution).
-
 ![Project overview and reading map](assets/readme-overview.svg)
 
 **🟦 Learn AI · 🟩 Portfolio evidence · 🟪 PhD research · 🟠 Planned work**
+
+Build a local document Q&A agent and inspect the evidence behind retrieval, citations, and abstention.
 
 <a id="explore-the-project"></a>
 
 ## 🧭 Explore the project
 
-[🗺️ Tutorial + extension tracker](guides/PROJECT_TRACKER.md) · [🧩 Architecture](#architecture) · [🚀 Setup](#setup-on-windows-powershell) · [🧪 Results & verification](#initial-verification) · [🗂️ Evidence & guides](#visual-guide-and-pdf-verification) · [🧪 Evaluation lab](#retrieval-evaluation-lab) · [📊 Measured results](#recorded-retrieval-results) · [🔎 Identifier retrieval](#identifier-aware-retrieval) · [📚 Multi-document lab](#multi-document-answer-evaluation) · [🧪 Prompt comparison](#frozen-context-prompt-comparison) · [🧪 Refinement](#second-prompt-refinement) · [🔗 Citation guard](#citation-guard) · [📋 Verification dashboard](verification/DASHBOARD.md) · [🎨 Visual standard](VISUAL_STYLE.md)
+[🟦 Base tutorial](#base-tutorial) · [🧩 Contributions](#contributions) · [🗺️ Roadmap](#visual-roadmap) · [🏗️ Architecture](#architecture) · [🚀 Setup](#setup-on-windows-powershell) · [🧪 Results & verification](#initial-verification) · [🗂️ Evidence & guides](#visual-guide-and-pdf-verification) · [🟪 Thesis connection](#thesis-connection) · [🎨 Visual standard](VISUAL_STYLE.md)
 
-🎨 [Shared architecture colors and diagram conventions](VISUAL_STYLE.md)
+> **📚 Tutorial foundation:** Based on [Darsh Shah's freeCodeCamp tutorial](https://www.freecodecamp.org/news/build-a-private-rag-qa-ai-agent-for-your-documents-using-langchain). See [Tutorial Acknowledgment and Attribution](#tutorial-acknowledgment-and-attribution).
+
+[📋 Verification dashboard](verification/DASHBOARD.md) · [🧪 Evaluation lab](#retrieval-evaluation-lab) · [📊 Measured retrieval results](#recorded-retrieval-results)
 
 A local document question-answering project using LangChain v1, Ollama,
 Qwen, and Chroma. Built to learn retrieval-augmented generation and
@@ -20,20 +22,30 @@ explore evidence-based answers for Build, Release and Integration engineering.
 
 Adapted from [Darsh Shah's freeCodeCamp tutorial](https://www.freecodecamp.org/news/build-a-private-rag-qa-ai-agent-for-your-documents-using-langchain).
 
+<a id="base-tutorial"></a>
+
 ## 🟦 Base tutorial
 
 The baseline runs local document Q&A with loading, chunking, Ollama embeddings, a persistent Chroma index, retrieval middleware, and cited answers. [Darsh Shah’s freeCodeCamp tutorial: How to Build a RAG Q&A AI Agent for Your Documents Using LangChain v1](https://www.freecodecamp.org/news/build-a-private-rag-qa-ai-agent-for-your-documents-using-langchain/)
 
-## 🧩 Extensions added in Project 5
+<a id="-extensions-added-in-project-5"></a>
 
-| Extension | What this project added |
-| --- | --- |
-| **1–2 · Document handling** | Added project fixtures, page-specific PDF verification, and automatic startup index updates. |
-| **3–5 · Retrieval and answer evaluation** | Built retrieval experiments, exact-ID comparisons, and multi-document and prompt comparison labs. |
-| **6–7 · Citation and instruction checks** | Added a citation guard, abstention evaluation, and document-instruction tests. |
-| **8–9 · Evidence viewer and CI** | Built an evidence viewer and automated verification on Windows and Ubuntu. |
+<a id="contributions"></a>
+
+## 🧩 Tutorial baseline and contributions
+
+| Origin | Item | Scope or contribution | Verification |
+| --- | --- | --- | --- |
+| 🟦 Tutorial baseline | 📘 Local document Q&A | Load, embed, index, retrieve, and answer locally. | [Initial verification](#initial-verification) |
+| 🛠️ Adaptation | 📂 Fictional document corpus | Uses project-specific Markdown and PDF fixtures. | [Tutorial tracker](guides/PROJECT_TRACKER.md#-part-a-base-tutorial) |
+| 🧩 Implemented extension | 📄 1–2 · Document handling | Page-specific PDF verification and automatic startup index updates. | [Progress tracker](guides/PROJECT_TRACKER.md) |
+| 🧩 Implemented extension | 🔎 3–5 · Retrieval and answer evaluation | Retrieval experiments, exact-ID comparisons, and multi-document and prompt comparison labs. | [Recorded results](#recorded-retrieval-results) |
+| 🧩 Implemented extension | 🔗 6–7 · Citation and instruction checks | Citation guard, abstention evaluation, and document-instruction tests. | [Citation and abstention evaluation](#citation-guard) |
+| 🧩 Implemented extension | 🖥️ 8–9 · Evidence viewer and CI | Evidence viewer and Windows/Ubuntu CI. Interactive viewer check is pending. | [Verification dashboard](verification/DASHBOARD.md) |
 
 See the [tutorial and extension tracker](guides/PROJECT_TRACKER.md) for all nine extensions, supporting evidence, and open checks.
+
+<a id="visual-roadmap"></a>
 
 ## 🗺️ Tutorial and Extension Progress
 
@@ -217,6 +229,8 @@ audited for all dependency telemetry or externally enabled tracing.
 The Git ignore rules exclude the local index, index backups, virtual
 environment, and .env file. The docs/ folder is tracked: review documents
 before committing and keep private material out of the public repository.
+
+<a id="thesis-connection"></a>
 
 <a id="learning-and-research-direction"></a>
 
