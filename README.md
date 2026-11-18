@@ -6,6 +6,12 @@
 
 **🟦 Learn AI · 🟩 Portfolio evidence · 🟪 PhD research · 🟠 Planned work**
 
+<a id="explore-the-project"></a>
+
+## 🧭 Explore the project
+
+[🗺️ Tutorial + extension tracker](guides/PROJECT_TRACKER.md) · [🧩 Architecture](#architecture) · [🚀 Setup](#setup-on-windows-powershell) · [🧪 Results & verification](#initial-verification) · [🗂️ Evidence & guides](#visual-guide-and-pdf-verification) · [🧪 Evaluation lab](#retrieval-evaluation-lab) · [📊 Measured results](#recorded-retrieval-results) · [🔎 Identifier retrieval](#identifier-aware-retrieval) · [📚 Multi-document lab](#multi-document-answer-evaluation) · [🧪 Prompt comparison](#frozen-context-prompt-comparison) · [🧪 Refinement](#second-prompt-refinement) · [🔗 Citation guard](#citation-guard) · [📋 Verification dashboard](verification/DASHBOARD.md) · [🎨 Visual standard](VISUAL_STYLE.md)
+
 🎨 [Shared architecture colors and diagram conventions](VISUAL_STYLE.md)
 
 A local document question-answering project using LangChain v1, Ollama,
@@ -14,34 +20,20 @@ explore evidence-based answers for Build, Release and Integration engineering.
 
 Adapted from [Darsh Shah's freeCodeCamp tutorial](https://www.freecodecamp.org/news/build-a-private-rag-qa-ai-agent-for-your-documents-using-langchain).
 
-<a id="base-tutorial"></a>
-
 ## 🟦 Base tutorial
 
 The baseline runs local document Q&A with loading, chunking, Ollama embeddings, a persistent Chroma index, retrieval middleware, and cited answers. [Darsh Shah’s freeCodeCamp tutorial: How to Build a RAG Q&A AI Agent for Your Documents Using LangChain v1](https://www.freecodecamp.org/news/build-a-private-rag-qa-ai-agent-for-your-documents-using-langchain/)
 
 ## 🧩 Extensions added in Project 5
 
-| Origin | Item | Scope or contribution | Verification |
-| --- | --- | --- | --- |
-| 🟦 Tutorial baseline | [Base tutorial](#base-tutorial) | Local document Q&A with chunking, Ollama embeddings, a persistent Chroma index, retrieval, and source citations. | [Baseline details](#base-tutorial) |
-| 🧩 Extension | **1. PDF verification and page citations** | Verified PDF retrieval and page citations with recorded smoke checks. | [Evidence](verification/pdf-results.md) |
-| 🧩 Extension | **2. Automatic index updates** | Added startup index refresh and verified add, edit, remove, and reuse cases. | [Evidence](verification/index-refresh-results.md) |
-| 🧩 Extension | **3. Retrieval Evaluation Lab** | Added a replayable retrieval lab and captured a six-setting comparison. | [Evidence](verification/retrieval-run-audit-20261110.md) |
-| 🧩 Extension | **4. Exact-ID and semantic retrieval** | Compared exact-ID and semantic retrieval with paired tests and an interactive example. | [Evidence](verification/identifier-run-audit-20261110.md) |
-| 🧩 Extension | **5. Multi-document answers** | Built multi-document and prompt comparison labs. Independent human ratings remain pending. | [Evidence](#multi-document-answer-evaluation) |
-| 🧩 Extension | **6. Citation and abstention evaluation** | Added citation and abstention evaluation. The tracker records the remaining citation and interactive checks. | [Evidence](guides/PROJECT_TRACKER.md) |
-| 🧩 Extension | **7. Document-instruction robustness** | Tested instruction handling in three live cases. Controlled baseline comparison remains open. | [Evidence](guides/PROJECT_TRACKER.md) |
-| 🧩 Extension | **8. Interactive evidence viewer** | Built a viewer with tested source mapping and escaping. Browser verification remains pending. | [Evidence](viewer/index.html) |
-| 🧩 Extension | **9. Automated tests and CI** | Added automated tests and verification on Windows and Ubuntu. | [Evidence](guides/PROJECT_TRACKER.md) |
+| Extension | What this project added |
+| --- | --- |
+| **1–2 · Document handling** | Added project fixtures, page-specific PDF verification, and automatic startup index updates. |
+| **3–5 · Retrieval and answer evaluation** | Built retrieval experiments, exact-ID comparisons, and multi-document and prompt comparison labs. |
+| **6–7 · Citation and instruction checks** | Added a citation guard, abstention evaluation, and document-instruction tests. |
+| **8–9 · Evidence viewer and CI** | Built an evidence viewer and automated verification on Windows and Ubuntu. |
 
 See the [tutorial and extension tracker](guides/PROJECT_TRACKER.md) for all nine extensions, supporting evidence, and open checks.
-
-<a id="explore-the-project"></a>
-
-## 🧭 Explore the project
-
-[🗺️ Tutorial + extension tracker](guides/PROJECT_TRACKER.md) · [🧩 Architecture](#architecture) · [🚀 Setup](#setup-on-windows-powershell) · [🧪 Results & verification](#initial-verification) · [🗂️ Evidence & guides](#visual-guide-and-pdf-verification) · [🧪 Evaluation lab](#retrieval-evaluation-lab) · [📊 Measured results](#recorded-retrieval-results) · [🔎 Identifier retrieval](#identifier-aware-retrieval) · [📚 Multi-document lab](#multi-document-answer-evaluation) · [🧪 Prompt comparison](#frozen-context-prompt-comparison) · [🧪 Refinement](#second-prompt-refinement) · [🔗 Citation guard](#citation-guard) · [📋 Verification dashboard](verification/DASHBOARD.md) · [🎨 Visual standard](VISUAL_STYLE.md)
 
 ## 🗺️ Tutorial and Extension Progress
 
